@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "skills": {
+    "cut-the-curve": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/cut-the-curve/SKILL.md",
+      "computedHash": "f6ce9dbbbc037afa3f9c04620c0e8b838edd99bb2a5e72c9504dbc891fcfc99f"
+    },
+    "hyperframes": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes/SKILL.md",
+      "computedHash": "33b38182e17a79539be1e8ea0e6d4fa6dac4489b8641b851da5940ee58895feb"
+    },
+    "hyperframes-animation": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-animation/SKILL.md",
+      "computedHash": "ef98227adde752fac33fa4e98cea3c32e3623054c9e09e7253f2be7f00495d36"
+    },
+    "hyperframes-creative": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-creative/SKILL.md",
+      "computedHash": "8483595fb0beaa4bdbc878a94e55ca7bb02994b26f8d01dfdd44470579a8d168"
+    },
+    "motion-doctrine": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/motion-doctrine/SKILL.md",
+      "computedHash": "69345676e0239fbabf870af618c364d25a2a59764dc98951a151945de44cf587"
+    },
+    "motion-graphics": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/motion-graphics/SKILL.md",
+      "computedHash": "d1ad5ab07f7c796cdd309315b239865cd6945c93d301f0db2cebdff269228277"
+    },
+    "oversized-cursor": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/oversized-cursor/SKILL.md",
+      "computedHash": "d541421084d97bfc561a9f5038989f9a7f258852c3f2b34e2f21645d178686cb"
+    }
+  }
+}

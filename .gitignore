@@ -24,3 +24,14 @@ build
 *.njsproj
 *.sln
 *.sw?
+
+# AI agent skills/tooling (installed locally, not part of the app)
+.claude/
+.agents/
+.opencode/
+.codex/
+.cursor/
+.gemini/
+.grok/
+.hermes/
+.veto/
