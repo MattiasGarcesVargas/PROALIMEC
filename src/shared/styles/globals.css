@@ -1,0 +1,41 @@
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-brand-ice);
+  color: var(--color-brand-navy);
+}
+
+:focus-visible {
+  border-radius: 0.2rem;
+  outline: 2px solid var(--color-brand-navy);
+  outline-offset: 4px;
+}
+
+a {
+  color: inherit;
+}
+
+@keyframes brand-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: brand-marquee 24s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
