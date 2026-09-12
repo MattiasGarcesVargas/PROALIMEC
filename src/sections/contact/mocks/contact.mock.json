@@ -1,0 +1,43 @@
+{
+  "status": "structure-only",
+  "hero": {
+    "eyebrow": "Contacto comercial",
+    "title": "Hablemos de lo que necesita tu negocio.",
+    "description": "Este espacio reunirá los canales oficiales de atención de PROALIMEC cuando estén confirmados.",
+    "cta": {
+      "label": "Explorar productos",
+      "href": "/productos"
+    },
+    "media": null
+  },
+  "methodsSection": {
+    "eyebrow": "Atención directa",
+    "title": "Canales de contacto",
+    "description": "Aquí podrás elegir el canal más conveniente para realizar una consulta comercial.",
+    "emptyMessage": "Los canales de contacto están pendientes de confirmación."
+  },
+  "methods": [],
+  "hoursSection": {
+    "eyebrow": "Disponibilidad",
+    "title": "Horarios de atención",
+    "description": "Consulta los días y franjas de atención antes de comunicarte.",
+    "emptyMessage": "Los horarios de atención están pendientes de confirmación."
+  },
+  "businessHours": [],
+  "locationSection": {
+    "eyebrow": "Ubicación",
+    "title": "Encuéntranos",
+    "description": "La dirección y el acceso a la ubicación se publicarán una vez que hayan sido aprobados.",
+    "emptyMessage": "La ubicación está pendiente de confirmación."
+  },
+  "location": null,
+  "wholesaleAttention": {
+    "eyebrow": "Atención mayorista",
+    "title": "Explora el portafolio antes de realizar tu consulta.",
+    "description": "Revisa los productos disponibles en el catálogo y prepara la información que necesitas consultar.",
+    "cta": {
+      "label": "Ver productos",
+      "href": "/productos"
+    }
+  }
+}
