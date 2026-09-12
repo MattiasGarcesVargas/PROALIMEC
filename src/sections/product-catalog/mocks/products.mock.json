@@ -1,0 +1,151 @@
+{
+  "status": "structure-only",
+  "products": [
+    {
+      "id": "res-lomo-fino",
+      "slug": "res-lomo-fino",
+      "name": "Lomo fino de res",
+      "categorySlug": "res",
+      "description": "Corte magro de res, de fibra fina y espesor uniforme. Se entrega congelado y listo para porcionar.",
+      "presentations": ["Pieza entera al vacío", "Caja mayorista"],
+      "media": [
+        {
+          "id": "res-lomo-fino-1",
+          "src": "/images/fotos/cortes-tabla.jpg",
+          "alt": "Cortes de res ordenados sobre una tabla de madera oscura",
+          "width": 543,
+          "height": 965
+        }
+      ]
+    },
+    {
+      "id": "res-costillar",
+      "slug": "res-costillar",
+      "name": "Costillar de res",
+      "categorySlug": "res",
+      "description": "Costillar de res con hueso, apto para cocción lenta y preparaciones de carta.",
+      "presentations": ["Pieza entera al vacío", "Caja mayorista"],
+      "media": [
+        {
+          "id": "res-costillar-1",
+          "src": "/images/fotos/costillar.jpg",
+          "alt": "Costillar de res sostenido con guante sobre fondo oscuro",
+          "width": 736,
+          "height": 981
+        }
+      ]
+    },
+    {
+      "id": "res-corte-hueso",
+      "slug": "res-corte-hueso",
+      "name": "Corte de res con hueso",
+      "categorySlug": "res",
+      "description": "Corte de res con hueso y grasa de cobertura, pensado para parrilla y porciones grandes.",
+      "presentations": ["Pieza entera al vacío", "Caja mayorista"],
+      "media": [
+        {
+          "id": "res-corte-hueso-1",
+          "src": "/images/fotos/corte-hueso.jpg",
+          "alt": "Corte de res con hueso sobre tabla de madera",
+          "width": 735,
+          "height": 947
+        }
+      ]
+    },
+    {
+      "id": "res-cubos",
+      "slug": "res-cubos",
+      "name": "Res en cubos",
+      "categorySlug": "res",
+      "description": "Res porcionada en cubos de tamaño regular, para guisos y volumen alto de servicio.",
+      "presentations": ["Funda al vacío", "Caja mayorista"],
+      "media": [
+        {
+          "id": "res-cubos-1",
+          "src": "/images/fotos/cubos.jpg",
+          "alt": "Cubos de res crudos sobre una tabla de corte",
+          "width": 736,
+          "height": 1104
+        }
+      ]
+    },
+    {
+      "id": "cerdo-chuleta",
+      "slug": "cerdo-chuleta",
+      "name": "Chuleta de cerdo",
+      "categorySlug": "cerdo",
+      "description": "Chuleta de cerdo de espesor parejo, para plancha, horno y punto de venta.",
+      "presentations": ["Bandeja porcionada", "Caja mayorista"],
+      "media": [
+        {
+          "id": "cerdo-chuleta-1",
+          "src": "/images/fotos/corte-colgado.jpg",
+          "alt": "Corte de cerdo colgado sobre fondo negro",
+          "width": 736,
+          "height": 1104
+        }
+      ]
+    },
+    {
+      "id": "cerdo-costilla",
+      "slug": "cerdo-costilla",
+      "name": "Costilla de cerdo",
+      "categorySlug": "cerdo",
+      "description": "Costilla de cerdo en tira, apta para ahumado, horno y parrilla.",
+      "presentations": ["Pieza entera al vacío", "Caja mayorista"],
+      "media": [
+        {
+          "id": "cerdo-costilla-1",
+          "src": "/images/fotos/camara-ganchos.jpg",
+          "alt": "Piezas de carne colgadas en ganchos dentro de cámara fría",
+          "width": 736,
+          "height": 1104
+        }
+      ]
+    },
+    {
+      "id": "pollo-presas",
+      "slug": "pollo-presas",
+      "name": "Presas de pollo",
+      "categorySlug": "pollo",
+      "description": "Presas de pollo congeladas, clasificadas por tipo para operaciones de alto volumen.",
+      "presentations": ["Funda por kilo", "Caja mayorista"],
+      "media": []
+    },
+    {
+      "id": "pollo-pechuga",
+      "slug": "pollo-pechuga",
+      "name": "Pechuga de pollo",
+      "categorySlug": "pollo",
+      "description": "Pechuga de pollo deshuesada y congelada, para porcionado y línea de producción.",
+      "presentations": ["Funda por kilo", "Caja mayorista"],
+      "media": []
+    },
+    {
+      "id": "mar-camaron",
+      "slug": "mar-camaron",
+      "name": "Camarón congelado",
+      "categorySlug": "mar",
+      "description": "Camarón congelado clasificado por talla, para carta y distribución.",
+      "presentations": ["Funda por kilo", "Caja mayorista"],
+      "media": [
+        {
+          "id": "mar-camaron-1",
+          "src": "/images/fotos/portafolio-mesa.jpg",
+          "alt": "Mesa con cortes de carne y productos del mar sobre superficie oscura",
+          "width": 736,
+          "height": 1313
+        }
+      ]
+    },
+    {
+      "id": "mar-filete-pescado",
+      "slug": "mar-filete-pescado",
+      "name": "Filete de pescado",
+      "categorySlug": "mar",
+      "description": "Filete de pescado congelado, sin espinas, para servicio de carta y volumen.",
+      "presentations": ["Bandeja porcionada", "Caja mayorista"],
+      "media": []
+    }
+  ]
+}
