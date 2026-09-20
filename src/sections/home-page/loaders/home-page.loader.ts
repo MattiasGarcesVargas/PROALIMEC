@@ -1,5 +1,5 @@
 import type { HomePageService } from '~/sections/home-page/services/home-page.service'
-import type { ProductCatalogService } from '~/sections/product-catalog/services/product-catalog.service'
+import type { ProductCatalogService } from '~/sections/product-catalog'
 
 export async function homePageLoader(
   service: HomePageService,
@@ -10,10 +10,5 @@ export async function homePageLoader(
     catalog.getProducts(),
   ])
 
-  const featured = content.featuredProducts.flatMap((id) => {
-    const product = products.find((candidate) => candidate.id === id)
-    return product ? [product] : []
-  })
-
-  return { content, featured }
+  return { content, products }
 }

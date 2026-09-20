@@ -1,70 +1,134 @@
-import { ArrowRight } from 'lucide-react'
-
 import type { HomeHeroContent } from '~/sections/home-page/types/home-page.types'
-import { ButtonLink, Container, WaterfallTitle } from '~/shared/components'
-
-const titleLines = ['Frescura protegida,', 'calidad garantizada.']
+import { useRevealOnScroll } from '~/shared/motion'
 
 export function HeroSection({ content }: { content: HomeHeroContent }) {
+  const { ref, visible } = useRevealOnScroll<HTMLElement>(0.1)
+
   return (
-    <section className="band-deep relative isolate overflow-hidden">
+    <section
+      id="hero"
+      ref={ref}
+      style={{
+        position: 'relative',
+        background: 'var(--white)',
+        overflow: 'hidden',
+      }}
+    >
       <div
-        aria-hidden="true"
-        className="absolute -right-1/4 top-0 h-[70%] w-[70%] rounded-full bg-navy/45 blur-[120px]"
-      />
-      <Container className="relative grid items-center gap-12 py-16 lg:min-h-[calc(100svh-var(--header-height))] lg:grid-cols-12 lg:gap-10 lg:py-20">
-        <div className="flex flex-col items-start gap-8 lg:col-span-7">
-          <p className="eyebrow" data-hero-follow>
+        style={{
+          width: 'var(--shell)',
+          marginInline: 'auto',
+          display: 'grid',
+          gridTemplateColumns:
+            'repeat(auto-fit, minmax(min(20rem, 100%), 1fr))',
+          alignItems: 'center',
+          gap: 'clamp(2rem, 5vw, 5rem)',
+          padding: 'clamp(2.5rem,6vw,6rem) 0 clamp(3.5rem,7vw,7rem)',
+        }}
+      >
+        <div>
+          <p
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 14,
+              margin: '0 0 clamp(1.5rem,3vw,2.5rem)',
+              font: '600 11px/1.2 var(--font-body)',
+              letterSpacing: '.2em',
+              textTransform: 'uppercase',
+              color: 'var(--accent)',
+              opacity: visible ? 1 : 0,
+              transform: visible ? 'none' : 'translateY(18px)',
+              transition:
+                'opacity .7s var(--ease-out-expo), transform .7s var(--ease-out-expo)',
+            }}
+          >
+            <span
+              style={{ width: 38, height: 1, background: 'currentColor' }}
+            />
             {content.eyebrow}
           </p>
 
-          <WaterfallTitle
-            lines={titleLines}
-            accentLastLine
-            className="font-display text-[clamp(2.9rem,8.5vw,6.5rem)] font-bold leading-[0.94] tracking-[-0.055em]"
-          />
+          <h1
+            style={{
+              margin: 0,
+              fontFamily: 'var(--font-display)',
+              fontWeight: 800,
+              fontSize: 'clamp(2.6rem, 7.6vw, 6.5rem)',
+              lineHeight: 1.06,
+              letterSpacing: '-.055em',
+              color: 'var(--navy)',
+            }}
+          >
+            {content.titleLines.map((lineText, index) => (
+              <span
+                key={lineText}
+                style={{
+                  display: 'block',
+                  overflow: 'hidden',
+                  paddingBottom: '.14em',
+                  marginBottom: '-.14em',
+                }}
+              >
+                <span
+                  style={{
+                    display: 'block',
+                    color:
+                      index === content.accentLineIndex
+                        ? 'var(--accent)'
+                        : 'inherit',
+                    transform: visible ? 'translateY(0)' : 'translateY(100%)',
+                    transition: `transform .95s var(--ease-out-expo) ${index * 0.08}s`,
+                  }}
+                >
+                  {lineText}
+                </span>
+              </span>
+            ))}
+          </h1>
 
           <p
-            className="max-w-lg text-lg leading-8 text-muted-cold"
-            data-hero-follow
+            style={{
+              maxWidth: '34rem',
+              margin: 'clamp(1.75rem,3.5vw,2.5rem) 0 0',
+              fontSize: '1.0625rem',
+              lineHeight: 1.75,
+              color: 'var(--muted)',
+              textWrap: 'pretty',
+              opacity: visible ? 1 : 0,
+              transform: visible ? 'none' : 'translateY(22px)',
+              transition:
+                'opacity .8s var(--ease-out-expo) .16s, transform .8s var(--ease-out-expo) .16s',
+            }}
           >
-            {content.description}
+            {content.intro}
           </p>
-
-          <div
-            className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row"
-            data-hero-follow
-          >
-            <ButtonLink to={content.primaryCta.href} variant="inverse">
-              {content.primaryCta.label}
-              <ArrowRight aria-hidden="true" size={18} />
-            </ButtonLink>
-            {content.secondaryCta ? (
-              <ButtonLink to={content.secondaryCta.href} variant="outlineDark">
-                {content.secondaryCta.label}
-              </ButtonLink>
-            ) : null}
-          </div>
         </div>
 
-        {content.media ? (
-          <div className="lg:col-span-5">
-            <figure
-              className="shield-frame mx-auto aspect-[3/4] w-full max-w-sm lg:max-w-none"
-              data-hero-media
-              data-cursor="Portafolio"
-            >
-              <img
-                src={content.media.src}
-                alt={content.media.alt}
-                width={content.media.width}
-                height={content.media.height}
-                fetchPriority="high"
-              />
-            </figure>
-          </div>
-        ) : null}
-      </Container>
+        <div
+          style={{
+            position: 'relative',
+            height: 'clamp(22rem, 60vh, 38rem)',
+            overflow: 'hidden',
+          }}
+        >
+          <img
+            src={content.image.src}
+            alt={content.image.alt}
+            width={content.image.width}
+            height={content.image.height}
+            fetchPriority="high"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              padding: 'clamp(1rem, 3vw, 2.5rem)',
+            }}
+          />
+        </div>
+      </div>
     </section>
   )
 }

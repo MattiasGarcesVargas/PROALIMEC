@@ -8,6 +8,17 @@ describe('localHomePageService', () => {
     const content = await localHomePageService.getContent()
 
     expect(HomePageSchema.safeParse(content).success).toBe(true)
-    expect(content.hero.title).toBe('Frescura protegida, calidad garantizada.')
+    expect(content.hero.titleLines).toEqual([
+      'Frescura',
+      'protegida.',
+      'Calidad garantizada.',
+    ])
+  })
+
+  it('exposes the two best sellers used by the hanging scene', async () => {
+    const content = await localHomePageService.getContent()
+
+    expect(content.bestSellers).toHaveLength(2)
+    expect(content.bestSellers[0]?.base?.src).toBe('/assets/base-piedra-v2.png')
   })
 })

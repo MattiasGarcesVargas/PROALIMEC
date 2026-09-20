@@ -1,40 +1,41 @@
-import { useRef } from 'react'
-
 import {
-  BrandMarquee,
-  BrandStorySection,
-  CategoryShowcase,
+  BestSellerScene,
+  CatalogPreviewSection,
+  CategoriesSection,
   ColdChainSection,
-  FeaturedProductsSection,
+  ContactCtaSection,
   HeroSection,
-  QuoteCtaSection,
-  TrustMetricsSection,
-  WhyProalimecSection,
+  MarqueeStrip,
+  OurProductsScene,
+  ServiceSection,
 } from '~/sections/home-page/components'
 import { useHomePageData } from '~/sections/home-page/hooks/use-home-page-data'
-import { useHeroMotion, useSectionMotion } from '~/shared/motion'
+import { ProductSheetModal, useProductSheet } from '~/sections/product-catalog'
 
 export function HomePage() {
-  const { content, featured } = useHomePageData()
-  const pageRef = useRef<HTMLElement>(null)
-  const heroRef = useRef<HTMLDivElement>(null)
-
-  useHeroMotion(heroRef)
-  useSectionMotion(pageRef)
+  const { content, products } = useHomePageData()
+  const { selected, open, close } = useProductSheet()
 
   return (
-    <main id="main-content" ref={pageRef}>
-      <div ref={heroRef}>
-        <HeroSection content={content.hero} />
-      </div>
-      <BrandMarquee messages={content.marquee} />
-      <CategoryShowcase content={content.categories} />
+    <main id="main-content">
+      <HeroSection content={content.hero} />
+      <MarqueeStrip content={content.marquee} />
+      <BestSellerScene items={content.bestSellers} />
+      <OurProductsScene content={content.ourProducts} />
+      <CategoriesSection
+        intro={content.categoriesIntro}
+        categories={content.categories}
+      />
       <ColdChainSection content={content.coldChain} />
-      <FeaturedProductsSection products={featured} />
-      <BrandStorySection content={content.story} />
-      <WhyProalimecSection content={content.benefits} />
-      <TrustMetricsSection metrics={content.metrics} />
-      <QuoteCtaSection content={content.quoteCta} />
+      <CatalogPreviewSection
+        content={content.catalogPreview}
+        products={products}
+        onOpen={open}
+      />
+      <ServiceSection content={content.service} />
+      <ContactCtaSection content={content.contactCta} />
+
+      <ProductSheetModal product={selected} onClose={close} />
     </main>
   )
 }
