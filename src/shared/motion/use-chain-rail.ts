@@ -31,7 +31,11 @@ export function useChainRail(scope: RefObject<HTMLElement | null>) {
         scrub: 0.4,
       }
 
-      gsap.fromTo(fill, { scaleY: 0 }, { scaleY: 1, ease: 'none', scrollTrigger: trigger })
+      gsap.fromTo(
+        fill,
+        { scaleY: 0 },
+        { scaleY: 1, ease: 'none', scrollTrigger: trigger },
+      )
       gsap.fromTo(
         node,
         { top: '0%' },

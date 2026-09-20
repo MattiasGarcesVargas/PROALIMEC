@@ -2,7 +2,10 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import type { RefObject } from 'react'
 
-import { motionTokens, type WaterfallWeight } from '~/shared/motion/motion.tokens'
+import {
+  motionTokens,
+  type WaterfallWeight,
+} from '~/shared/motion/motion.tokens'
 import { useReducedMotion } from '~/shared/motion/use-reduced-motion'
 
 if (typeof window !== 'undefined') {
@@ -30,7 +33,8 @@ export function useHeroMotion(scope: RefObject<HTMLElement | null>) {
       const { waterfall, duration, ease } = motionTokens
       const words = gsap.utils.toArray<HTMLElement>('[data-word]')
       const followers = gsap.utils.toArray<HTMLElement>('[data-hero-follow]')
-      const media = scope.current.querySelector<HTMLElement>('[data-hero-media]')
+      const media =
+        scope.current.querySelector<HTMLElement>('[data-hero-media]')
 
       gsap.set(words, { autoAlpha: 0 })
       gsap.set(followers, { autoAlpha: 0, y: motionTokens.distance.md })
