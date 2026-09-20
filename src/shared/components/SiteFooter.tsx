@@ -1,45 +1,82 @@
-import { ArrowUpRight } from 'lucide-react'
+import type { CSSProperties } from 'react'
 import { Link } from 'react-router'
 
-import { BrandLogo } from '~/shared/components/BrandLogo'
-import { Container } from '~/shared/components/Container'
+const navLink: CSSProperties = {
+  font: '600 12px/1 var(--font-body)',
+  letterSpacing: '.14em',
+  textTransform: 'uppercase',
+  color: 'var(--white)',
+  textDecoration: 'none',
+  transition: 'color .3s',
+}
+
+const navigationItems = [
+  { label: 'Inicio', to: '/' },
+  { label: 'Productos', to: '/productos' },
+  { label: 'Contáctanos', to: '/contacto' },
+] as const
 
 export function SiteFooter() {
   return (
-    <footer className="bg-ink py-12 text-white">
-      <Container>
-        <div className="grid gap-10 border-b border-white/15 pb-10 md:grid-cols-[1fr_auto] md:items-end">
-          <div className="w-fit rounded-2xl bg-white p-3">
-            <BrandLogo className="w-35" />
-          </div>
-          <nav aria-label="Navegación del pie de página">
-            <ul className="flex flex-wrap gap-x-8 gap-y-4 text-sm font-semibold">
-              <li>
-                <Link to="/" className="no-underline hover:text-ice">
-                  Inicio
-                </Link>
-              </li>
-              <li>
-                <Link to="/productos" className="no-underline hover:text-ice">
-                  Productos
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contacto"
-                  className="inline-flex items-center gap-2 no-underline hover:text-ice"
-                >
-                  Contáctanos <ArrowUpRight aria-hidden="true" size={16} />
-                </Link>
-              </li>
-            </ul>
+    <footer
+      style={{
+        background: 'var(--black)',
+        color: 'var(--white)',
+        padding: 'clamp(2.5rem,5vw,4rem) 0 clamp(1.75rem,3vw,2.5rem)',
+      }}
+    >
+      <div style={{ width: 'var(--shell)', marginInline: 'auto' }}>
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            alignItems: 'flex-end',
+            justifyContent: 'space-between',
+            gap: 28,
+            paddingBottom: 28,
+            borderBottom: '1px solid rgba(255,255,255,.16)',
+          }}
+        >
+          <Link
+            to="/"
+            aria-label="PROALIMEC, ir al inicio"
+            style={{ display: 'block', width: 160 }}
+          >
+            <img
+              src="/assets/logo-slogan.png"
+              alt="PROALIMEC"
+              loading="lazy"
+              style={{ display: 'block', width: '100%', height: 'auto' }}
+            />
+          </Link>
+
+          <nav
+            aria-label="Navegación del pie de página"
+            style={{ display: 'flex', flexWrap: 'wrap', gap: 28 }}
+          >
+            {navigationItems.map((item) => (
+              <Link key={item.to} to={item.to} style={navLink}>
+                {item.label}
+              </Link>
+            ))}
           </nav>
         </div>
-        <div className="flex flex-col gap-2 pt-6 text-sm text-frost sm:flex-row sm:justify-between">
-          <p>Frescura protegida, calidad garantizada.</p>
-          <p>PROALIMEC</p>
+
+        <div
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            gap: 12,
+            paddingTop: 22,
+            fontSize: '.8125rem',
+            color: 'var(--mutedcold)',
+          }}
+        >
+          <p style={{ margin: 0 }}>Frescura protegida, calidad garantizada.</p>
+          <p style={{ margin: 0 }}>PROALIMEC · Venta mayorista</p>
         </div>
-      </Container>
+      </div>
     </footer>
   )
 }

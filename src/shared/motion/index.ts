@@ -3,4 +3,11 @@ export type { WaterfallWeight } from './motion.tokens'
 export { useChainRail } from './use-chain-rail'
 export { useHeroMotion } from './use-hero-motion'
 export { useReducedMotion } from './use-reduced-motion'
+export { useRevealOnScroll } from './use-reveal-on-scroll'
+export {
+  clamp01,
+  easeOutCubic,
+  range,
+  useScrollScene,
+} from './use-scroll-scene'
 export { useSectionMotion } from './use-section-motion'
