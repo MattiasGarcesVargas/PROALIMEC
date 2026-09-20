@@ -36,31 +36,38 @@ describe('main pages', () => {
     renderRoute({
       path: '/',
       component: HomePage,
-      loader: () => homePageLoader(localHomePageService),
+      loader: () =>
+        homePageLoader(localHomePageService, localProductCatalogService),
     })
 
     expect(
       await screen.findByRole('heading', {
         level: 1,
-        name: 'Frescura protegida, calidad garantizada.',
+        name: 'Frescura protegida. Calidad garantizada.',
       }),
     ).toBeVisible()
   })
 
-  it('renders the catalog empty state', async () => {
+  it('renders the catalog with its line filters', async () => {
     renderRoute({
       path: '/productos',
       component: ProductCatalogPage,
-      loader: () => productCatalogLoader(localProductCatalogService),
+      loader: () =>
+        productCatalogLoader(
+          { request: new Request('http://localhost/productos') },
+          localProductCatalogService,
+        ),
     })
 
     expect(
       await screen.findByRole('heading', {
         level: 1,
-        name: 'Explora nuestro portafolio.',
+        name: 'Nuestros productos',
       }),
     ).toBeVisible()
-    expect(screen.getByText('Catálogo sin productos publicados')).toBeVisible()
+    expect(screen.getByRole('button', { name: /todos 12/i })).toBeVisible()
+    expect(screen.getByRole('button', { name: /cerdo 8/i })).toBeVisible()
+    expect(screen.getByRole('button', { name: /res 4/i })).toBeVisible()
   })
 
   it('renders contact without invented business information', async () => {
