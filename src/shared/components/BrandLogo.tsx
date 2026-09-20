@@ -15,10 +15,10 @@ export function BrandLogo({ className, priority = false }: BrandLogoProps) {
       className={cn('block shrink-0', className)}
     >
       <img
-        src="/images/logo.png"
+        src="/assets/logo-horizontal.png"
         alt="PROALIMEC"
-        width="1536"
-        height="924"
+        width="2042"
+        height="720"
         className="h-auto w-full"
         fetchPriority={priority ? 'high' : undefined}
       />

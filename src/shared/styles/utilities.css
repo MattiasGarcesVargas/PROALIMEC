@@ -1,5 +1,5 @@
 .site-container {
-  width: min(calc(100% - 2 * clamp(1.25rem, 4vw, 4rem)), 80rem);
+  width: var(--shell);
   margin-inline: auto;
 }
 
@@ -22,18 +22,18 @@
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 0.875rem;
   color: var(--color-brand-orange);
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.2em;
   line-height: 1.2;
   text-transform: uppercase;
 }
 
 .eyebrow::before {
-  width: clamp(1.5rem, 4vw, 2.75rem);
+  width: 38px;
   height: 1px;
   background: currentColor;
   content: '';
@@ -45,26 +45,26 @@
 
 .display-title {
   font-family: var(--font-display);
-  font-size: clamp(2.75rem, 6vw, 5rem);
-  font-weight: 700;
+  font-size: clamp(2.6rem, 7.6vw, 6.5rem);
+  font-weight: 800;
   letter-spacing: -0.055em;
-  line-height: 0.98;
+  line-height: 1.06;
 }
 
 .page-title {
   font-family: var(--font-display);
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  font-weight: 700;
+  font-size: clamp(2.4rem, 6.5vw, 5.5rem);
+  font-weight: 800;
   letter-spacing: -0.05em;
   line-height: 1.02;
 }
 
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  font-weight: 700;
+  font-size: clamp(1.85rem, 3.6vw, 3rem);
+  font-weight: 800;
   letter-spacing: -0.04em;
-  line-height: 1.08;
+  line-height: 1.06;
 }
 
 .balanced-text {

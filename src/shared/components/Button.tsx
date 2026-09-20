@@ -4,22 +4,18 @@ import { Link, type LinkProps } from 'react-router'
 import { cn } from '~/shared/lib/cn'
 
 type ButtonVariant =
-  | 'primary'
-  | 'secondary'
-  | 'accent'
-  | 'ghost'
-  | 'inverse'
-  | 'outlineDark'
+  'primary' | 'secondary' | 'accent' | 'ghost' | 'inverse' | 'outlineDark'
 type ButtonSize = 'default' | 'compact'
 
 const baseClassName =
-  'inline-flex min-h-11 items-center justify-center gap-2 rounded-full border font-semibold no-underline transition-[background-color,color,border-color,transform,box-shadow] duration-200 active:translate-y-px disabled:pointer-events-none disabled:opacity-50'
+  'inline-flex items-center justify-center gap-2 border font-semibold uppercase tracking-[0.12em] no-underline transition-[background-color,color,border-color] duration-300 disabled:pointer-events-none disabled:opacity-50'
 
 const variantClassNames: Record<ButtonVariant, string> = {
-  primary: 'border-navy bg-navy text-white hover:bg-ink hover:shadow-sm',
+  primary: 'border-navy bg-navy text-white hover:bg-ink',
   secondary:
     'border-navy bg-transparent text-navy hover:bg-navy hover:text-white',
-  accent: 'border-orange bg-orange text-navy hover:bg-frost hover:border-frost',
+  accent:
+    'border-orange bg-orange text-white hover:border-ember hover:bg-ember',
   ghost: 'border-transparent bg-transparent text-navy hover:bg-frost',
   inverse:
     'border-white bg-white text-navy hover:border-frost hover:bg-frost focus-visible:outline-ice',
@@ -28,8 +24,8 @@ const variantClassNames: Record<ButtonVariant, string> = {
 }
 
 const sizeClassNames: Record<ButtonSize, string> = {
-  default: 'min-h-12 px-6 text-sm',
-  compact: 'min-h-11 px-4 text-sm',
+  default: 'min-h-13 px-6.5 text-xs',
+  compact: 'min-h-11 px-5 text-xs',
 }
 
 function getButtonClassName(

@@ -32,12 +32,13 @@
   --font-display: 'Montserrat', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  --radius-sm: 0.5rem;
-  --radius-md: 1rem;
-  --radius-lg: 1.5rem;
-  --radius-xl: 2rem;
-  --radius-pill: 999px;
-  --radius-shield: 12rem 12rem 1.5rem 1.5rem;
+  /* Lenguaje de bordes rectos: radio 0 en todo el sitio. */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-pill: 0;
+  --radius-shield: 0;
 
   --shadow-xs: 0 0.25rem 0.75rem rgb(11 31 83 / 0.06);
   --shadow-sm: 0 0.75rem 2rem rgb(11 31 83 / 0.08);
@@ -45,7 +46,28 @@
   --shadow-deep: 0 2rem 5rem rgb(4 13 31 / 0.55);
   --shadow-focus: 0 0 0 3px rgb(99 200 242 / 0.55);
 
-  --header-height: 6.25rem;
+  --header-height: 4rem;
+
+  /* Alias del sistema de diseño del handoff: nombres cortos usados por las
+     secciones portadas (home + catálogo). Apuntan a los mismos valores. */
+  --navy: var(--color-brand-navy);
+  --orange: var(--color-brand-orange);
+  --accent: var(--color-brand-orange);
+  --ice: var(--color-brand-ice);
+  --frost: var(--color-brand-frost);
+  --ink: var(--color-ink);
+  --muted: var(--color-muted);
+  --mutedcold: var(--color-muted-cold);
+  --surface-cold: var(--color-surface-cold);
+  --black: #000000;
+  --white: #ffffff;
+
+  /* Shell de página y altura de escena sticky. */
+  --shell: min(100% - clamp(2.5rem, 8vw, 8rem), 80rem);
+  --scene: 340vh;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @theme inline {

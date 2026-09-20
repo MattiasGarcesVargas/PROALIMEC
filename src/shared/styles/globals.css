@@ -31,7 +31,7 @@ a {
 }
 
 .marquee-track {
-  animation: brand-marquee 24s linear infinite;
+  animation: brand-marquee 28s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
