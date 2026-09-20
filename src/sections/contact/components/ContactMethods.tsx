@@ -27,13 +27,13 @@ export function ContactMethods({ content, methods }: ContactMethodsProps) {
           </div>
         ) : (
           <div
-            className="mt-12 flex min-h-40 items-center rounded-3xl border border-cold-border bg-cold px-6 py-8 md:px-10"
+            className="mt-12 flex min-h-40 items-center border border-cold-border bg-cold px-6 py-8 md:px-10"
             role="status"
             data-reveal
           >
             <span
               aria-hidden="true"
-              className="mr-5 h-12 w-1 shrink-0 rounded-full bg-orange"
+              className="mr-5 h-12 w-1 shrink-0 bg-orange"
             />
             <p className="max-w-2xl text-lg font-medium text-navy">
               {content.emptyMessage}

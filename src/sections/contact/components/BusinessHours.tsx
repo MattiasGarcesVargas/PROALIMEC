@@ -13,11 +13,8 @@ type BusinessHoursProps = {
 
 export function BusinessHours({ content, hours }: BusinessHoursProps) {
   return (
-    <section
-      className="rounded-4xl bg-navy p-6 text-white md:p-10 lg:p-12"
-      data-reveal
-    >
-      <span className="mb-8 flex size-12 items-center justify-center rounded-2xl bg-white/10 text-ice">
+    <section className="bg-navy p-6 text-white md:p-10 lg:p-12" data-reveal>
+      <span className="mb-8 flex size-12 items-center justify-center bg-white/10 text-ice">
         <Clock3 aria-hidden="true" size={23} strokeWidth={1.8} />
       </span>
       <SectionHeading

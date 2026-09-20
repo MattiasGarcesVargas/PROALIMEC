@@ -34,13 +34,9 @@ export function ContactHero({ content }: ContactHeroProps) {
           </ButtonLink>
         </div>
 
-        <div className="relative lg:col-span-5" data-reveal>
-          <div
-            aria-hidden="true"
-            className="absolute -inset-5 rounded-[48%_48%_2rem_2rem] border border-ice/50 lg:-inset-7"
-          />
-          <div className="media-blank relative overflow-hidden rounded-[48%_48%_2rem_2rem] bg-white">
-            {content.media ? (
+        {content.media ? (
+          <div className="relative lg:col-span-5" data-reveal>
+            <div className="relative aspect-4/5 overflow-hidden bg-black">
               <img
                 src={content.media.src}
                 alt={content.media.alt}
@@ -49,9 +45,9 @@ export function ContactHero({ content }: ContactHeroProps) {
                 className="absolute inset-0 size-full object-cover"
                 fetchPriority="high"
               />
-            ) : null}
+            </div>
           </div>
-        </div>
+        ) : null}
       </Container>
     </section>
   )

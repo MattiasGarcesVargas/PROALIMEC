@@ -14,7 +14,7 @@ type LocationSectionProps = {
 export function LocationSection({ content, location }: LocationSectionProps) {
   return (
     <section
-      className="overflow-hidden rounded-4xl border border-cold-border bg-white"
+      className="overflow-hidden border border-cold-border bg-white"
       data-reveal
     >
       <div
@@ -33,7 +33,7 @@ export function LocationSection({ content, location }: LocationSectionProps) {
         ) : null}
         <span
           aria-hidden="true"
-          className="absolute bottom-6 right-6 flex size-12 items-center justify-center rounded-2xl border border-cold-border bg-white text-navy"
+          className="absolute bottom-6 right-6 flex size-12 items-center justify-center border border-cold-border bg-white text-navy"
         >
           <MapPin size={22} strokeWidth={1.8} />
         </span>

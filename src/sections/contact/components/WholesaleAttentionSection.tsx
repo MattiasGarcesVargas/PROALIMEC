@@ -12,10 +12,6 @@ export function WholesaleAttentionSection({
 }: WholesaleAttentionSectionProps) {
   return (
     <section className="relative isolate overflow-hidden bg-navy py-18 text-white">
-      <div
-        aria-hidden="true"
-        className="absolute -bottom-48 -right-28 size-[30rem] rounded-full border-[5rem] border-ice/10"
-      />
       <Container className="relative grid items-end gap-10 lg:grid-cols-[1fr_auto]">
         <div className="max-w-3xl" data-reveal>
           <p className="eyebrow">{content.eyebrow}</p>

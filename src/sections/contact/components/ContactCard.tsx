@@ -13,8 +13,8 @@ export function ContactCard({ method }: { method: ContactMethod }) {
   const isExternal = method.type === 'whatsapp'
 
   return (
-    <article className="flex min-h-64 flex-col rounded-3xl border border-cold-border bg-white p-7 transition-[border-color,transform,box-shadow] duration-200 hover:-translate-y-1 hover:border-navy hover:shadow-sm">
-      <span className="flex size-12 items-center justify-center rounded-2xl bg-frost text-navy">
+    <article className="flex min-h-64 flex-col border border-cold-border bg-white p-7 transition-[border-color,transform,box-shadow] duration-200 hover:-translate-y-1 hover:border-navy hover:shadow-sm">
+      <span className="flex size-12 items-center justify-center bg-frost text-navy">
         <Icon aria-hidden="true" size={22} strokeWidth={1.8} />
       </span>
       <h3 className="mt-8 font-display text-xl font-semibold text-navy">
