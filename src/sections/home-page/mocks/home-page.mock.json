@@ -5,7 +5,7 @@
     "accentLineIndex": 2,
     "intro": "Distribuimos cortes cárnicos nacionales e importados para restaurantes, mercados y distribuidores. Contamos con más de 15 años de experiencia en el mercado.",
     "image": {
-      "src": "/assets/hero-chuleta-cut.png",
+      "src": "/assets/images/hero-chuleta-cut.png",
       "alt": "Chuleta de cerdo con hueso",
       "width": 1536,
       "height": 1024
@@ -44,13 +44,13 @@
       ],
       "ctaLabel": "Consultar este corte",
       "product": {
-        "src": "/assets/pierna-cerdo.png",
+        "src": "/assets/images/pierna-cerdo.png",
         "alt": "Pierna de cerdo colgada de una cuerda",
         "width": 1024,
         "height": 1536
       },
       "base": {
-        "src": "/assets/base-piedra-v2.png",
+        "src": "/assets/images/base-piedra-v2.png",
         "alt": "",
         "width": 1536,
         "height": 1024
@@ -80,7 +80,7 @@
       ],
       "ctaLabel": "Consultar este corte",
       "product": {
-        "src": "/assets/costillar-cerdo.png",
+        "src": "/assets/images/costillar-cerdo.png",
         "alt": "Costillar de cerdo colgado de un gancho de carnicería",
         "width": 1024,
         "height": 1536
@@ -91,7 +91,7 @@
     "title": "Nuestros productos",
     "body": "A partir de estas piezas, es preferible que el corte sea recto para que se cocine uniformemente. El producto sale de cámara congelado y se porciona en destino. Cada línea del catálogo mantiene el mismo estándar de conservación, desde el almacenamiento hasta la entrega en tu punto de recepción.",
     "image": {
-      "src": "/assets/cortes-colgados-cerdo.png",
+      "src": "/assets/images/cortes-colgados-cerdo.png",
       "alt": "Cortes de cerdo y de res colgados de ganchos de carnicería",
       "width": 1536,
       "height": 1024
@@ -111,7 +111,7 @@
       "title": "Cerdo",
       "description": "Piezas de cerdo para restaurantes, asaderos y punto de venta.",
       "banner": {
-        "src": "/assets/banner-cerdo.png",
+        "src": "/assets/images/banner-cerdo.png",
         "alt": "Cortes de cerdo"
       }
     },
@@ -121,7 +121,7 @@
       "title": "Res",
       "description": "Cortes de res para parrilla, cocción lenta y porcionado industrial.",
       "banner": {
-        "src": "/assets/banner-res.png",
+        "src": "/assets/images/banner-res.png",
         "alt": "Cortes de res"
       }
     }
@@ -195,7 +195,7 @@
     "primaryLabel": "Ir a contacto",
     "secondaryLabel": "Ver catálogo",
     "image": {
-      "src": "/assets/fotos/res-despiece.jpg",
+      "src": "/assets/images/res-despiece.jpg",
       "alt": "Piezas de res dispuestas formando la silueta de una vaca",
       "width": 564,
       "height": 743

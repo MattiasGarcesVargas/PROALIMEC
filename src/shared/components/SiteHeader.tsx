@@ -54,7 +54,7 @@ export function SiteHeader() {
           style={{ display: 'block', flex: 'none', width: 168 }}
         >
           <img
-            src="/assets/logo-horizontal.png"
+            src="/assets/images/logo-horizontal.png"
             alt="PROALIMEC"
             width={2042}
             height={720}

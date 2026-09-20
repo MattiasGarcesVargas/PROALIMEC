@@ -43,7 +43,7 @@ export function SiteFooter() {
             style={{ display: 'block', width: 160 }}
           >
             <img
-              src="/assets/logo-slogan.png"
+              src="/assets/images/logo-slogan.png"
               alt="PROALIMEC"
               loading="lazy"
               style={{ display: 'block', width: '100%', height: 'auto' }}

@@ -14,7 +14,7 @@
       "suggestedUse": "Porcionado en chuletas, parrilla y plancha",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/cortes-colgados-cerdo.png",
+        "src": "/assets/images/cortes-colgados-cerdo.png",
         "alt": "Chuleta entera — corte congelado PROALIMEC"
       }
     },
@@ -31,7 +31,7 @@
       "suggestedUse": "Plancha, parrilla y menú diario",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/fotos/cortes-tabla.jpg",
+        "src": "/assets/images/cortes-tabla.jpg",
         "alt": "Chuleta rebanada — corte congelado PROALIMEC"
       }
     },
@@ -48,7 +48,7 @@
       "suggestedUse": "Horno, pernil y porcionado",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/pierna-cerdo.png",
+        "src": "/assets/images/pierna-cerdo.png",
         "alt": "Pierna entera — corte congelado PROALIMEC"
       }
     },
@@ -65,7 +65,7 @@
       "suggestedUse": "Cocción lenta, horno y despiece",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/cortes-colgados-cerdo.png",
+        "src": "/assets/images/cortes-colgados-cerdo.png",
         "alt": "Brazo entero — corte congelado PROALIMEC"
       }
     },
@@ -82,7 +82,7 @@
       "suggestedUse": "Ahumado, cocción lenta y sándwich",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/fotos/cubos.jpg",
+        "src": "/assets/images/cubos.jpg",
         "alt": "Bondiola — corte congelado PROALIMEC"
       }
     },
@@ -99,7 +99,7 @@
       "suggestedUse": "Filetes, cubos y alto volumen",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/fotos/cortes-tabla.jpg",
+        "src": "/assets/images/cortes-tabla.jpg",
         "alt": "Pulpa de pierna — corte congelado PROALIMEC"
       }
     },
@@ -116,7 +116,7 @@
       "suggestedUse": "Guisos, molido y preparaciones largas",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/fotos/cubos.jpg",
+        "src": "/assets/images/cubos.jpg",
         "alt": "Pulpa de brazo — corte congelado PROALIMEC"
       }
     },
@@ -133,7 +133,7 @@
       "suggestedUse": "Ahumado, horno y parrilla",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/costillar-cerdo.png",
+        "src": "/assets/images/costillar-cerdo.png",
         "alt": "Costillar de cerdo — corte congelado PROALIMEC"
       }
     },
@@ -150,7 +150,7 @@
       "suggestedUse": "Medallones, parrilla y plancha",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/fotos/cortes-tabla.jpg",
+        "src": "/assets/images/cortes-tabla.jpg",
         "alt": "Lomo fino de res — corte congelado PROALIMEC"
       }
     },
@@ -167,7 +167,7 @@
       "suggestedUse": "Cocción lenta, horno y ahumado",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/fotos/costillar.jpg",
+        "src": "/assets/images/costillar.jpg",
         "alt": "Costillar de res — corte congelado PROALIMEC"
       }
     },
@@ -184,7 +184,7 @@
       "suggestedUse": "Parrilla y porciones grandes",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/fotos/corte-hueso.jpg",
+        "src": "/assets/images/corte-hueso.jpg",
         "alt": "Corte de res con hueso — corte congelado PROALIMEC"
       }
     },
@@ -201,7 +201,7 @@
       "suggestedUse": "Guisos, estofados y alto volumen",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/fotos/cubos.jpg",
+        "src": "/assets/images/cubos.jpg",
         "alt": "Res en cubos — corte congelado PROALIMEC"
       }
     }

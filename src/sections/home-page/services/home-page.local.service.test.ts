@@ -19,6 +19,8 @@ describe('localHomePageService', () => {
     const content = await localHomePageService.getContent()
 
     expect(content.bestSellers).toHaveLength(2)
-    expect(content.bestSellers[0]?.base?.src).toBe('/assets/base-piedra-v2.png')
+    expect(content.bestSellers[0]?.base?.src).toBe(
+      '/assets/images/base-piedra-v2.png',
+    )
   })
 })
