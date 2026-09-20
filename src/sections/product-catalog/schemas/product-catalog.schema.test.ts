@@ -1,40 +1,34 @@
 import { describe, expect, it } from 'vitest'
 
-import categoriesMock from '~/sections/product-catalog/mocks/categories.mock.json'
+import catalogContentMock from '~/sections/product-catalog/mocks/catalog-content.mock.json'
 import productsMock from '~/sections/product-catalog/mocks/products.mock.json'
-import {
-  CategoriesDatasetSchema,
-  CategorySchema,
-} from '~/sections/product-catalog/schemas/category.schema'
+import { CatalogContentSchema } from '~/sections/product-catalog/schemas/catalog-content.schema'
 import {
   ProductSchema,
   ProductsDatasetSchema,
 } from '~/sections/product-catalog/schemas/product.schema'
 
 describe('product catalog schemas', () => {
-  it('accepts the empty structure-only datasets', () => {
-    expect(CategoriesDatasetSchema.parse(categoriesMock)).toEqual(
-      categoriesMock,
-    )
+  it('accepts the published catalog datasets', () => {
     expect(ProductsDatasetSchema.parse(productsMock)).toEqual(productsMock)
+    expect(CatalogContentSchema.parse(catalogContentMock)).toEqual(
+      catalogContentMock,
+    )
   })
 
-  it('rejects category and product slugs that are not URL-safe', () => {
+  it('rejects product slugs that are not URL-safe', () => {
+    const product = ProductsDatasetSchema.parse(productsMock).products[0]
+
     expect(
-      CategorySchema.safeParse({
-        id: 'category-id',
-        slug: 'Categoría A',
-        name: 'A',
-      }).success,
+      ProductSchema.safeParse({ ...product, slug: 'Chuleta Entera' }).success,
     ).toBe(false)
-    expect(
-      ProductSchema.safeParse({
-        id: 'product-id',
-        slug: 'Product A',
-        name: 'A',
-        categorySlug: 'category-a',
-        description: 'Description',
-      }).success,
-    ).toBe(false)
+  })
+
+  it('rejects a product line outside cerdo and res', () => {
+    const product = ProductsDatasetSchema.parse(productsMock).products[0]
+
+    expect(ProductSchema.safeParse({ ...product, line: 'pollo' }).success).toBe(
+      false,
+    )
   })
 })

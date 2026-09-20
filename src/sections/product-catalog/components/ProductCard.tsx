@@ -1,69 +1,115 @@
-import { MessageCircle } from 'lucide-react'
-import { Link } from 'react-router'
+import { useState } from 'react'
 
-import type {
-  Category,
-  Product,
-} from '~/sections/product-catalog/types/product-catalog.types'
+import type { Product } from '~/sections/product-catalog/types/product-catalog.types'
 
-type ProductCardProps = {
+interface ProductCardProps {
   product: Product
-  category?: Category
+  onOpen: (product: Product) => void
 }
 
-export function ProductCard({ product, category }: ProductCardProps) {
-  const primaryMedia = product.media[0]
+export function ProductCard({ product, onOpen }: ProductCardProps) {
+  const [hover, setHover] = useState(false)
 
   return (
-    <article className="group flex h-full flex-col">
-      <Link
-        to={`/productos/${product.slug}`}
-        data-cursor="Ver detalle"
-        className="frame-square block aspect-[4/5] w-full no-underline"
+    <article>
+      <button
+        type="button"
+        onClick={() => onOpen(product)}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onFocus={() => setHover(true)}
+        onBlur={() => setHover(false)}
+        aria-label={`Ver ficha de ${product.name}`}
+        style={{
+          display: 'block',
+          width: '100%',
+          padding: 0,
+          border: 0,
+          background: 'transparent',
+          textAlign: 'left',
+          cursor: 'pointer',
+        }}
       >
-        {primaryMedia ? (
-          <img
-            src={primaryMedia.src}
-            alt={primaryMedia.alt}
-            width={primaryMedia.width}
-            height={primaryMedia.height}
-            loading="lazy"
-            className="transition-transform duration-500 group-hover:scale-[1.04]"
-          />
-        ) : (
-          <div
-            role="img"
-            aria-label={`Imagen no disponible para ${product.name}`}
-            className="size-full bg-gradient-to-br from-deep-raised to-navy"
-          />
-        )}
         <span
-          aria-hidden="true"
-          className="absolute inset-0 bg-gradient-to-t from-deep via-deep/25 to-transparent"
-        />
-        <span className="absolute left-5 top-5 text-xs font-semibold uppercase tracking-[0.14em] text-ice">
-          {category?.name ?? product.categorySlug}
+          style={{
+            position: 'relative',
+            display: 'block',
+            aspectRatio: '4 / 5',
+            overflow: 'hidden',
+            background: 'var(--black)',
+          }}
+        >
+          <img
+            src={product.image.src}
+            alt={product.image.alt}
+            loading="lazy"
+            draggable={false}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              transform: hover ? 'scale(1.05)' : 'scale(1)',
+              transition: 'transform .8s var(--ease-out-expo)',
+            }}
+          />
+          <span
+            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background:
+                'linear-gradient(180deg, rgba(4,10,24,0) 34%, rgba(4,10,24,.58) 66%, rgba(4,10,24,.9) 100%)',
+            }}
+          />
+          <span
+            style={{
+              position: 'absolute',
+              left: 0,
+              right: 0,
+              bottom: 0,
+              display: 'block',
+              padding: 'clamp(1rem, 2vw, 1.35rem)',
+            }}
+          >
+            <span
+              style={{
+                display: 'block',
+                font: '600 10px/1 var(--font-body)',
+                letterSpacing: '.18em',
+                textTransform: 'uppercase',
+                color: 'var(--accent)',
+              }}
+            >
+              {product.lineLabel}
+            </span>
+            <span
+              style={{
+                display: 'block',
+                marginTop: 10,
+                fontFamily: 'var(--font-display)',
+                fontWeight: 700,
+                fontSize: '1.25rem',
+                lineHeight: 1.15,
+                letterSpacing: '-.025em',
+                color: 'var(--white)',
+              }}
+            >
+              {product.name}
+            </span>
+            <span
+              style={{
+                display: 'block',
+                marginTop: 6,
+                fontSize: '.8125rem',
+                lineHeight: 1.55,
+                color: 'rgba(255,255,255,.84)',
+              }}
+            >
+              {product.shortDescription}
+            </span>
+          </span>
         </span>
-        <h3 className="absolute inset-x-5 bottom-4 font-display text-2xl font-bold leading-tight tracking-[-0.02em] text-white">
-          {product.name}
-        </h3>
-      </Link>
-
-      <p className="mt-4 line-clamp-3 text-muted">{product.description}</p>
-
-      {product.presentations[0] ? (
-        <p className="mt-3 text-sm text-ink">
-          Presentación: {product.presentations[0]}
-        </p>
-      ) : null}
-
-      <Link
-        to={`/contacto?producto=${encodeURIComponent(product.name)}`}
-        className="mt-auto inline-flex w-fit items-center gap-2 pt-5 text-sm font-semibold text-navy underline-offset-4 hover:underline"
-      >
-        Consultar este producto
-        <MessageCircle aria-hidden="true" size={16} className="text-orange" />
-      </Link>
+      </button>
     </article>
   )
 }

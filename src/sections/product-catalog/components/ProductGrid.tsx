@@ -1,28 +1,57 @@
-import type {
-  Category,
-  Product,
-} from '~/sections/product-catalog/types/product-catalog.types'
+import type { CSSProperties } from 'react'
 
-import { ProductCard } from './ProductCard'
+import { ProductCard } from '~/sections/product-catalog/components/ProductCard'
+import type { Product } from '~/sections/product-catalog/types/product-catalog.types'
 
-type ProductGridProps = {
+interface ProductGridProps {
   products: Product[]
-  categories: Category[]
+  isLoading?: boolean
+  onOpen: (product: Product) => void
 }
 
-export function ProductGrid({ products, categories }: ProductGridProps) {
-  const categoryBySlug = new Map(
-    categories.map((category) => [category.slug, category]),
-  )
+const gridStyle: CSSProperties = {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fill, minmax(min(17rem, 100%), 1fr))',
+  gap: 'clamp(1rem, 2vw, 1.75rem)',
+  marginTop: 'clamp(2rem, 4vw, 3rem)',
+}
+
+export function ProductGrid({
+  products,
+  isLoading = false,
+  onOpen,
+}: ProductGridProps) {
+  if (isLoading) {
+    return (
+      <div style={gridStyle} aria-busy="true">
+        {Array.from({ length: 8 }).map((_, index) => (
+          <div
+            key={index}
+            style={{ aspectRatio: '4 / 5', background: 'rgba(11,31,83,.06)' }}
+          />
+        ))}
+      </div>
+    )
+  }
+
+  if (products.length === 0) {
+    return (
+      <p
+        style={{
+          margin: 'clamp(2.5rem,5vw,4rem) 0',
+          textAlign: 'center',
+          color: 'var(--muted)',
+        }}
+      >
+        No hay cortes en esta línea por ahora.
+      </p>
+    )
+  }
 
   return (
-    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3" data-stagger>
+    <div style={gridStyle}>
       {products.map((product) => (
-        <ProductCard
-          key={product.id}
-          product={product}
-          category={categoryBySlug.get(product.categorySlug)}
-        />
+        <ProductCard key={product.id} product={product} onOpen={onOpen} />
       ))}
     </div>
   )

@@ -1,56 +1,45 @@
-import { useRef } from 'react'
-
 import {
-  CatalogHero,
-  CatalogToolbar,
-  EmptyCatalog,
+  CustomCutCta,
+  ProductFilterBar,
   ProductGrid,
+  ProductSheetModal,
+  ProductsHero,
 } from '~/sections/product-catalog/components'
-import { useCatalogFilters } from '~/sections/product-catalog/hooks/use-catalog-filters'
 import { useProductCatalogData } from '~/sections/product-catalog/hooks/use-product-catalog-data'
-import { Container } from '~/shared/components'
-import { useSectionMotion } from '~/shared/motion'
+import { useProductFilter } from '~/sections/product-catalog/hooks/use-product-filter'
+import { useProductSheet } from '~/sections/product-catalog/hooks/use-product-sheet'
 
 export function ProductCatalogPage() {
-  const { categories, products } = useProductCatalogData()
-  const filters = useCatalogFilters(products)
-  const pageRef = useRef<HTMLElement>(null)
-  useSectionMotion(pageRef)
+  const { content, products, counts } = useProductCatalogData()
+  const { line, setLine } = useProductFilter()
+  const { selected, open, close } = useProductSheet()
 
   return (
-    <main id="main-content" ref={pageRef}>
-      <CatalogHero categories={categories} />
-      <section
-        className="section-space bg-white"
-        aria-label="Productos del catálogo"
-      >
-        <Container>
-          <CatalogToolbar
-            categories={categories}
-            search={filters.search}
-            selectedCategory={filters.category}
-            resultCount={filters.filteredProducts.length}
-            hasActiveFilters={filters.hasActiveFilters}
-            onSearchChange={filters.setSearch}
-            onCategoryChange={filters.setCategory}
-            onClear={filters.clearFilters}
-          />
+    <main
+      id="main-content"
+      style={{
+        background: 'var(--white)',
+        padding: 'clamp(3rem,7vw,6.5rem) 0 clamp(3.5rem,8vw,8rem)',
+      }}
+    >
+      <div style={{ width: 'var(--shell)', marginInline: 'auto' }}>
+        <ProductsHero
+          eyebrow={content.hero.eyebrow}
+          title={content.hero.title}
+          intro={content.hero.intro}
+        />
 
-          <div className="mt-10">
-            {filters.filteredProducts.length > 0 ? (
-              <ProductGrid
-                products={filters.filteredProducts}
-                categories={categories}
-              />
-            ) : (
-              <EmptyCatalog
-                hasActiveFilters={filters.hasActiveFilters}
-                onClear={filters.clearFilters}
-              />
-            )}
-          </div>
-        </Container>
-      </section>
+        <ProductFilterBar value={line} counts={counts} onChange={setLine} />
+
+        <ProductGrid products={products} onOpen={open} />
+
+        <CustomCutCta
+          body={content.customCut.body}
+          ctaLabel={content.customCut.ctaLabel}
+        />
+      </div>
+
+      <ProductSheetModal product={selected} onClose={close} />
     </main>
   )
 }

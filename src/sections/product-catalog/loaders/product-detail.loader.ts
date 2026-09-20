@@ -7,21 +7,13 @@ export async function productDetailLoader(
   service: ProductCatalogService,
 ) {
   const slug = args.params.slug
-  const [categories, products, product] = await Promise.all([
-    service.getCategories(),
-    service.getProducts(),
-    slug ? service.getProductBySlug(slug) : Promise.resolve(null),
-  ])
+  const product = slug ? await service.getProductBySlug(slug) : null
 
   const relatedProducts = product
-    ? products
-        .filter(
-          (candidate) =>
-            candidate.categorySlug === product.categorySlug &&
-            candidate.id !== product.id,
-        )
+    ? (await service.getProducts(product.line))
+        .filter((candidate) => candidate.id !== product.id)
         .slice(0, 3)
     : []
 
-  return { categories, product, relatedProducts }
+  return { product, relatedProducts }
 }
