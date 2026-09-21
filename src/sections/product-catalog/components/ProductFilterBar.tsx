@@ -51,7 +51,7 @@ export function ProductFilterBar({
               border: 0,
               borderBottom: `2px solid ${active ? 'var(--navy)' : 'transparent'}`,
               color: active ? 'var(--navy)' : 'var(--muted)',
-              font: '600 11px/1 var(--font-body)',
+              font: '600 12px/1 var(--font-body)',
               letterSpacing: '.16em',
               textTransform: 'uppercase',
               cursor: 'pointer',

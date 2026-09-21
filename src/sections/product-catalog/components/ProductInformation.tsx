@@ -32,7 +32,7 @@ export function ProductInformation({ product }: { product: Product }) {
       <p
         style={{
           margin: 0,
-          font: '600 11px/1.2 var(--font-body)',
+          font: '600 12px/1.2 var(--font-body)',
           letterSpacing: '.2em',
           textTransform: 'uppercase',
           color: 'var(--accent)',

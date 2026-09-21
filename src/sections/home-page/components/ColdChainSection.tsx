@@ -22,7 +22,7 @@ export function ColdChainSection({ content }: { content: ColdChainContent }) {
               alignItems: 'center',
               gap: 14,
               margin: '0 0 18px',
-              font: '600 11px/1.2 var(--font-body)',
+              font: '600 12px/1.2 var(--font-body)',
               letterSpacing: '.2em',
               textTransform: 'uppercase',
               color: 'var(--ice)',
@@ -116,7 +116,7 @@ export function ColdChainSection({ content }: { content: ColdChainContent }) {
                 <p
                   style={{
                     margin: 0,
-                    font: '600 11px/1.2 var(--font-body)',
+                    font: '600 12px/1.2 var(--font-body)',
                     letterSpacing: '.22em',
                     textTransform: 'uppercase',
                     color: 'var(--ice)',

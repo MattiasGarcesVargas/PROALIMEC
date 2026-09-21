@@ -42,7 +42,7 @@ export function BestSellerScene({ items }: { items: BestSeller[] }) {
             right: 0,
             margin: 0,
             textAlign: 'center',
-            font: '600 11px/1.2 var(--font-body)',
+            font: '600 12px/1.2 var(--font-body)',
             letterSpacing: '.32em',
             textTransform: 'uppercase',
             color: 'var(--ice)',

@@ -17,7 +17,7 @@ export function ProductsHero({ eyebrow, title, intro }: ProductsHeroProps) {
           alignItems: 'center',
           gap: 14,
           margin: '0 0 clamp(1.25rem,2.5vw,2rem)',
-          font: '600 11px/1.2 var(--font-body)',
+          font: '600 12px/1.2 var(--font-body)',
           letterSpacing: '.2em',
           textTransform: 'uppercase',
           color: 'var(--accent)',

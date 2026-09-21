@@ -74,7 +74,7 @@ export function ProductCard({ product, onOpen }: ProductCardProps) {
             <span
               style={{
                 display: 'block',
-                font: '600 10px/1 var(--font-body)',
+                font: '600 11px/1 var(--font-body)',
                 letterSpacing: '.18em',
                 textTransform: 'uppercase',
                 color: 'var(--accent)',

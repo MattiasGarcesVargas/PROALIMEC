@@ -77,7 +77,7 @@ export function ProductDetailPage() {
           aria-label="Migas de pan"
           style={{
             marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)',
-            font: '600 11px/1 var(--font-body)',
+            font: '600 12px/1 var(--font-body)',
             letterSpacing: '.16em',
             textTransform: 'uppercase',
             color: 'var(--muted)',

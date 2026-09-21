@@ -42,7 +42,7 @@ export function CategoriesSection({
                 alignItems: 'center',
                 gap: 14,
                 margin: '0 0 18px',
-                font: '600 11px/1.2 var(--font-body)',
+                font: '600 12px/1.2 var(--font-body)',
                 letterSpacing: '.2em',
                 textTransform: 'uppercase',
                 color: 'var(--accent)',
@@ -148,7 +148,7 @@ export function CategoriesSection({
                   <span
                     style={{
                       flex: 'none',
-                      font: '500 .6875rem/1 var(--font-body)',
+                      font: '500 .75rem/1 var(--font-body)',
                       letterSpacing: '.16em',
                       color: active ? 'rgba(255,255,255,.7)' : 'var(--muted)',
                       transition: 'color .5s ease',

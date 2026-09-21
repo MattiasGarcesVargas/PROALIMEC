@@ -141,7 +141,7 @@ export function OurProductsScene({ content }: { content: OurProductsContent }) {
               <p
                 style={{
                   margin: '4px 0 0',
-                  font: '500 .625rem/1.4 var(--font-body)',
+                  font: '500 .6875rem/1.4 var(--font-body)',
                   letterSpacing: '.1em',
                   textTransform: 'uppercase',
                   color: 'var(--muted)',
