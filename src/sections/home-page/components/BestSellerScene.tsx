@@ -5,8 +5,8 @@ import { useScrollScene } from '~/shared/motion'
 
 /**
  * Escena sticky de 1.9 × --scene: dos best sellers que caen desde el gancho.
- * El corte 01 aparece sobre la losa de piedra; el 02 entra con el gancho al ras
- * del borde superior, sin dejar hueco negro.
+ * El rótulo "Best seller" termina de entrar antes de que baje el corte 01; el
+ * 02 entra con el gancho al ras del borde superior, sin dejar hueco negro.
  */
 export function BestSellerScene({ items }: { items: BestSeller[] }) {
   const { ref, progress } = useScrollScene<HTMLElement>()
@@ -65,8 +65,8 @@ export function BestSellerScene({ items }: { items: BestSeller[] }) {
             fontWeight: 800,
             fontSize: 'clamp(1.5rem, 6.6vw, 5.5rem)',
             lineHeight: 1,
-            letterSpacing: '.24em',
-            textIndent: '.24em',
+            letterSpacing: '.12em',
+            textIndent: '.12em',
             textTransform: 'uppercase',
             color: 'var(--white)',
             whiteSpace: 'nowrap',
@@ -76,24 +76,8 @@ export function BestSellerScene({ items }: { items: BestSeller[] }) {
           Best seller
         </h2>
 
-        {/* Slot A — pierna de cerdo sobre losa de piedra */}
+        {/* Slot A — pierna de cerdo suspendida */}
         <div style={{ position: 'absolute', inset: 0, ...motion.slotA }}>
-          {first.base ? (
-            <img
-              src={first.base.src}
-              alt=""
-              aria-hidden="true"
-              style={{
-                position: 'absolute',
-                bottom: '7vh',
-                left: 'clamp(1vw, 4vw, 7vw)',
-                width: 'min(48vw, 64vh)',
-                height: 'auto',
-                objectFit: 'contain',
-                ...motion.baseA,
-              }}
-            />
-          ) : null}
           <img
             src={first.product.src}
             alt={first.product.alt}

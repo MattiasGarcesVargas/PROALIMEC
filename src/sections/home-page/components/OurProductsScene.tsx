@@ -3,16 +3,16 @@ import { easeOutCubic, range, useScrollScene } from '~/shared/motion'
 
 /**
  * Escena sticky: primero entra el texto (4–30 %), luego la línea vertical
- * (10–38 %) y la percha se balancea entrando desde la derecha a partir del 40 %.
+ * (10–38 %) y la percha se desliza de derecha a izquierda a partir del 36 %,
+ * sin balanceo: un único desplazamiento lateral con easing.
  */
 export function OurProductsScene({ content }: { content: OurProductsContent }) {
   const { ref, progress } = useScrollScene<HTMLElement>()
 
   const text = easeOutCubic(range(progress, 0.04, 0.3))
   const rule = easeOutCubic(range(progress, 0.1, 0.38))
-  const swing = range(progress, 0.4, 0.95)
+  const slide = easeOutCubic(range(progress, 0.36, 0.86))
   const caption = easeOutCubic(range(progress, 0.82, 0.98))
-  const tilt = Math.sin(swing * Math.PI * 1.5) * (1 - swing) * 7
 
   return (
     <section
@@ -112,9 +112,9 @@ export function OurProductsScene({ content }: { content: OurProductsContent }) {
                 width: '100%',
                 height: '100%',
                 objectFit: 'contain',
-                transformOrigin: '50% 0',
-                opacity: swing > 0 ? 1 : 0,
-                transform: `translateX(${120 * (1 - easeOutCubic(swing))}px) rotate(${tilt}deg)`,
+                opacity: easeOutCubic(range(progress, 0.36, 0.5)),
+                transform: `translateX(${160 * (1 - slide)}px)`,
+                willChange: 'transform',
               }}
             />
             <div

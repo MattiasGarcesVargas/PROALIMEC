@@ -10,8 +10,8 @@ describe('localHomePageService', () => {
     expect(HomePageSchema.safeParse(content).success).toBe(true)
     expect(content.hero.titleLines).toEqual([
       'Frescura',
-      'protegida.',
-      'Calidad garantizada.',
+      'protegida',
+      'Calidad garantizada',
     ])
   })
 
@@ -19,8 +19,8 @@ describe('localHomePageService', () => {
     const content = await localHomePageService.getContent()
 
     expect(content.bestSellers).toHaveLength(2)
-    expect(content.bestSellers[0]?.base?.src).toBe(
-      '/assets/images/base-piedra-v2.png',
+    expect(content.bestSellers[0]?.product.src).toBe(
+      '/assets/images/pierna-cerdo.png',
     )
   })
 })

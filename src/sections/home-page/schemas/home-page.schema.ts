@@ -33,7 +33,6 @@ export const BestSellerSchema = z.object({
   specs: z.array(SpecRowSchema),
   ctaLabel: z.string().trim().min(1),
   product: MediaAssetSchema,
-  base: MediaAssetSchema.optional(),
 })
 
 export const HomeCategorySchema = z.object({

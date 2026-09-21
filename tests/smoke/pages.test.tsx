@@ -43,7 +43,7 @@ describe('main pages', () => {
     expect(
       await screen.findByRole('heading', {
         level: 1,
-        name: 'Frescura protegida. Calidad garantizada.',
+        name: 'Frescura protegida Calidad garantizada',
       }),
     ).toBeVisible()
   })

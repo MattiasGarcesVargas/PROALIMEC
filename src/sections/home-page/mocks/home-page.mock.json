@@ -1,7 +1,7 @@
 {
   "hero": {
     "eyebrow": "Alimentos cárnicos congelados",
-    "titleLines": ["Frescura", "protegida.", "Calidad garantizada."],
+    "titleLines": ["Frescura", "protegida", "Calidad garantizada"],
     "accentLineIndex": 2,
     "intro": "Distribuimos cortes cárnicos nacionales e importados para restaurantes, mercados y distribuidores. Contamos con más de 15 años de experiencia en el mercado.",
     "image": {
@@ -48,12 +48,6 @@
         "alt": "Pierna de cerdo colgada de una cuerda",
         "width": 1024,
         "height": 1536
-      },
-      "base": {
-        "src": "/assets/images/base-piedra-v2.png",
-        "alt": "",
-        "width": 1536,
-        "height": 1024
       }
     },
     {

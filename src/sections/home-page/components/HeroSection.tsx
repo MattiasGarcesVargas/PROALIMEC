@@ -55,8 +55,9 @@ export function HeroSection({ content }: { content: HomeHeroContent }) {
               fontFamily: 'var(--font-display)',
               fontWeight: 800,
               fontSize: 'clamp(2.6rem, 7.6vw, 6.5rem)',
-              lineHeight: 1.06,
+              lineHeight: 0.98,
               letterSpacing: '-.055em',
+              wordSpacing: '-.1em',
               color: 'var(--navy)',
             }}
           >

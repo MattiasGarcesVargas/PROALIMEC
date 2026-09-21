@@ -7,7 +7,6 @@ export interface HangingSceneStyles {
   word: CSSProperties
   slotA: CSSProperties
   slotB: CSSProperties
-  baseA: CSSProperties
   hookA: CSSProperties
   copyA: CSSProperties
   hookB: CSSProperties
@@ -17,20 +16,24 @@ export interface HangingSceneStyles {
 const lerp = (from: number, to: number, t: number) => from + (to - from) * t
 
 /**
- * Traduce el progreso 0..1 de la escena "Best seller" en estilos: el rótulo
- * entra, la palabra sube y sale, y cada corte cae desde el gancho por turnos.
+ * Traduce el progreso 0..1 de la escena "Best seller" en estilos. El orden es
+ * estrictamente secuencial: primero entra el rótulo, luego la palabra termina
+ * de montarse (0.20) y solo entonces empieza a caer el corte 01 (0.24). La
+ * palabra se atenúa mientras baja ese primer corte y ya se queda atenuada de
+ * fondo durante el segundo. El corte 02 releva al 01 una vez leída su ficha.
  */
 export function useHangingSceneMotion(progress: number): HangingSceneStyles {
-  const label = easeOutCubic(range(progress, 0, 0.08))
-  const wordIn = easeOutCubic(range(progress, 0.01, 0.26))
-  const word = progress < 0.74 ? wordIn : 1 - 0.88 * range(progress, 0.74, 1)
+  const label = easeOutCubic(range(progress, 0, 0.06))
+  const wordIn = easeOutCubic(range(progress, 0.02, 0.2))
+  const wordDim = easeOutCubic(range(progress, 0.26, 0.46))
+  const word = wordIn - 0.88 * wordDim
 
-  const aIn = easeOutCubic(range(progress, 0.03, 0.42))
-  const aOut = range(progress, 0.44, 0.52)
-  const bIn = easeOutCubic(range(progress, 0.55, 0.92))
+  const aIn = easeOutCubic(range(progress, 0.24, 0.5))
+  const aOut = range(progress, 0.62, 0.7)
+  const bIn = easeOutCubic(range(progress, 0.7, 0.92))
 
-  const copyAIn = easeOutCubic(range(progress, 0.22, 0.4))
-  const copyBIn = easeOutCubic(range(progress, 0.74, 0.92))
+  const copyAIn = easeOutCubic(range(progress, 0.4, 0.56))
+  const copyBIn = easeOutCubic(range(progress, 0.82, 0.96))
 
   const drop = (t: number) => `translateY(${lerp(-64, 0, t)}%)`
 
@@ -38,8 +41,7 @@ export function useHangingSceneMotion(progress: number): HangingSceneStyles {
     label: { opacity: label },
     word: { opacity: word, transform: `translateY(${36 * (1 - wordIn)}px)` },
     slotA: { opacity: 1 - aOut, pointerEvents: aOut > 0.5 ? 'none' : 'auto' },
-    slotB: { opacity: easeOutCubic(range(progress, 0.5, 0.6)) },
-    baseA: { opacity: easeOutCubic(range(progress, 0.08, 0.36)) },
+    slotB: { opacity: easeOutCubic(range(progress, 0.68, 0.78)) },
     hookA: { opacity: Math.min(1, aIn * 5), transform: drop(aIn) },
     copyA: {
       opacity: copyAIn,
