@@ -35,3 +35,8 @@ build
 .grok/
 .hermes/
 .veto/
+
+# Impeccable: archivos temporales (capturas de revisión, estado de preguntas, caché)
+.impeccable/review/
+.impeccable/questions/
+.impeccable/hook.cache.json
