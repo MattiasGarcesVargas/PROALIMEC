@@ -1,6 +1,6 @@
 import type { LoaderFunctionArgs } from 'react-router'
 
-import type { ProductCatalogService } from '~/sections/product-catalog/services/product-catalog.service'
+import type { ProductCatalogService } from '@/sections/product-catalog/services/product-catalog.service'
 
 export async function productDetailLoader(
   args: Pick<LoaderFunctionArgs, 'params'>,

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { parseLineFilter } from '~/sections/product-catalog/hooks/use-product-filter'
+import { parseLineFilter } from '@/sections/product-catalog/hooks/use-product-filter'
 
 describe('parseLineFilter', () => {
   it('keeps the supported lines coming from the URL', () => {

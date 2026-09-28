@@ -1,104 +1,43 @@
 import { Link } from 'react-router'
 
-import {
-  ProductInformation,
-  RelatedProducts,
-} from '~/sections/product-catalog/components'
-import { useProductDetailData } from '~/sections/product-catalog/hooks/use-product-detail-data'
+import ButtonLink from '@/shared/components/ui/ButtonLink'
 
-export function ProductDetailPage() {
+import ProductGallery from './components/ProductGallery'
+import ProductInformation from './components/ProductInformation'
+import RelatedProducts from './components/RelatedProducts'
+import { useProductDetailData } from './hooks/use-product-detail-data'
+
+function ProductDetailPage() {
   const { product, relatedProducts } = useProductDetailData()
 
   if (!product) {
     return (
-      <main
-        id="main-content"
-        style={{
-          background: 'var(--white)',
-          padding: 'clamp(3rem,7vw,7rem) 0',
-        }}
-      >
-        <div style={{ width: 'var(--shell)', marginInline: 'auto' }}>
-          <h1
-            style={{
-              margin: 0,
-              fontFamily: 'var(--font-display)',
-              fontWeight: 800,
-              fontSize: 'clamp(2rem, 4vw, 3.25rem)',
-              letterSpacing: '-.045em',
-              color: 'var(--navy)',
-            }}
-          >
+      <main id="main-content" className="bg-white py-[clamp(3rem,7vw,7rem)]">
+        <div className="shell">
+          <h1 className="font-display text-[clamp(2rem,4vw,3.25rem)] font-extrabold tracking-[-0.045em] text-navy">
             Producto no disponible
           </h1>
-          <p
-            style={{
-              margin: '18px 0 0',
-              maxWidth: '32rem',
-              color: 'var(--muted)',
-              lineHeight: 1.75,
-            }}
-          >
+          <p className="mt-4.5 max-w-128 leading-[1.75] text-muted">
             No encontramos información publicada para este corte.
           </p>
-          <Link
-            to="/productos"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              minHeight: 52,
-              marginTop: 28,
-              padding: '0 26px',
-              background: 'var(--navy)',
-              color: 'var(--white)',
-              font: '600 12px/1 var(--font-body)',
-              letterSpacing: '.12em',
-              textTransform: 'uppercase',
-              textDecoration: 'none',
-            }}
-          >
+          <ButtonLink to="/productos" className="mt-7">
             Volver al catálogo
-          </Link>
+          </ButtonLink>
         </div>
       </main>
     )
   }
 
   return (
-    <main id="main-content" style={{ background: 'var(--white)' }}>
-      <div
-        style={{
-          width: 'var(--shell)',
-          marginInline: 'auto',
-          paddingBlock: 'clamp(1.5rem, 3vw, 2.5rem) clamp(3rem, 6vw, 6rem)',
-        }}
-      >
+    <main id="main-content" className="bg-white">
+      <div className="shell pt-[clamp(1.5rem,3vw,2.5rem)] pb-[clamp(3rem,6vw,6rem)]">
         <nav
           aria-label="Migas de pan"
-          style={{
-            marginBottom: 'clamp(1.5rem, 3vw, 2.5rem)',
-            font: '600 12px/1 var(--font-body)',
-            letterSpacing: '.16em',
-            textTransform: 'uppercase',
-            color: 'var(--muted)',
-          }}
+          className="mb-[clamp(1.5rem,3vw,2.5rem)] text-xs/none font-semibold tracking-[0.16em] text-muted uppercase"
         >
-          <ol
-            style={{
-              listStyle: 'none',
-              display: 'flex',
-              flexWrap: 'wrap',
-              alignItems: 'center',
-              gap: 10,
-              margin: 0,
-              padding: 0,
-            }}
-          >
+          <ol className="flex flex-wrap items-center gap-2.5">
             <li>
-              <Link
-                to="/productos"
-                style={{ color: 'var(--navy)', textDecoration: 'none' }}
-              >
+              <Link to="/productos" className="text-navy">
                 Productos
               </Link>
             </li>
@@ -107,34 +46,9 @@ export function ProductDetailPage() {
           </ol>
         </nav>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns:
-              'repeat(auto-fit, minmax(min(20rem, 100%), 1fr))',
-            alignItems: 'start',
-            gap: 'clamp(2rem, 5vw, 4.5rem)',
-          }}
-        >
-          <div
-            style={{
-              position: 'relative',
-              aspectRatio: '4 / 5',
-              overflow: 'hidden',
-              background: 'var(--black)',
-            }}
-          >
-            <img
-              src={product.image.src}
-              alt={product.image.alt}
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-              }}
-            />
-          </div>
-
+        <div className="grid grid-fit-80 items-start gap-[clamp(2rem,5vw,4.5rem)]">
+          {/* key: al pasar a otro corte (relacionados) la galería vuelve a su primera foto */}
+          <ProductGallery key={product.id} product={product} />
           <ProductInformation product={product} />
         </div>
       </div>
@@ -143,3 +57,5 @@ export function ProductDetailPage() {
     </main>
   )
 }
+
+export default ProductDetailPage

@@ -3,7 +3,7 @@ import type {
   LineCounts,
   MeatLineFilter,
   Product,
-} from '~/sections/product-catalog/types/product-catalog.types'
+} from '@/sections/product-catalog/types/product-catalog.types'
 
 export interface ProductCatalogService {
   getContent(): Promise<CatalogContent>

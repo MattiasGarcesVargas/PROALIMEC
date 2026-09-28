@@ -16,7 +16,29 @@
       "image": {
         "src": "/assets/images/cortes-colgados-cerdo.png",
         "alt": "Chuleta entera — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-colgados-cerdo.png",
+          "alt": "Cortes de cerdo colgados en ganchos"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/costillar-cerdo.png",
+          "alt": "Costillar de cerdo colgado de un gancho"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-002",
@@ -33,7 +55,29 @@
       "image": {
         "src": "/assets/images/cortes-tabla.jpg",
         "alt": "Chuleta rebanada — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-003",
@@ -50,7 +94,29 @@
       "image": {
         "src": "/assets/images/pierna-cerdo.png",
         "alt": "Pierna entera — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/pierna-cerdo.png",
+          "alt": "Pierna de cerdo colgada de un gancho"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cortes-colgados-cerdo.png",
+          "alt": "Cortes de cerdo colgados en ganchos"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-004",
@@ -67,7 +133,29 @@
       "image": {
         "src": "/assets/images/cortes-colgados-cerdo.png",
         "alt": "Brazo entero — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-colgados-cerdo.png",
+          "alt": "Cortes de cerdo colgados en ganchos"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/pierna-cerdo.png",
+          "alt": "Pierna de cerdo colgada de un gancho"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-005",
@@ -84,7 +172,29 @@
       "image": {
         "src": "/assets/images/cubos.jpg",
         "alt": "Bondiola — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-006",
@@ -101,7 +211,29 @@
       "image": {
         "src": "/assets/images/cortes-tabla.jpg",
         "alt": "Pulpa de pierna — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-007",
@@ -118,7 +250,29 @@
       "image": {
         "src": "/assets/images/cubos.jpg",
         "alt": "Pulpa de brazo — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-008",
@@ -135,7 +289,29 @@
       "image": {
         "src": "/assets/images/costillar-cerdo.png",
         "alt": "Costillar de cerdo — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/costillar-cerdo.png",
+          "alt": "Costillar de cerdo colgado de un gancho"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/cortes-colgados-cerdo.png",
+          "alt": "Cortes de cerdo colgados en ganchos"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-009",
@@ -152,7 +328,29 @@
       "image": {
         "src": "/assets/images/cortes-tabla.jpg",
         "alt": "Lomo fino de res — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-010",
@@ -169,7 +367,29 @@
       "image": {
         "src": "/assets/images/costillar.jpg",
         "alt": "Costillar de res — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/costillar.jpg",
+          "alt": "Costillar sostenido con guante"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/corte-hueso.jpg",
+          "alt": "Corte con hueso sobre tabla"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-011",
@@ -186,7 +406,29 @@
       "image": {
         "src": "/assets/images/corte-hueso.jpg",
         "alt": "Corte de res con hueso — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/corte-hueso.jpg",
+          "alt": "Corte con hueso sobre tabla"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     },
     {
       "id": "prd-012",
@@ -203,7 +445,29 @@
       "image": {
         "src": "/assets/images/cubos.jpg",
         "alt": "Res en cubos — corte congelado PROALIMEC"
-      }
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
     }
   ]
 }

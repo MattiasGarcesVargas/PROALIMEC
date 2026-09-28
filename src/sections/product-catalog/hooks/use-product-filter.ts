@@ -1,7 +1,7 @@
 import { startTransition } from 'react'
 import { useSearchParams } from 'react-router'
 
-import type { MeatLineFilter } from '~/sections/product-catalog/types/product-catalog.types'
+import type { MeatLineFilter } from '@/sections/product-catalog/types/product-catalog.types'
 
 const VALID_LINES: MeatLineFilter[] = ['todo', 'cerdo', 'res']
 

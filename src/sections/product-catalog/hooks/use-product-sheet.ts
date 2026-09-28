@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 
-import type { Product } from '~/sections/product-catalog/types/product-catalog.types'
+import type { Product } from '@/sections/product-catalog/types/product-catalog.types'
 
 /** Estado de la ficha en modal: abre, cierra y responde a Escape. */
 export function useProductSheet() {

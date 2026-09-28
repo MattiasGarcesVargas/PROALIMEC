@@ -1,7 +1,8 @@
 import type {
   LineCounts,
   MeatLineFilter,
-} from '~/sections/product-catalog/types/product-catalog.types'
+} from '@/sections/product-catalog/types/product-catalog.types'
+import { cn } from '@/shared/utils/cn'
 
 interface ProductFilterBarProps {
   value: MeatLineFilter
@@ -9,62 +10,39 @@ interface ProductFilterBarProps {
   onChange: (line: MeatLineFilter) => void
 }
 
-const OPTIONS: Array<{ value: MeatLineFilter; label: string }> = [
+const OPTIONS: { value: MeatLineFilter; label: string }[] = [
   { value: 'todo', label: 'Todos' },
   { value: 'cerdo', label: 'Cerdo' },
   { value: 'res', label: 'Res' },
 ]
 
-export function ProductFilterBar({
-  value,
-  counts,
-  onChange,
-}: ProductFilterBarProps) {
+function ProductFilterBar({ value, counts, onChange }: ProductFilterBarProps) {
   return (
     <div
       role="group"
       aria-label="Filtrar cortes por línea"
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        alignItems: 'center',
-        justifyContent: 'center',
-        gap: 'clamp(18px, 3vw, 36px)',
-        marginTop: 'clamp(2.5rem, 5vw, 4rem)',
-        paddingBlock: 'clamp(1rem, 2vw, 1.5rem)',
-        borderBlock: '1px solid rgba(11,31,83,.12)',
-      }}
+      className="mt-[clamp(2.5rem,5vw,4rem)] flex flex-wrap items-center justify-center gap-[clamp(18px,3vw,36px)] border-y border-navy/12 py-[clamp(1rem,2vw,1.5rem)]"
     >
       {OPTIONS.map((option) => {
-        const active = option.value === value
+        const isActive = option.value === value
 
         return (
           <button
             key={option.value}
             type="button"
-            aria-pressed={active}
+            aria-pressed={isActive}
             onClick={() => onChange(option.value)}
-            style={{
-              minHeight: 44,
-              padding: '0 6px',
-              background: 'transparent',
-              border: 0,
-              borderBottom: `2px solid ${active ? 'var(--navy)' : 'transparent'}`,
-              color: active ? 'var(--navy)' : 'var(--muted)',
-              font: '600 12px/1 var(--font-body)',
-              letterSpacing: '.16em',
-              textTransform: 'uppercase',
-              cursor: 'pointer',
-              transition: 'color .35s, border-color .35s',
-            }}
+            className={cn(
+              'min-h-11 cursor-pointer border-b-2 px-1.5 text-xs/none font-semibold tracking-[0.16em] uppercase transition-[color,border-color] duration-350',
+              isActive ? 'border-navy text-navy' : 'border-transparent text-muted hover:text-navy',
+            )}
           >
-            {option.label}{' '}
-            <span style={{ color: 'var(--accent)' }}>
-              {counts[option.value]}
-            </span>
+            {option.label} <span className="text-orange">{counts[option.value]}</span>
           </button>
         )
       })}
     </div>
   )
 }
+
+export default ProductFilterBar

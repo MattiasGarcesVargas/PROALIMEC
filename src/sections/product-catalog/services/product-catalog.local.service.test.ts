@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { localProductCatalogService } from '~/sections/product-catalog/services/product-catalog.local.service'
+import { localProductCatalogService } from '@/sections/product-catalog/services/product-catalog.local.service'
 
 describe('localProductCatalogService', () => {
   it('returns every product when no line is requested', async () => {
@@ -32,8 +32,6 @@ describe('localProductCatalogService', () => {
       localProductCatalogService.getProductBySlug('chuleta-entera'),
     ).resolves.toMatchObject({ name: 'Chuleta entera', line: 'cerdo' })
 
-    await expect(
-      localProductCatalogService.getProductBySlug('not-published'),
-    ).resolves.toBeNull()
+    await expect(localProductCatalogService.getProductBySlug('not-published')).resolves.toBeNull()
   })
 })

@@ -1,8 +1,8 @@
-import catalogContentMock from '~/sections/product-catalog/mocks/catalog-content.mock.json'
-import productsMock from '~/sections/product-catalog/mocks/products.mock.json'
-import { CatalogContentSchema } from '~/sections/product-catalog/schemas/catalog-content.schema'
-import { ProductsDatasetSchema } from '~/sections/product-catalog/schemas/product.schema'
-import type { ProductCatalogService } from '~/sections/product-catalog/services/product-catalog.service'
+import catalogContentMock from '@/sections/product-catalog/mocks/catalog-content.mock.json'
+import productsMock from '@/sections/product-catalog/mocks/products.mock.json'
+import { CatalogContentSchema } from '@/sections/product-catalog/schemas/catalog-content.schema'
+import { ProductsDatasetSchema } from '@/sections/product-catalog/schemas/product.schema'
+import type { ProductCatalogService } from '@/sections/product-catalog/services/product-catalog.service'
 
 function readProducts() {
   return ProductsDatasetSchema.parse(productsMock).products
@@ -15,9 +15,7 @@ export const localProductCatalogService: ProductCatalogService = {
 
   async getProducts(line = 'todo') {
     const products = readProducts()
-    return line === 'todo'
-      ? products
-      : products.filter((product) => product.line === line)
+    return line === 'todo' ? products : products.filter((product) => product.line === line)
   },
 
   async getLineCounts() {

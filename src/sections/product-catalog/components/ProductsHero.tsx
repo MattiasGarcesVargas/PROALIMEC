@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import Eyebrow from '@/shared/components/ui/Eyebrow'
 
 interface ProductsHeroProps {
   eyebrow: string
@@ -6,54 +6,18 @@ interface ProductsHeroProps {
   intro: string
 }
 
-const rule: CSSProperties = { width: 38, height: 1, background: 'currentColor' }
-
-export function ProductsHero({ eyebrow, title, intro }: ProductsHeroProps) {
+function ProductsHero({ eyebrow, title, intro }: ProductsHeroProps) {
   return (
-    <div style={{ textAlign: 'center' }}>
-      <p
-        style={{
-          display: 'inline-flex',
-          alignItems: 'center',
-          gap: 14,
-          margin: '0 0 clamp(1.25rem,2.5vw,2rem)',
-          font: '600 12px/1.2 var(--font-body)',
-          letterSpacing: '.2em',
-          textTransform: 'uppercase',
-          color: 'var(--accent)',
-        }}
-      >
-        <span style={rule} />
+    <div className="text-center">
+      <Eyebrow centered className="mb-[clamp(1.25rem,2.5vw,2rem)] inline-flex">
         {eyebrow}
-        <span style={rule} />
-      </p>
-
-      <h1
-        style={{
-          margin: 0,
-          fontFamily: 'var(--font-display)',
-          fontWeight: 800,
-          fontSize: 'clamp(2.4rem, 6.5vw, 5.5rem)',
-          lineHeight: 1.02,
-          letterSpacing: '-.05em',
-          color: 'var(--navy)',
-        }}
-      >
-        {title}
-      </h1>
-
-      <p
-        style={{
-          margin: 'clamp(1.25rem,2.5vw,1.75rem) auto 0',
-          maxWidth: '38rem',
-          fontSize: '1rem',
-          lineHeight: 1.7,
-          color: 'var(--muted)',
-          textWrap: 'pretty',
-        }}
-      >
+      </Eyebrow>
+      <h1 className="font-display text-page font-extrabold text-navy">{title}</h1>
+      <p className="mx-auto mt-[clamp(1.25rem,2.5vw,1.75rem)] max-w-152 leading-[1.7] text-pretty text-muted">
         {intro}
       </p>
     </div>
   )
 }
+
+export default ProductsHero
