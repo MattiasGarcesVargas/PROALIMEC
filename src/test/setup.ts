@@ -12,3 +12,15 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: vi.fn(),
   })),
 })
+
+// jsdom no trae ResizeObserver (los navegadores sí): el carrusel del home lo usa para medir la pista
+class ResizeObserverStub {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+}
+
+Object.defineProperty(window, 'ResizeObserver', {
+  configurable: true,
+  value: ResizeObserverStub,
+})
