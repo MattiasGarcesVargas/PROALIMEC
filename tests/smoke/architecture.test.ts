@@ -17,9 +17,7 @@ describe('vertical slice boundaries', () => {
   it('keeps mock imports out of components', () => {
     const componentFiles = readdirSync(sectionsRoot, {
       withFileTypes: true,
-    }).flatMap((section) =>
-      listSourceFiles(join(sectionsRoot, section.name, 'components')),
-    )
+    }).flatMap((section) => listSourceFiles(join(sectionsRoot, section.name, 'components')))
 
     for (const file of componentFiles) {
       expect(readFileSync(file, 'utf8')).not.toMatch(/\/mocks\//)
@@ -33,14 +31,12 @@ describe('vertical slice boundaries', () => {
 
     for (const section of sections) {
       const files = listSourceFiles(join(sectionsRoot, section))
-      const otherSections = sections.filter(
-        (candidate) => candidate !== section,
-      )
+      const otherSections = sections.filter((candidate) => candidate !== section)
 
       for (const file of files) {
         const source = readFileSync(file, 'utf8')
         for (const otherSection of otherSections) {
-          expect(source).not.toContain(`~/sections/${otherSection}/`)
+          expect(source).not.toContain(`@/sections/${otherSection}/`)
         }
       }
     }
@@ -50,7 +46,7 @@ describe('vertical slice boundaries', () => {
     const sharedFiles = listSourceFiles(join(sourceRoot, 'shared'))
 
     for (const file of sharedFiles) {
-      expect(readFileSync(file, 'utf8')).not.toMatch(/~\/sections\//)
+      expect(readFileSync(file, 'utf8')).not.toMatch(/@\/sections\//)
     }
   })
 })
