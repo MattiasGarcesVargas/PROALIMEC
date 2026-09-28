@@ -1,6 +1,6 @@
 import type { Route } from './+types/contact.route'
-import { ContactPage, contactLoader } from '~/sections/contact'
-import { services } from '~/service-registry'
+import { ContactPage, contactLoader } from '@/sections/contact'
+import { services } from '@/service-registry'
 
 export function loader() {
   return contactLoader(services.contact)

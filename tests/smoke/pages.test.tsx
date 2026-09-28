@@ -2,15 +2,15 @@ import { render, screen } from '@testing-library/react'
 import { createMemoryRouter, RouterProvider } from 'react-router'
 import { describe, expect, it } from 'vitest'
 
-import { ContactPage } from '~/sections/contact'
-import { contactLoader } from '~/sections/contact/loaders/contact.loader'
-import { localContactService } from '~/sections/contact/services/contact.local.service'
-import { HomePage } from '~/sections/home-page'
-import { homePageLoader } from '~/sections/home-page/loaders/home-page.loader'
-import { localHomePageService } from '~/sections/home-page/services/home-page.local.service'
-import { ProductCatalogPage } from '~/sections/product-catalog'
-import { productCatalogLoader } from '~/sections/product-catalog/loaders/product-catalog.loader'
-import { localProductCatalogService } from '~/sections/product-catalog/services/product-catalog.local.service'
+import { ContactPage } from '@/sections/contact'
+import { contactLoader } from '@/sections/contact/loaders/contact.loader'
+import { localContactService } from '@/sections/contact/services/contact.local.service'
+import { HomePage } from '@/sections/home-page'
+import { homePageLoader } from '@/sections/home-page/loaders/home-page.loader'
+import { localHomePageService } from '@/sections/home-page/services/home-page.local.service'
+import { ProductCatalogPage } from '@/sections/product-catalog'
+import { productCatalogLoader } from '@/sections/product-catalog/loaders/product-catalog.loader'
+import { localProductCatalogService } from '@/sections/product-catalog/services/product-catalog.local.service'
 
 function renderRoute(options: {
   path: string
@@ -36,8 +36,7 @@ describe('main pages', () => {
     renderRoute({
       path: '/',
       component: HomePage,
-      loader: () =>
-        homePageLoader(localHomePageService, localProductCatalogService),
+      loader: () => homePageLoader(localHomePageService, localProductCatalogService),
     })
 
     expect(
@@ -80,11 +79,9 @@ describe('main pages', () => {
     expect(
       await screen.findByRole('heading', {
         level: 1,
-        name: 'Hablemos de lo que necesita tu negocio.',
+        name: 'Cotiza tu pedido.',
       }),
     ).toBeVisible()
-    expect(
-      screen.queryByRole('link', { name: /whatsapp/i }),
-    ).not.toBeInTheDocument()
+    expect(screen.queryByRole('link', { name: /whatsapp/i })).not.toBeInTheDocument()
   })
 })

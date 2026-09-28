@@ -1,10 +1,5 @@
 import { z } from 'zod'
 
-const InternalCtaSchema = z.object({
-  label: z.string().min(1),
-  href: z.string().regex(/^\/(?!\/)/, 'El CTA debe usar una ruta interna'),
-})
-
 const MediaSchema = z.object({
   src: z.string().min(1),
   alt: z.string().min(1),
@@ -12,70 +7,40 @@ const MediaSchema = z.object({
   height: z.number().int().positive(),
 })
 
-const SectionContentSchema = z.object({
-  eyebrow: z.string().min(1),
-  title: z.string().min(1),
-  description: z.string().min(1),
-  emptyMessage: z.string().min(1),
+const InternalCtaSchema = z.object({
+  label: z.string().min(1),
+  href: z.string().regex(/^\/(?!\/)/, 'El CTA debe usar una ruta interna'),
 })
 
-const ContactMethodBaseSchema = z.object({
+// Cada línea que el comprador puede sumar al mensaje de WhatsApp
+export const QuoteLineSchema = z.object({
   id: z.string().min(1),
   label: z.string().min(1),
-  value: z.string().min(1),
-  actionLabel: z.string().min(1),
+  hint: z.string().min(1),
+  prompt: z.string().min(1),
 })
 
-export const ContactMethodSchema = z.discriminatedUnion('type', [
-  ContactMethodBaseSchema.extend({
-    type: z.literal('whatsapp'),
-    href: z.string().regex(/^https:\/\/wa\.me\/\d+(?:\?.*)?$/),
-  }),
-  ContactMethodBaseSchema.extend({
-    type: z.literal('phone'),
-    href: z.string().regex(/^tel:\+?\d+$/),
-  }),
-  ContactMethodBaseSchema.extend({
-    type: z.literal('email'),
-    href: z.string().regex(/^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/),
-  }),
-])
-
-export const BusinessHourSchema = z.object({
-  id: z.string().min(1),
-  label: z.string().min(1),
-  value: z.string().min(1),
-})
-
-export const ContactLocationSchema = z.object({
-  name: z.string().min(1),
-  address: z.string().min(1),
-  mapUrl: z
-    .string()
-    .regex(/^https:\/\//)
-    .nullable(),
-  media: MediaSchema.nullable(),
-})
-
+// Solo textos de la página: los datos comerciales viven en src/shared/config/contact.ts
 export const ContactSchema = z.object({
-  status: z.literal('structure-only'),
   hero: z.object({
-    eyebrow: z.string().min(1),
     title: z.string().min(1),
     description: z.string().min(1),
-    cta: InternalCtaSchema,
-    media: MediaSchema.nullable(),
+    // Solo afirmaciones aprobadas en PRODUCT.md
+    facts: z.array(z.object({ key: z.string().min(1), label: z.string().min(1) })).length(3),
+    image: MediaSchema,
   }),
-  methodsSection: SectionContentSchema,
-  methods: z.array(ContactMethodSchema),
-  hoursSection: SectionContentSchema,
-  businessHours: z.array(BusinessHourSchema),
-  locationSection: SectionContentSchema,
-  location: ContactLocationSchema.nullable(),
-  wholesaleAttention: z.object({
-    eyebrow: z.string().min(1),
+  quote: z.object({
+    title: z.string().min(1),
+    description: z.string().min(1),
+    lines: z.array(QuoteLineSchema).min(1),
+  }),
+  channels: z.object({
+    title: z.string().min(1),
+  }),
+  closing: z.object({
     title: z.string().min(1),
     description: z.string().min(1),
     cta: InternalCtaSchema,
+    image: MediaSchema,
   }),
 })

@@ -1,32 +1,17 @@
 import { describe, expect, it } from 'vitest'
 
-import contactMock from '~/sections/contact/mocks/contact.mock.json'
-import { ContactSchema } from '~/sections/contact/schemas/contact.schema'
+import contactMock from '@/sections/contact/mocks/contact.mock.json'
+import { ContactSchema } from '@/sections/contact/schemas/contact.schema'
 
 describe('ContactSchema', () => {
-  it('accepts the structure-only mock without unconfirmed contact data', () => {
-    const content = ContactSchema.parse(contactMock)
-
-    expect(content.status).toBe('structure-only')
-    expect(content.methods).toEqual([])
-    expect(content.businessHours).toEqual([])
-    expect(content.location).toBeNull()
-    expect(content.hero.media).toBeNull()
+  it('accepts the contact page copy', () => {
+    expect(ContactSchema.safeParse(contactMock).success).toBe(true)
   })
 
-  it('rejects contact methods with an unsafe link for their type', () => {
+  it('rejects a closing CTA that leaves the site', () => {
     const result = ContactSchema.safeParse({
       ...contactMock,
-      methods: [
-        {
-          id: 'phone',
-          type: 'phone',
-          label: 'Teléfono',
-          value: 'Dato sin confirmar',
-          actionLabel: 'Llamar',
-          href: 'https://example.com',
-        },
-      ],
+      closing: { ...contactMock.closing, cta: { label: 'Salir', href: 'https://example.com' } },
     })
 
     expect(result.success).toBe(false)
