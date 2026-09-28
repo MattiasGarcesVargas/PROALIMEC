@@ -1,6 +1,6 @@
 import type { Route } from './+types/home.route'
-import { HomePage, homePageLoader } from '~/sections/home-page'
-import { services } from '~/service-registry'
+import { HomePage, homePageLoader } from '@/sections/home-page'
+import { services } from '@/service-registry'
 
 export function loader() {
   return homePageLoader(services.homePage, services.productCatalog)

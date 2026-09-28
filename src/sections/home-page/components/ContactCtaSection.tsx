@@ -1,126 +1,40 @@
-import { Link } from 'react-router'
+import type { ContactCtaContent } from '@/sections/home-page/types/home-page.types'
+import ButtonLink from '@/shared/components/ui/ButtonLink'
 
-import type { ContactCtaContent } from '~/sections/home-page/types/home-page.types'
-
-export function ContactCtaSection({ content }: { content: ContactCtaContent }) {
+// La foto es horizontal (4:3): en escritorio toma más ancho que el texto y se ve completa, sin recorte
+function ContactCtaSection({ content }: { content: ContactCtaContent }) {
   return (
-    <section
-      id="contacto"
-      style={{
-        background: 'var(--white)',
-        paddingBlock: 'clamp(3.5rem, 8vw, 8rem)',
-      }}
-    >
-      <div
-        style={{
-          width: 'var(--shell)',
-          marginInline: 'auto',
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(min(18rem,100%), 1fr))',
-          alignItems: 'end',
-          gap: 'clamp(2rem, 5vw, 5rem)',
-        }}
-      >
+    <section id="contacto" className="bg-white py-[clamp(3.5rem,8vw,8rem)]">
+      <div className="shell grid items-center gap-[clamp(2rem,5vw,5rem)] lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
         <div>
-          <h2
-            style={{
-              margin: 0,
-              maxWidth: '30rem',
-              fontFamily: 'var(--font-display)',
-              fontWeight: 800,
-              fontSize: 'clamp(2rem, 4.4vw, 3.75rem)',
-              lineHeight: 1.02,
-              letterSpacing: '-.05em',
-              color: 'var(--navy)',
-              textWrap: 'pretty',
-            }}
-          >
+          <h2 className="max-w-120 font-display text-[clamp(2rem,4.4vw,3.75rem)] leading-[1.02] font-extrabold tracking-[-0.05em] text-pretty text-navy">
             {content.title}
           </h2>
-          <p
-            style={{
-              margin: '22px 0 0',
-              maxWidth: '32rem',
-              fontSize: '1.0625rem',
-              lineHeight: 1.8,
-              color: 'var(--muted)',
-              textWrap: 'pretty',
-            }}
-          >
+          <p className="mt-5.5 max-w-128 text-[17px] leading-[1.8] text-pretty text-muted">
             {content.body}
           </p>
 
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              gap: 12,
-              marginTop: 32,
-            }}
-          >
-            <Link
-              to="/contacto"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                minHeight: 52,
-                padding: '0 26px',
-                background: 'var(--navy)',
-                border: '1px solid var(--navy)',
-                color: 'var(--white)',
-                font: '600 12px/1 var(--font-body)',
-                letterSpacing: '.12em',
-                textTransform: 'uppercase',
-                textDecoration: 'none',
-                transition: 'background .3s, border-color .3s',
-              }}
-            >
-              {content.primaryLabel}
-            </Link>
-            <Link
-              to="/productos"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                minHeight: 52,
-                padding: '0 26px',
-                border: '1px solid rgba(11,31,83,.25)',
-                color: 'var(--navy)',
-                font: '600 12px/1 var(--font-body)',
-                letterSpacing: '.12em',
-                textTransform: 'uppercase',
-                textDecoration: 'none',
-                transition: 'border-color .3s, background .3s',
-              }}
-            >
+          <div className="mt-8 flex flex-wrap gap-3">
+            <ButtonLink to="/contacto">{content.primaryLabel}</ButtonLink>
+            <ButtonLink to="/productos" variant="outline">
               {content.secondaryLabel}
-            </Link>
+            </ButtonLink>
           </div>
         </div>
 
-        <div
-          style={{
-            position: 'relative',
-            aspectRatio: '4 / 5',
-            overflow: 'hidden',
-            background: 'var(--black)',
-          }}
-        >
+        <div className="aspect-4/3 overflow-hidden bg-black">
           <img
             src={content.image.src}
             alt={content.image.alt}
+            width={content.image.width}
+            height={content.image.height}
             loading="lazy"
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-              transform: 'scale(1.12)',
-            }}
+            className="size-full object-cover"
           />
         </div>
       </div>
     </section>
   )
 }
+
+export default ContactCtaSection

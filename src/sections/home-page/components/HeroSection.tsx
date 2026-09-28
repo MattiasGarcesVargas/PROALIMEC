@@ -1,135 +1,71 @@
-import type { HomeHeroContent } from '~/sections/home-page/types/home-page.types'
-import { useRevealOnScroll } from '~/shared/motion'
+import { Fragment } from 'react'
 
-export function HeroSection({ content }: { content: HomeHeroContent }) {
+import type { HomeHeroContent } from '@/sections/home-page/types/home-page.types'
+import Eyebrow from '@/shared/components/ui/Eyebrow'
+import { useRevealOnScroll } from '@/shared/motion/use-reveal-on-scroll'
+import { cn } from '@/shared/utils/cn'
+
+function HeroSection({ content }: { content: HomeHeroContent }) {
   const { ref, visible } = useRevealOnScroll<HTMLElement>(0.1)
 
   return (
-    <section
-      id="hero"
-      ref={ref}
-      style={{
-        position: 'relative',
-        background: 'var(--white)',
-        overflow: 'hidden',
-      }}
-    >
-      <div
-        style={{
-          width: 'var(--shell)',
-          marginInline: 'auto',
-          display: 'grid',
-          gridTemplateColumns:
-            'repeat(auto-fit, minmax(min(20rem, 100%), 1fr))',
-          alignItems: 'center',
-          gap: 'clamp(2rem, 5vw, 5rem)',
-          padding: 'clamp(2.5rem,6vw,6rem) 0 clamp(3.5rem,7vw,7rem)',
-        }}
-      >
+    <section id="hero" ref={ref} className="relative overflow-hidden bg-white">
+      <div className="shell grid grid-fit-80 items-center gap-[clamp(2rem,5vw,5rem)] pt-[clamp(2.5rem,6vw,6rem)] pb-[clamp(3.5rem,7vw,7rem)]">
         <div>
-          <p
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 14,
-              margin: '0 0 clamp(1.5rem,3vw,2.5rem)',
-              font: '600 12px/1.2 var(--font-body)',
-              letterSpacing: '.2em',
-              textTransform: 'uppercase',
-              color: 'var(--accent)',
-              opacity: visible ? 1 : 0,
-              transform: visible ? 'none' : 'translateY(18px)',
-              transition:
-                'opacity .7s var(--ease-out-expo), transform .7s var(--ease-out-expo)',
-            }}
+          <Eyebrow
+            className={cn(
+              'mb-[clamp(1.5rem,3vw,2.5rem)] transition-[opacity,translate] duration-700 ease-out-expo',
+              !visible && 'translate-y-4.5 opacity-0',
+            )}
           >
-            <span
-              style={{ width: 38, height: 1, background: 'currentColor' }}
-            />
             {content.eyebrow}
-          </p>
+          </Eyebrow>
 
-          <h1
-            style={{
-              margin: 0,
-              fontFamily: 'var(--font-display)',
-              fontWeight: 800,
-              fontSize: 'clamp(2.6rem, 7.6vw, 6.5rem)',
-              lineHeight: 0.98,
-              letterSpacing: '-.055em',
-              wordSpacing: '-.1em',
-              color: 'var(--navy)',
-            }}
-          >
+          <h1 className="font-display text-display font-extrabold text-navy [word-spacing:-0.1em]">
             {content.titleLines.map((lineText, index) => (
-              <span
-                key={lineText}
-                style={{
-                  display: 'block',
-                  overflow: 'hidden',
-                  paddingBottom: '.14em',
-                  marginBottom: '-.14em',
-                }}
-              >
-                <span
-                  style={{
-                    display: 'block',
-                    color:
-                      index === content.accentLineIndex
-                        ? 'var(--accent)'
-                        : 'inherit',
-                    transform: visible ? 'translateY(0)' : 'translateY(100%)',
-                    transition: `transform .95s var(--ease-out-expo) ${index * 0.08}s`,
-                  }}
-                >
-                  {lineText}
+              // Cada línea sube desde detrás de su propio borde (máscara).
+              // El espacio entre líneas no se ve, pero separa las palabras al leer o copiar el título
+              <Fragment key={lineText}>
+                {index > 0 && ' '}
+                <span className="-mb-[0.14em] block overflow-hidden pb-[0.14em]">
+                  <span
+                    className={cn(
+                      'block transition-[translate] duration-950 ease-out-expo',
+                      index === content.accentLineIndex && 'text-orange',
+                      !visible && 'translate-y-full',
+                    )}
+                    style={{ transitionDelay: `${index * 0.08}s` }}
+                  >
+                    {lineText}
+                  </span>
                 </span>
-              </span>
+              </Fragment>
             ))}
           </h1>
 
           <p
-            style={{
-              maxWidth: '34rem',
-              margin: 'clamp(1.75rem,3.5vw,2.5rem) 0 0',
-              fontSize: '1.0625rem',
-              lineHeight: 1.75,
-              color: 'var(--muted)',
-              textWrap: 'pretty',
-              opacity: visible ? 1 : 0,
-              transform: visible ? 'none' : 'translateY(22px)',
-              transition:
-                'opacity .8s var(--ease-out-expo) .16s, transform .8s var(--ease-out-expo) .16s',
-            }}
+            className={cn(
+              'mt-[clamp(1.75rem,3.5vw,2.5rem)] max-w-136 text-[17px] leading-[1.75] text-pretty text-muted transition-[opacity,translate] delay-160 duration-800 ease-out-expo',
+              !visible && 'translate-y-5.5 opacity-0',
+            )}
           >
             {content.intro}
           </p>
         </div>
 
-        <div
-          style={{
-            position: 'relative',
-            height: 'clamp(22rem, 60vh, 38rem)',
-            overflow: 'hidden',
-          }}
-        >
+        <div className="relative h-[clamp(22rem,60vh,38rem)] overflow-hidden">
           <img
             src={content.image.src}
             alt={content.image.alt}
             width={content.image.width}
             height={content.image.height}
             fetchPriority="high"
-            style={{
-              position: 'absolute',
-              inset: 0,
-              width: '100%',
-              height: '100%',
-              objectFit: 'contain',
-              padding: 'clamp(1rem, 3vw, 2.5rem)',
-            }}
+            className="absolute inset-0 size-full object-contain p-[clamp(1rem,3vw,2.5rem)]"
           />
         </div>
       </div>
     </section>
   )
 }
+
+export default HeroSection

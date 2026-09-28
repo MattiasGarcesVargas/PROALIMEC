@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-export const clamp01 = (value: number) =>
-  value < 0 ? 0 : value > 1 ? 1 : value
+export const clamp01 = (value: number) => (value < 0 ? 0 : value > 1 ? 1 : value)
 
 export const easeOutCubic = (progress: number) => 1 - Math.pow(1 - progress, 3)
 

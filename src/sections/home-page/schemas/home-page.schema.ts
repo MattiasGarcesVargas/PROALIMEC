@@ -73,6 +73,8 @@ export const HomePageSchema = z.object({
         step: z.string().trim().min(1),
         title: z.string().trim().min(1),
         body: z.string().trim().min(1),
+        // Foto que aparece detrás del texto al pasar el mouse por la tarjeta del paso
+        image: MediaAssetSchema,
       }),
     ),
     stats: z.array(

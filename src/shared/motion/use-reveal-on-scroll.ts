@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 /** Reveal reversible: true mientras el elemento está dentro de la banda visible. */
-export function useRevealOnScroll<T extends HTMLElement = HTMLDivElement>(
-  threshold = 0.22,
-) {
+export function useRevealOnScroll<T extends HTMLElement = HTMLDivElement>(threshold = 0.22) {
   const ref = useRef<T | null>(null)
   const [visible, setVisible] = useState(false)
 

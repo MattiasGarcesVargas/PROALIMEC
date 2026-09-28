@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react'
 
-import { easeOutCubic, range } from '~/shared/motion'
+import { easeOutCubic, range } from '@/shared/motion/use-scroll-scene'
 
 export interface HangingSceneStyles {
   label: CSSProperties

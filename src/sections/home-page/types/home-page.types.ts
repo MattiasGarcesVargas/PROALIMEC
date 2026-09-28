@@ -7,7 +7,7 @@ import type {
   HomePageSchema,
   MediaAssetSchema,
   MeatLineSchema,
-} from '~/sections/home-page/schemas/home-page.schema'
+} from '@/sections/home-page/schemas/home-page.schema'
 
 export type HomePageContent = z.infer<typeof HomePageSchema>
 export type HomeHeroContent = z.infer<typeof HomeHeroSchema>

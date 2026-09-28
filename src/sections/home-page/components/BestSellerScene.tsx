@@ -1,14 +1,15 @@
-import { BestSellerCopy } from '~/sections/home-page/components/BestSellerCopy'
-import { useHangingSceneMotion } from '~/sections/home-page/hooks/use-hanging-scene-motion'
-import type { BestSeller } from '~/sections/home-page/types/home-page.types'
-import { useScrollScene } from '~/shared/motion'
+import { useHangingSceneMotion } from '@/sections/home-page/hooks/use-hanging-scene-motion'
+import type { BestSeller } from '@/sections/home-page/types/home-page.types'
+import { useScrollScene } from '@/shared/motion/use-scroll-scene'
+
+import BestSellerCopy from './BestSellerCopy'
 
 /**
- * Escena sticky de 1.9 × --scene: dos best sellers que caen desde el gancho.
- * El rótulo "Best seller" termina de entrar antes de que baje el corte 01; el
- * 02 entra con el gancho al ras del borde superior, sin dejar hueco negro.
+ * Escena sticky de 646vh (1.9 × la escena base de 340vh): dos best sellers que
+ * caen desde el gancho. El rótulo "Best seller" termina de entrar antes de que
+ * baje el corte 01; el 02 entra con el gancho al ras del borde superior.
  */
-export function BestSellerScene({ items }: { items: BestSeller[] }) {
+function BestSellerScene({ items }: { items: BestSeller[] }) {
   const { ref, progress } = useScrollScene<HTMLElement>()
   const motion = useHangingSceneMotion(progress)
   const [first, second] = items
@@ -19,95 +20,41 @@ export function BestSellerScene({ items }: { items: BestSeller[] }) {
     <section
       ref={ref}
       aria-label="Lo más pedido del catálogo"
-      style={{
-        position: 'relative',
-        background: 'var(--black)',
-        height: 'calc(var(--scene) * 1.9)',
-      }}
+      className="relative h-[646vh] bg-black"
     >
-      <div
-        style={{
-          position: 'sticky',
-          top: 0,
-          height: '100vh',
-          overflow: 'hidden',
-          background: 'var(--black)',
-        }}
-      >
+      <div className="sticky top-0 h-screen overflow-hidden bg-black">
         <p
-          style={{
-            position: 'absolute',
-            top: 'clamp(1.5rem, 5vh, 4rem)',
-            left: 0,
-            right: 0,
-            margin: 0,
-            textAlign: 'center',
-            font: '600 12px/1.2 var(--font-body)',
-            letterSpacing: '.32em',
-            textTransform: 'uppercase',
-            color: 'var(--ice)',
-            ...motion.label,
-          }}
+          className="absolute inset-x-0 top-[clamp(1.5rem,5vh,4rem)] text-center text-xs/[1.2] font-semibold tracking-[0.32em] text-ice uppercase"
+          style={motion.label}
         >
           Lo más pedido del catálogo
         </p>
 
         <h2
-          style={{
-            position: 'absolute',
-            top: '34%',
-            left: 0,
-            right: 0,
-            margin: 0,
-            translate: '0 -50%',
-            textAlign: 'center',
-            fontFamily: 'var(--font-display)',
-            fontWeight: 800,
-            fontSize: 'clamp(1.5rem, 6.6vw, 5.5rem)',
-            lineHeight: 1,
-            letterSpacing: '.12em',
-            textIndent: '.12em',
-            textTransform: 'uppercase',
-            color: 'var(--white)',
-            whiteSpace: 'nowrap',
-            ...motion.word,
-          }}
+          className="absolute inset-x-0 top-[34%] -translate-y-1/2 text-center font-display text-[clamp(1.5rem,6.6vw,5.5rem)] leading-none font-extrabold tracking-[0.12em] indent-[0.12em] whitespace-nowrap text-white uppercase"
+          style={motion.word}
         >
           Best seller
         </h2>
 
-        {/* Slot A — pierna de cerdo suspendida */}
-        <div style={{ position: 'absolute', inset: 0, ...motion.slotA }}>
+        {/* Slot A: pierna de cerdo suspendida */}
+        <div className="absolute inset-0" style={motion.slotA}>
           <img
             src={first.product.src}
             alt={first.product.alt}
-            style={{
-              position: 'absolute',
-              top: '-1.5vh',
-              left: 'clamp(0px, 3vw, 6vw)',
-              width: 'min(42vw, 58vh)',
-              height: 'auto',
-              objectFit: 'contain',
-              ...motion.hookA,
-            }}
+            className="absolute top-[-1.5vh] left-[clamp(0px,3vw,6vw)] w-[min(42vw,58vh)] object-contain"
+            style={motion.hookA}
           />
           <BestSellerCopy item={first} side="right" style={motion.copyA} />
         </div>
 
-        {/* Slot B — costillar suspendido, gancho al ras del borde superior */}
-        <div style={{ position: 'absolute', inset: 0, ...motion.slotB }}>
+        {/* Slot B: costillar suspendido, gancho al ras del borde superior */}
+        <div className="absolute inset-0" style={motion.slotB}>
           <img
             src={second.product.src}
             alt={second.product.alt}
-            style={{
-              position: 'absolute',
-              top: 0,
-              right: 'clamp(3vw, 9vw, 14vw)',
-              width: 'min(46vw, 64vh)',
-              height: 'auto',
-              objectFit: 'contain',
-              ...motion.hookB,
-            }}
+            className="absolute top-0 right-[clamp(3vw,9vw,14vw)] w-[min(46vw,64vh)] object-contain"
+            style={motion.hookB}
           />
           <BestSellerCopy item={second} side="left" style={motion.copyB} />
         </div>
@@ -115,3 +62,5 @@ export function BestSellerScene({ items }: { items: BestSeller[] }) {
     </section>
   )
 }
+
+export default BestSellerScene

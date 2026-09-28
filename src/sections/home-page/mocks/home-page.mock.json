@@ -121,7 +121,7 @@
     }
   ],
   "catalogPreview": {
-    "title": "Algunos de los cortes que movemos",
+    "title": "Algunos de los cortes que manejamos",
     "ctaLabel": "Ver catálogo completo"
   },
   "coldChain": {
@@ -132,17 +132,35 @@
       {
         "step": "Paso 1",
         "title": "Almacenamiento",
-        "body": "El producto permanece congelado en cámara, sin ciclos de descongelado parcial."
+        "body": "El producto permanece congelado en cámara, sin ciclos de descongelado parcial.",
+        "image": {
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Cortes de carne colgados en ganchos dentro de una cámara fría",
+          "width": 736,
+          "height": 1104
+        }
       },
       {
         "step": "Paso 2",
         "title": "Preparación del pedido",
-        "body": "El despacho se arma en frío y se cierra antes de salir de cámara."
+        "body": "El despacho se arma en frío y se cierra antes de salir de cámara.",
+        "image": {
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Filete de res crudo sellado al vacío en plástico",
+          "width": 1200,
+          "height": 800
+        }
       },
       {
         "step": "Paso 3",
         "title": "Transporte",
-        "body": "El traslado mantiene la temperatura hasta la entrega en tu punto de recepción."
+        "body": "El traslado mantiene la temperatura hasta la entrega en tu punto de recepción.",
+        "image": {
+          "src": "/assets/images/paso-transporte.webp",
+          "alt": "Camión de carga refrigerado blanco estacionado junto a una bodega",
+          "width": 1200,
+          "height": 800
+        }
       }
     ],
     "stats": [
@@ -151,8 +169,8 @@
         "label": "Temperatura de conservación del producto congelado"
       },
       {
-        "value": "2",
-        "label": "Líneas de producto en el catálogo"
+        "value": "2 líneas",
+        "label": "Líneas de producto en el catálogo: cerdo y res"
       },
       {
         "value": "B2B",
@@ -189,10 +207,10 @@
     "primaryLabel": "Ir a contacto",
     "secondaryLabel": "Ver catálogo",
     "image": {
-      "src": "/assets/images/res-despiece.jpg",
-      "alt": "Piezas de res dispuestas formando la silueta de una vaca",
-      "width": 564,
-      "height": 743
+      "src": "/assets/images/cerdo-despiece.webp",
+      "alt": "Cortes de cerdo crudos dispuestos formando la silueta de un cerdo sobre piedra negra",
+      "width": 1448,
+      "height": 1086
     }
   }
 }

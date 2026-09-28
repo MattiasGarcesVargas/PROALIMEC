@@ -1,99 +1,29 @@
-import type { ServiceContent } from '~/sections/home-page/types/home-page.types'
+import type { ServiceContent } from '@/sections/home-page/types/home-page.types'
+import Eyebrow from '@/shared/components/ui/Eyebrow'
 
-export function ServiceSection({ content }: { content: ServiceContent }) {
+function ServiceSection({ content }: { content: ServiceContent }) {
   return (
-    <section
-      style={{
-        background: 'var(--surface-cold)',
-        paddingBlock: 'clamp(3.5rem, 8vw, 8rem)',
-      }}
-    >
-      <div style={{ width: 'var(--shell)', marginInline: 'auto' }}>
-        <div style={{ maxWidth: '40rem' }}>
-          <p
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 14,
-              margin: '0 0 18px',
-              font: '600 12px/1.2 var(--font-body)',
-              letterSpacing: '.2em',
-              textTransform: 'uppercase',
-              color: 'var(--accent)',
-            }}
-          >
-            <span
-              style={{ width: 38, height: 1, background: 'currentColor' }}
-            />
-            {content.eyebrow}
-          </p>
-          <h2
-            style={{
-              margin: 0,
-              fontFamily: 'var(--font-display)',
-              fontWeight: 800,
-              fontSize: 'clamp(1.85rem, 3.6vw, 3rem)',
-              lineHeight: 1.06,
-              letterSpacing: '-.04em',
-              color: 'var(--navy)',
-              textWrap: 'pretty',
-            }}
-          >
+    <section className="bg-cold py-[clamp(3.5rem,8vw,8rem)]">
+      <div className="shell">
+        <div className="max-w-160">
+          <Eyebrow className="mb-4.5">{content.eyebrow}</Eyebrow>
+          <h2 className="font-display text-section font-extrabold text-pretty text-navy">
             {content.title}
           </h2>
-          <p
-            style={{
-              margin: '18px 0 0',
-              fontSize: '1rem',
-              lineHeight: 1.75,
-              color: 'var(--muted)',
-              textWrap: 'pretty',
-            }}
-          >
-            {content.intro}
-          </p>
+          <p className="mt-4.5 leading-[1.75] text-pretty text-muted">{content.intro}</p>
         </div>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns:
-              'repeat(auto-fit, minmax(min(18rem,100%), 1fr))',
-            gap: 'clamp(2rem, 4vw, 3.5rem)',
-            marginTop: 'clamp(2.5rem, 5vw, 4.5rem)',
-          }}
-        >
+        {/* Con 3 columnas, si la última tarjeta queda sola en su fila va a la columna del centro */}
+        <div className="mt-[clamp(2.5rem,5vw,4.5rem)] grid gap-[clamp(2rem,4vw,3.5rem)] sm:grid-cols-2 lg:grid-cols-3">
           {content.cards.map((card) => (
             <div
               key={card.title}
-              style={{
-                borderTop: '1px solid rgba(11,31,83,.16)',
-                paddingTop: 22,
-              }}
+              className="border-t border-navy/16 pt-5.5 lg:[&:last-child:nth-child(3n+1)]:col-start-2"
             >
-              <h3
-                style={{
-                  margin: 0,
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 700,
-                  fontSize: '1.25rem',
-                  letterSpacing: '-.025em',
-                  color: 'var(--navy)',
-                }}
-              >
+              <h3 className="font-display text-[1.25rem] font-bold tracking-[-0.025em] text-navy">
                 {card.title}
               </h3>
-              <p
-                style={{
-                  margin: '12px 0 0',
-                  maxWidth: '24rem',
-                  fontSize: '.9375rem',
-                  lineHeight: 1.7,
-                  color: 'var(--muted)',
-                }}
-              >
-                {card.body}
-              </p>
+              <p className="mt-3 max-w-96 text-[15px] leading-[1.7] text-muted">{card.body}</p>
             </div>
           ))}
         </div>
@@ -101,3 +31,5 @@ export function ServiceSection({ content }: { content: ServiceContent }) {
     </section>
   )
 }
+
+export default ServiceSection
