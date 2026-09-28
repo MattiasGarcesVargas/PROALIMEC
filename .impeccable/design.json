@@ -1,0 +1,411 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-26T22:34:15.947Z",
+  "title": "Design System: PROALIMEC",
+  "extensions": {
+    "colorMeta": {
+      "navy": {
+        "role": "primary",
+        "displayName": "Navy PROALIMEC",
+        "canonical": "#0b1f53",
+        "tonalRamp": [
+          "oklch(15% 0.053 264.5)",
+          "oklch(26% 0.071 264.5)",
+          "oklch(37% 0.089 264.5)",
+          "oklch(48% 0.098 264.5)",
+          "oklch(59% 0.098 264.5)",
+          "oklch(70% 0.094 264.5)",
+          "oklch(82% 0.074 264.5)",
+          "oklch(95% 0.053 264.5)"
+        ]
+      },
+      "orange": {
+        "role": "secondary",
+        "displayName": "Naranja brasa",
+        "canonical": "#d85a1a",
+        "tonalRamp": [
+          "oklch(15% 0.078 42.8)",
+          "oklch(26% 0.109 42.8)",
+          "oklch(37% 0.141 42.8)",
+          "oklch(48% 0.173 42.8)",
+          "oklch(59% 0.173 42.8)",
+          "oklch(70% 0.15 42.8)",
+          "oklch(82% 0.115 42.8)",
+          "oklch(95% 0.078 42.8)"
+        ]
+      },
+      "ember": {
+        "role": "secondary",
+        "displayName": "Ember",
+        "canonical": "#b8460f",
+        "tonalRamp": [
+          "oklch(15% 0.073 41.2)",
+          "oklch(26% 0.102 41.2)",
+          "oklch(37% 0.131 41.2)",
+          "oklch(48% 0.159 41.2)",
+          "oklch(59% 0.159 41.2)",
+          "oklch(70% 0.139 41.2)",
+          "oklch(82% 0.108 41.2)",
+          "oklch(95% 0.073 41.2)"
+        ]
+      },
+      "ice": {
+        "role": "tertiary",
+        "displayName": "Hielo",
+        "canonical": "#63c8f2",
+        "tonalRamp": [
+          "oklch(15% 0.057 227.9)",
+          "oklch(26% 0.077 227.9)",
+          "oklch(37% 0.098 227.9)",
+          "oklch(48% 0.111 227.9)",
+          "oklch(59% 0.111 227.9)",
+          "oklch(70% 0.103 227.9)",
+          "oklch(82% 0.081 227.9)",
+          "oklch(95% 0.057 227.9)"
+        ]
+      },
+      "frost": {
+        "role": "tertiary",
+        "displayName": "Escarcha",
+        "canonical": "#d9f1fb",
+        "tonalRamp": [
+          "oklch(15% 0.029 224.7)",
+          "oklch(26% 0.029 224.7)",
+          "oklch(37% 0.029 224.7)",
+          "oklch(48% 0.029 224.7)",
+          "oklch(59% 0.029 224.7)",
+          "oklch(70% 0.029 224.7)",
+          "oklch(82% 0.029 224.7)",
+          "oklch(95% 0.029 224.7)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta",
+        "canonical": "#071633",
+        "tonalRamp": [
+          "oklch(15% 0.04 261.7)",
+          "oklch(26% 0.052 261.7)",
+          "oklch(37% 0.061 261.7)",
+          "oklch(48% 0.061 261.7)",
+          "oklch(59% 0.061 261.7)",
+          "oklch(70% 0.061 261.7)",
+          "oklch(82% 0.054 261.7)",
+          "oklch(95% 0.04 261.7)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Gris pizarra",
+        "canonical": "#526079",
+        "tonalRamp": [
+          "oklch(15% 0.035 261.9)",
+          "oklch(26% 0.043 261.9)",
+          "oklch(37% 0.044 261.9)",
+          "oklch(48% 0.044 261.9)",
+          "oklch(59% 0.044 261.9)",
+          "oklch(70% 0.044 261.9)",
+          "oklch(82% 0.044 261.9)",
+          "oklch(95% 0.035 261.9)"
+        ]
+      },
+      "muted-cold": {
+        "role": "neutral",
+        "displayName": "Gris frío",
+        "canonical": "#9fb4d2",
+        "tonalRamp": [
+          "oklch(15% 0.036 257.3)",
+          "oklch(26% 0.045 257.3)",
+          "oklch(37% 0.049 257.3)",
+          "oklch(48% 0.049 257.3)",
+          "oklch(59% 0.049 257.3)",
+          "oklch(70% 0.049 257.3)",
+          "oklch(82% 0.047 257.3)",
+          "oklch(95% 0.036 257.3)"
+        ]
+      },
+      "cold": {
+        "role": "neutral",
+        "displayName": "Blanco frío",
+        "canonical": "#f3fbfe",
+        "tonalRamp": [
+          "oklch(15% 0.009 222.1)",
+          "oklch(26% 0.009 222.1)",
+          "oklch(37% 0.009 222.1)",
+          "oklch(48% 0.009 222.1)",
+          "oklch(59% 0.009 222.1)",
+          "oklch(70% 0.009 222.1)",
+          "oklch(82% 0.009 222.1)",
+          "oklch(95% 0.009 222.1)"
+        ]
+      },
+      "shade": {
+        "role": "neutral",
+        "displayName": "Sombra",
+        "canonical": "#040a18",
+        "tonalRamp": [
+          "oklch(15% 0.031 261.6)",
+          "oklch(26% 0.033 261.6)",
+          "oklch(37% 0.033 261.6)",
+          "oklch(48% 0.033 261.6)",
+          "oklch(59% 0.033 261.6)",
+          "oklch(70% 0.033 261.6)",
+          "oklch(82% 0.033 261.6)",
+          "oklch(95% 0.031 261.6)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "Blanco",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0 89.9)",
+          "oklch(26% 0 89.9)",
+          "oklch(37% 0 89.9)",
+          "oklch(48% 0 89.9)",
+          "oklch(59% 0 89.9)",
+          "oklch(70% 0 89.9)",
+          "oklch(82% 0 89.9)",
+          "oklch(95% 0 89.9)"
+        ]
+      },
+      "black": {
+        "role": "neutral",
+        "displayName": "Negro",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26% 0 0)",
+          "oklch(37% 0 0)",
+          "oklch(48% 0 0)",
+          "oklch(59% 0 0)",
+          "oklch(70% 0 0)",
+          "oklch(82% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "H1 de home y contacto."
+      },
+      "headline": {
+        "displayName": "Page",
+        "purpose": "H1 de páginas interiores (token text-page)."
+      },
+      "section": {
+        "displayName": "Section",
+        "purpose": "H2 de sección."
+      },
+      "subsection": {
+        "displayName": "Subsection",
+        "purpose": "H2 de bloques secundarios."
+      },
+      "title": {
+        "displayName": "Item title",
+        "purpose": "H3 de canal, tarjeta o paso."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Párrafo de introducción, medida máx. 34rem."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Texto de ítems."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Pistas, hechos, PendingNote."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Botones, enlaces de acción, toggles; mayúsculas."
+      }
+    },
+    "shadows": [
+      {
+        "name": "chain-glow",
+        "value": "0 0 0.75rem rgb(99 200 242 / 0.9)",
+        "purpose": "Solo el nodo del riel de cadena de frío."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Entradas, revelados al hacer scroll, escala de foto en hover (800ms)."
+      },
+      {
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Transiciones de estado estándar."
+      },
+      {
+        "name": "button-transition",
+        "value": "background-color, color, border-color 300ms",
+        "purpose": "Hover de botones y navegación."
+      },
+      {
+        "name": "marquee",
+        "value": "marquee 28s linear infinite",
+        "purpose": "Franja marquesina del home."
+      },
+      {
+        "name": "settle",
+        "value": "settle 1.4s ease-out-expo both (scale 1.06 -> 1)",
+        "purpose": "La foto del hero de contacto asienta su escala."
+      },
+      {
+        "name": "line-in",
+        "value": "line-in 0.9s ease-out-expo both (destello ice/0.28, translateY 6px)",
+        "purpose": "Línea recién agregada a la vista previa del mensaje."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "motion-reduce:animate-none / gsap matchMedia MOTION_OK",
+        "purpose": "Todo movimiento es prescindible."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Acción principal sobre claro: cotizar, ver catálogo.",
+      "html": "<button class=\"ds-btn-primary\">Ver el catálogo</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 26px; border: 1px solid; border-radius: 0; font-family: var(--font-body); font-size: 12px; line-height: 1; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background-color .3s, color .3s, border-color .3s; } .ds-btn-primary { background: var(--color-navy); border-color: var(--color-navy); color: #fff; } .ds-btn-primary:hover { background: var(--color-ink); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 4px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acción alternativa sobre claro; se rellena en hover.",
+      "html": "<button class=\"ds-btn-secondary\">Ver productos</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 26px; border: 1px solid; border-radius: 0; font-family: var(--font-body); font-size: 12px; line-height: 1; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background-color .3s, color .3s, border-color .3s; } .ds-btn-secondary { background: transparent; border-color: var(--color-navy); color: var(--color-navy); } .ds-btn-secondary:hover { background: var(--color-navy); color: #fff; } .ds-btn-secondary:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 4px; }"
+    },
+    {
+      "name": "Inverse Button",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "Botón para fondos oscuros (ink, negro, foto velada).",
+      "html": "<div style=\"background:#071633;padding:24px\"><button class=\"ds-btn-inverse\">Abrir en WhatsApp</button></div>",
+      "css": ".ds-btn-inverse { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 0 26px; border: 1px solid; border-radius: 0; font-family: var(--font-body); font-size: 12px; line-height: 1; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; cursor: pointer; transition: background-color .3s, color .3s, border-color .3s; } .ds-btn-inverse { background: #fff; border-color: #fff; color: var(--color-navy); } .ds-btn-inverse:hover { background: var(--color-frost); border-color: var(--color-frost); } .ds-btn-inverse:focus-visible { outline: 2px solid var(--color-ice); outline-offset: 4px; }"
+    },
+    {
+      "name": "Text Action",
+      "kind": "custom",
+      "refersTo": "text-action",
+      "description": "Enlace de acción secundario con subrayado de filete.",
+      "html": "<a href=\"#\" class=\"ds-text-action\">Ver el catálogo</a>",
+      "css": ".ds-text-action { display: inline-flex; padding-bottom: 4px; border-bottom: 1px solid rgb(11 31 83 / 0.3); color: var(--color-navy); font-family: var(--font-body); font-size: 12px; line-height: 1; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: border-color .15s; } .ds-text-action:hover { border-color: var(--color-navy); } .ds-text-action:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 4px; }"
+    },
+    {
+      "name": "Option Toggle",
+      "kind": "chip",
+      "refersTo": "option-toggle",
+      "description": "Opción exclusiva con aria-pressed (línea de producto).",
+      "html": "<div class=\"ds-toggles\"><button class=\"ds-toggle\">Cerdo</button><button class=\"ds-toggle\">Res</button><button class=\"ds-toggle\" aria-pressed=\"true\">Cerdo y res</button></div>",
+      "css": ".ds-toggles { display: flex; gap: 8px; flex-wrap: wrap; } .ds-toggle { min-height: 44px; padding: 0 16px; border: 1px solid rgb(11 31 83 / 0.2); border-radius: 0; background: #fff; color: var(--color-navy); font-family: var(--font-body); font-size: 12px; line-height: 1; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; } .ds-toggle:hover { border-color: var(--color-navy); } .ds-toggle[aria-pressed=\"true\"] { background: var(--color-navy); border-color: var(--color-navy); color: #fff; } .ds-toggle:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 4px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "",
+      "description": "Cabecera blanca con enlaces en label y subrayado naranja en el activo.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-link\">Inicio</a><a href=\"#\" class=\"ds-nav-link\" aria-current=\"page\">Productos</a><a href=\"#\" class=\"ds-nav-link\">Contacto</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 30px; align-items: center; padding: 10px 0; border-bottom: 1px solid rgb(11 31 83 / 0.1); background: #fff; } .ds-nav-link { padding: 10px 0; border-bottom: 1px solid transparent; color: var(--color-muted); font-family: var(--font-body); font-size: 12px; line-height: 1; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; transition: color .3s, border-color .3s; } .ds-nav-link:hover { color: var(--color-navy); } .ds-nav-link[aria-current=\"page\"] { color: var(--color-navy); border-color: var(--color-orange); } .ds-nav-link:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 4px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "",
+      "description": "Foto de corte a 4/5 sobre negro con velo shade y texto blanco.",
+      "html": "<button class=\"ds-card\"><span class=\"ds-card-veil\"></span><span class=\"ds-card-body\"><span class=\"ds-card-line\">Cerdo</span><span class=\"ds-card-title\">Costillar</span><span class=\"ds-card-desc\">Corte entero para asar.</span></span></button>",
+      "css": ".ds-card { position: relative; display: block; width: 240px; aspect-ratio: 4/5; overflow: hidden; border: 0; border-radius: 0; padding: 0; background: #000; text-align: left; cursor: pointer; } .ds-card-veil { position: absolute; inset: 0; background: linear-gradient(to bottom, rgb(4 10 24 / 0) 34%, rgb(4 10 24 / 0.58) 66%, rgb(4 10 24 / 0.9)); } .ds-card-body { position: absolute; inset: auto 0 0 0; padding: 20px; display: block; } .ds-card-line { display: block; font-family: var(--font-body); font-size: 11px; line-height: 1; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-orange); } .ds-card-title { display: block; margin-top: 10px; font-family: var(--font-display); font-size: 1.25rem; line-height: 1.15; font-weight: 700; letter-spacing: -0.025em; color: #fff; } .ds-card-desc { display: block; margin-top: 6px; font-family: var(--font-body); font-size: 13px; line-height: 1.55; color: rgb(255 255 255 / 0.84); } .ds-card:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 4px; }"
+    },
+    {
+      "name": "Pending Note",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Dato comercial pendiente dicho tal cual, con marcador hielo.",
+      "html": "<p class=\"ds-pending\"><span class=\"ds-pending-mark\"></span>WhatsApp de cotizaciones por confirmar</p>",
+      "css": ".ds-pending { display: flex; align-items: center; gap: 10px; margin: 0; font-family: var(--font-body); font-size: 13px; color: var(--color-muted); } .ds-pending-mark { width: 6px; height: 6px; flex-shrink: 0; background: var(--color-ice); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "La cámara de frío con la puerta abierta",
+    "overview": "Una columna tipográfica navy sobre blanco, y al lado el producto real: cortes fotografiados sobre fondo negro, a sangre o en escenas oscuras de ancho completo. El sitio alterna entre dos temperaturas de superficie, el blanco o el blanco frío (`cold`) donde se lee y se decide, y el negro o el ink donde el producto se exhibe. El hielo marca todo lo que es frío, estado o cadena; el naranja es escaso y se reserva para la acción principal y los datos clave.\n\nLa densidad es editorial, no de tablero: titulares Montserrat 800 muy apretados a escala fluida, párrafos Inter con interlineado amplio y medida corta, secciones separadas por mucho aire vertical. Nada tiene esquinas redondeadas ni sombras; la estructura la dan filetes de 1 px en navy traslúcido y los cambios de fondo entre secciones.\n\nEl movimiento es mejora progresiva: revelados al entrar en pantalla con `ease-out-expo`, un riel de cadena de frío que se llena con el scroll, escenas colgantes con GSAP. Todo se entiende y funciona con `prefers-reduced-motion`.",
+    "keyCharacteristics": [
+      "Blanco con columna tipográfica navy; producto sobre negro.",
+      "Esquinas rectas en todo; estructura por filetes de 1 px, no por tarjetas.",
+      "Naranja escaso: acción principal, datos clave, acento de una línea del titular.",
+      "Hielo para lo frío, el estado y lo pendiente.",
+      "Titulares Montserrat 800 con tracking negativo; cuerpo Inter con medida corta.",
+      "Movimiento progresivo, siempre prescindible."
+    ],
+    "rules": [
+      {
+        "name": "The Ember-On-Light Rule",
+        "body": "El texto naranja de tamaño de cuerpo o menor sobre blanco o `cold` usa `ember`, nunca `orange` (que queda en aprox. 3.9:1). `orange` se reserva para fondos oscuros, texto de escala display y acentos no textuales.",
+        "section": "colors"
+      },
+      {
+        "name": "The Scarce Orange Rule",
+        "body": "El naranja marca la acción principal y los datos clave, no la decoración. Si una pantalla tiene más de dos o tres toques naranja, sobra alguno.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ice Means Cold Rule",
+        "body": "El hielo pertenece al frío, al estado y a lo pendiente. No se usa como segundo color de acento genérico.",
+        "section": "colors"
+      },
+      {
+        "name": "The Heavy Head, Quiet Body Rule",
+        "body": "Los titulares son siempre Montserrat 800 (700 para títulos de ítem) con tracking negativo; el cuerpo es siempre Inter. No se mezclan roles.",
+        "section": "typography"
+      },
+      {
+        "name": "The Short Measure Rule",
+        "body": "Ningún párrafo de cuerpo pasa de unos 34rem de ancho.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Cold Room Rule",
+        "body": "Las superficies no flotan. Para separar, cambia el fondo o traza un filete; no agregues sombra.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do usar `ember` para cualquier texto naranja de tamaño cuerpo o menor sobre blanco o `cold`; `orange` solo sobre oscuro, a escala display o en acentos no textuales.",
+      "Do poner la fotografía de producto sobre negro y velarla con `shade` en degradado cuando lleva texto encima.",
+      "Do separar ítems con filetes de 1 px (navy al 10-16 % en claro, blanco al 12-18 % en oscuro) en lugar de tarjetas.",
+      "Do mantener esquinas rectas (0px) en botones, campos, paneles y tarjetas.",
+      "Do mostrar cada dato comercial pendiente con `PendingNote`.",
+      "Do envolver todo movimiento en `motion-reduce` o en `MOTION_OK`, con `ease-out-expo` para entradas.",
+      "Do usar `shell` para el ancho de toda sección y `grid-fit-*` / `grid-fill-*` para rejillas."
+    ],
+    "donts": [
+      "Don't usar `orange` para texto pequeño sobre blanco o `cold` (aprox. 3.9:1, falla AA).",
+      "Don't agregar sombras de elevación ni esquinas redondeadas a superficies.",
+      "Don't usar el hielo como acento decorativo fuera de frío, estado o pendiente.",
+      "Don't inventar teléfonos, correos, direcciones u horarios, ni simular formularios que envían datos.",
+      "Don't poner etiquetas en mayúsculas (eyebrows) sobre los titulares en superficies nuevas; el componente `Eyebrow` existente es herencia, no patrón."
+    ]
+  }
+}
