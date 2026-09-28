@@ -1,22 +1,14 @@
-import {
-  Links,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-  isRouteErrorResponse,
-} from 'react-router'
+import { Links, Meta, Outlet, Scripts, ScrollRestoration, isRouteErrorResponse } from 'react-router'
 
 import type { Route } from './+types/root'
-import { AppShell } from '~/shared/components'
+import AppShell from '@/shared/components/layout/AppShell'
 import './index.css'
 
 export const meta: Route.MetaFunction = () => [
   { title: 'PROALIMEC | Alimentos cárnicos congelados' },
   {
     name: 'description',
-    content:
-      'Conoce el portafolio y los canales de atención comercial de PROALIMEC.',
+    content: 'Conoce el portafolio y los canales de atención comercial de PROALIMEC.',
   },
 ]
 

@@ -1,25 +1,19 @@
 import { ArrowLeft, PackageSearch } from 'lucide-react'
 
 import type { Route } from './+types/not-found.route'
-import { ButtonLink, Container } from '~/shared/components'
+import ButtonLink from '@/shared/components/ui/ButtonLink'
+import Eyebrow from '@/shared/components/ui/Eyebrow'
 
-export const meta: Route.MetaFunction = () => [
-  { title: 'Página no encontrada | PROALIMEC' },
-]
+export const meta: Route.MetaFunction = () => [{ title: 'Página no encontrada | PROALIMEC' }]
 
 export default function NotFoundRoute() {
   return (
     <main id="main-content" className="bg-cold">
-      <Container className="grid min-h-[70svh] place-items-center py-20 text-center">
+      <div className="shell grid min-h-[70svh] place-items-center py-20 text-center">
         <div className="flex max-w-2xl flex-col items-center">
-          <PackageSearch
-            aria-hidden="true"
-            className="text-ice"
-            size={56}
-            strokeWidth={1.5}
-          />
-          <p className="eyebrow mt-8">Error 404</p>
-          <h1 className="page-title balanced-text mt-5 text-navy">
+          <PackageSearch aria-hidden="true" className="text-ice" size={56} strokeWidth={1.5} />
+          <Eyebrow className="mt-8">Error 404</Eyebrow>
+          <h1 className="mt-5 font-display text-page font-extrabold text-balance text-navy">
             Esta página no está disponible.
           </h1>
           <p className="mt-5 text-lg text-muted">
@@ -34,7 +28,7 @@ export default function NotFoundRoute() {
             </ButtonLink>
           </div>
         </div>
-      </Container>
+      </div>
     </main>
   )
 }
