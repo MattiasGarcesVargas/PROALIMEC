@@ -1,0 +1,4 @@
+# Cloudflare Pages: las fichas de producto no se pre-generan; se sirven con el SPA fallback.
+# Reescritura 200 (la URL del navegador no cambia). Va sin ".html" porque Cloudflare
+# redirige los .html a su versión sin extensión y eso cambiaría la ruta que ve React Router
+/productos/:slug  /__spa-fallback  200

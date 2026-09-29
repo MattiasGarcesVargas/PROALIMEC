@@ -10,7 +10,8 @@ import PendingNote from './PendingNote'
 // Una sola decisión: el titular con la acción de WhatsApp y, al lado, el corte ofrecido a sangre
 function ContactHero({ content }: { content: ContactContent['hero'] }) {
   return (
-    <section className="relative bg-white lg:min-h-[min(calc(100svh-4rem),52rem)]">
+    // 6rem = alto del header en escritorio: el hero ocupa justo el resto de la pantalla
+    <section className="relative bg-white lg:min-h-[min(calc(100svh-6rem),52rem)]">
       <div className="shell lg:grid lg:min-h-[inherit] lg:grid-cols-2">
         <div className="flex flex-col justify-center py-[clamp(3rem,8vw,6rem)] lg:pr-[clamp(2rem,5vw,5rem)]">
           <h1 className="font-display text-display font-extrabold text-balance text-navy">

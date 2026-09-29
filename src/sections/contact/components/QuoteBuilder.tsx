@@ -1,8 +1,7 @@
-import { Check, SquareArrowRight } from 'lucide-react'
+import { Check } from 'lucide-react'
 import { useState } from 'react'
 
 import type { ContactContent } from '@/sections/contact/types/contact.types'
-import { BUTTON_BASE, BUTTON_SIZES, BUTTON_VARIANTS } from '@/shared/components/ui/buttonStyles'
 import MaskIcon from '@/shared/components/ui/MaskIcon'
 import { CONTACT, WHATSAPP_GREETING } from '@/shared/config/contact'
 import { cn } from '@/shared/utils/cn'
@@ -151,20 +150,16 @@ function QuoteBuilder({ content }: { content: ContactContent['quote'] }) {
             </ul>
           </div>
 
-          <div className="mt-10 border-t border-white/12 pt-7">
+          <div className="mt-10 flex justify-end">
+            {/* Único botón redondeado del sitio: blanco sobre el panel, con texto e ícono en cobalto */}
             <a
               href={whatsappUrl ?? undefined}
               target={whatsappUrl ? '_blank' : undefined}
               rel={whatsappUrl ? 'noopener noreferrer' : undefined}
-              className={cn(
-                BUTTON_BASE,
-                BUTTON_VARIANTS.inverse,
-                BUTTON_SIZES.default,
-                'cursor-pointer',
-              )}
+              className="inline-flex min-h-14 cursor-pointer items-center gap-3 rounded-full bg-white px-8 text-[17px] font-semibold text-cobalt transition-colors duration-300 hover:bg-frost focus-visible:outline-ice"
             >
-              Enviar mensaje
-              <SquareArrowRight aria-hidden="true" className="size-4.5" strokeWidth={1.75} />
+              <MaskIcon src="/assets/images/logos/whatsapp.svg" className="size-5" />
+              Enviar por WhatsApp
             </a>
           </div>
         </div>
