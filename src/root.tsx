@@ -4,6 +4,13 @@ import type { Route } from './+types/root'
 import AppShell from '@/shared/components/layout/AppShell'
 import './index.css'
 
+// Favicon: íconos generados a partir del logo de PROALIMEC (escudo sin texto)
+export const links: Route.LinksFunction = () => [
+  { rel: 'icon', href: '/favicon.ico', sizes: '48x48' },
+  { rel: 'icon', href: '/icon-192.png', type: 'image/png', sizes: '192x192' },
+  { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+]
+
 export const meta: Route.MetaFunction = () => [
   { title: 'PROALIMEC | Alimentos cárnicos congelados' },
   {
