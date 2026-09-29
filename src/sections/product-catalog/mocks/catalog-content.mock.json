@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "eyebrow": "Catálogo completo",
+    "title": "Nuestros productos",
+    "intro": "Cortes de cerdo y res congelados a −18 °C, con empaque al vacío y volumen mayorista. Filtra por línea y abre la ficha de cada corte."
+  },
+  "customCut": {
+    "body": "¿Necesitas un corte con especificación propia de grosor, peso o empaque? Lo trabajamos bajo pedido.",
+    "ctaLabel": "Solicitar cotización"
+  }
+}

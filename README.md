@@ -1,75 +1,37 @@
-# React + TypeScript + Vite
+# PROALIMEC Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Presencia corporativa y catálogo estático de PROALIMEC, construidos con React, TypeScript, React Router Framework Mode, Tailwind CSS, Zod y GSAP.
 
-Currently, two official plugins are available:
+## Desarrollo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Calidad
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run typecheck
+npm run lint
+npm run format:check
+npm run test
+npm run build
 ```
+
+El build estático se genera en `build/client` y prerenderiza `/`, `/productos`, `/contacto` y `/404`.
+
+## Arquitectura
+
+```text
+routes -> sections -> shared
+JSON -> Zod -> service -> loader -> hook -> page -> component
+```
+
+Los módulos verticales viven en `src/sections`. El registro de implementaciones está en `src/service-registry.ts`, como composition root de la aplicación.
+
+## Contenido
+
+Los productos, categorías, canales de contacto, fotografías y datos empresariales siguen pendientes de aprobación. Los mocks permanecen vacíos y la interfaz no inventa información comercial.
+
+La dirección visual y las reglas de implementación están documentadas en `docs/PROALIMEC_DESIGN_SYSTEM.md`.

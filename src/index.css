@@ -1,0 +1,133 @@
+@import 'tailwindcss';
+@import './fonts.css';
+
+@theme {
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Marca (tomados del logo de PROALIMEC) */
+  --color-navy: #0b1f53;
+  --color-orange: #d85a1a; /* acento: eyebrows, flechas, contadores */
+  --color-ember: #b8460f;
+  --color-ice: #63c8f2; /* cadena de frío */
+  --color-frost: #d9f1fb;
+  --color-cobalt: #13357c; /* texto e ícono del botón "Enviar por WhatsApp" */
+
+  /* Texto */
+  --color-ink: #071633;
+  --color-muted: #526079;
+  --color-muted-cold: #9fb4d2; /* texto secundario sobre fondos oscuros */
+
+  /* Superficies */
+  --color-cold: #f3fbfe;
+  --color-cold-border: #c6e2ee;
+  --color-shade: #040a18; /* velos oscuros sobre fotos */
+
+  /* Escala tipográfica de títulos (tamaño fluido + interlineado + tracking) */
+  --text-display: clamp(2.6rem, 7.6vw, 6.5rem);
+  --text-display--line-height: 0.98;
+  --text-display--letter-spacing: -0.055em;
+  --text-page: clamp(2.4rem, 6.5vw, 5.5rem);
+  --text-page--line-height: 1.02;
+  --text-page--letter-spacing: -0.05em;
+  --text-section: clamp(1.85rem, 3.6vw, 3rem);
+  --text-section--line-height: 1.06;
+  --text-section--letter-spacing: -0.04em;
+  --text-subsection: clamp(1.6rem, 3vw, 2.4rem);
+  --text-subsection--line-height: 1.08;
+  --text-subsection--letter-spacing: -0.04em;
+
+  --tracking-button: 0.12em;
+  --tracking-eyebrow: 0.2em;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --animate-marquee: marquee 28s linear infinite;
+  /* La foto del hero de contacto ya se ve desde el inicio; solo asienta su escala */
+  --animate-settle: settle 1.4s var(--ease-out-expo) both;
+  /* Línea recién sumada al mensaje de WhatsApp: destella en hielo y se asienta */
+  --animate-line-in: line-in 0.9s var(--ease-out-expo) both;
+
+  /* Cambio de foto en la galería de la ficha */
+  --animate-fade-in: fade-in 0.35s ease both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+  }
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes settle {
+    from {
+      transform: scale(1.06);
+    }
+  }
+
+  @keyframes line-in {
+    from {
+      background-color: rgb(99 200 242 / 0.28);
+      transform: translateY(6px);
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+
+    @media (prefers-reduced-motion: reduce) {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply min-h-screen min-w-80 overflow-x-hidden bg-white font-body leading-[1.6] text-ink;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  :focus-visible {
+    @apply rounded-[0.2rem] outline-2 outline-offset-4 outline-navy;
+  }
+
+  ::selection {
+    @apply bg-ice text-navy;
+  }
+}
+
+/* Contenedor de página: el mismo ancho en todas las secciones */
+@utility shell {
+  width: min(100% - clamp(2.5rem, 8vw, 8rem), 80rem);
+  margin-inline: auto;
+}
+
+/* Rejillas fluidas: tantas columnas como quepan con un ancho mínimo (grid-fit-72 = 18rem) */
+@utility grid-fit-* {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(calc(var(--spacing) * --value(integer)), 100%), 1fr)
+  );
+}
+
+/* Igual, pero conserva las columnas vacías: las tarjetas no se estiran si hay pocas */
+@utility grid-fill-* {
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(calc(var(--spacing) * --value(integer)), 100%), 1fr)
+  );
+}

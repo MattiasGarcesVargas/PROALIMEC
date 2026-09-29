@@ -1,0 +1,73 @@
+{
+  "hero": {
+    "title": "Cotiza tu pedido.",
+    "description": "Cuéntanos qué cortes necesita tu negocio, en qué cantidad y cada cuánto. Te respondemos con una cotización.",
+    "image": {
+      "src": "/assets/images/costillar.jpg",
+      "alt": "Mano con guante negro sosteniendo un costillar de res crudo sobre fondo oscuro",
+      "width": 736,
+      "height": 981
+    },
+    "facts": [
+      {
+        "key": "Ambato",
+        "label": "Ecuador"
+      },
+      {
+        "key": "15+ años",
+        "label": "en el mercado"
+      },
+      {
+        "key": "Nacionales",
+        "label": "e importados"
+      }
+    ]
+  },
+  "quote": {
+    "title": "Arma tu mensaje",
+    "description": "Elige la línea, marca lo que quieres contarnos y escribe cada dato. El mensaje se abre en WhatsApp listo para enviar.",
+    "lines": [
+      {
+        "id": "cortes",
+        "label": "Cortes",
+        "hint": "Qué piezas necesitas",
+        "prompt": "Cortes que necesito:"
+      },
+      {
+        "id": "cantidad",
+        "label": "Cantidad",
+        "hint": "Kilos o cajas por pedido",
+        "prompt": "Cantidad aproximada por pedido:"
+      },
+      {
+        "id": "frecuencia",
+        "label": "Frecuencia",
+        "hint": "Cada cuánto compras",
+        "prompt": "Frecuencia de compra:"
+      },
+      {
+        "id": "entrega",
+        "label": "Entrega",
+        "hint": "Ciudad o punto de entrega",
+        "prompt": "Ciudad de entrega:"
+      }
+    ]
+  },
+  "channels": {
+    "title": "Otras formas de contactarnos"
+  },
+  "closing": {
+    "title": "¿Todavía eliges los cortes?",
+    "description": "Revisa el catálogo por línea, anota lo que te interesa y vuelve a escribirnos.",
+    "cta": {
+      "label": "Ver el catálogo",
+      "href": "/productos"
+    },
+    "image": {
+      "src": "/assets/images/banner-res.png",
+      "alt": "Cortes de res sobre una mesa de madera oscura",
+      "width": 2172,
+      "height": 724
+    }
+  }
+}

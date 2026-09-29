@@ -1,0 +1,473 @@
+{
+  "status": "structure-only",
+  "products": [
+    {
+      "id": "prd-001",
+      "slug": "chuleta-entera",
+      "name": "Chuleta entera",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Lomo con hueso en pieza entera, lista para porcionar.",
+      "description": "Lomo de cerdo con hueso en pieza entera, de espesor parejo para porcionar al grosor que maneje tu cocina.",
+      "presentation": "Congelado · empaque al vacío",
+      "approxWeight": "4 – 6 kg por pieza",
+      "suggestedUse": "Porcionado en chuletas, parrilla y plancha",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/cortes-colgados-cerdo.png",
+        "alt": "Chuleta entera — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-colgados-cerdo.png",
+          "alt": "Cortes de cerdo colgados en ganchos"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/costillar-cerdo.png",
+          "alt": "Costillar de cerdo colgado de un gancho"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-002",
+      "slug": "chuleta-rebanada",
+      "name": "Chuleta rebanada",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Rebanada a espesor uniforme, lista para plancha.",
+      "description": "Chuleta de cerdo ya rebanada a espesor uniforme, lista para plancha y parrilla sin trabajo adicional en cocina.",
+      "presentation": "Congelado · bandeja porcionada",
+      "approxWeight": "Caja de 5 kg",
+      "suggestedUse": "Plancha, parrilla y menú diario",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/cortes-tabla.jpg",
+        "alt": "Chuleta rebanada — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-003",
+      "slug": "pierna-entera",
+      "name": "Pierna entera",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Pieza entera, magra y de cobertura pareja.",
+      "description": "Pierna de cerdo entera, de carne magra y cobertura pareja. Se entrega congelada y lista para deshuesar o porcionar.",
+      "presentation": "Congelado · pieza entera al vacío",
+      "approxWeight": "6 – 9 kg por pieza",
+      "suggestedUse": "Horno, pernil y porcionado",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/pierna-cerdo.png",
+        "alt": "Pierna entera — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/pierna-cerdo.png",
+          "alt": "Pierna de cerdo colgada de un gancho"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cortes-colgados-cerdo.png",
+          "alt": "Cortes de cerdo colgados en ganchos"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-004",
+      "slug": "brazo-entero",
+      "name": "Brazo entero",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Pieza entera para cocción larga y despiece.",
+      "description": "Brazo de cerdo entero, con buena proporción de carne y grasa, pensado para cocciones largas y despiece en cocina.",
+      "presentation": "Congelado · pieza entera al vacío",
+      "approxWeight": "5 – 7 kg por pieza",
+      "suggestedUse": "Cocción lenta, horno y despiece",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/cortes-colgados-cerdo.png",
+        "alt": "Brazo entero — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-colgados-cerdo.png",
+          "alt": "Cortes de cerdo colgados en ganchos"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/pierna-cerdo.png",
+          "alt": "Pierna de cerdo colgada de un gancho"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-005",
+      "slug": "bondiola",
+      "name": "Bondiola",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Corte jugoso y marmoleado, para cocción lenta.",
+      "description": "Bondiola de cerdo, corte jugoso y con marmoleo natural, ideal para cocción lenta, ahumado y sándwich de carta.",
+      "presentation": "Congelado · empaque al vacío",
+      "approxWeight": "2 – 3 kg por pieza",
+      "suggestedUse": "Ahumado, cocción lenta y sándwich",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/cubos.jpg",
+        "alt": "Bondiola — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-006",
+      "slug": "pulpa-de-pierna",
+      "name": "Pulpa de pierna",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Sin hueso, magra y de fibra pareja.",
+      "description": "Pulpa de pierna de cerdo sin hueso, carne magra y de fibra pareja, lista para porcionar en filetes o cubos.",
+      "presentation": "Congelado · empaque al vacío",
+      "approxWeight": "3 – 5 kg por pieza",
+      "suggestedUse": "Filetes, cubos y alto volumen",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/cortes-tabla.jpg",
+        "alt": "Pulpa de pierna — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-007",
+      "slug": "pulpa-de-brazo",
+      "name": "Pulpa de brazo",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Sin hueso, de gran rendimiento en guisos.",
+      "description": "Pulpa de brazo de cerdo sin hueso, algo más fibrosa que la de pierna y de excelente rendimiento en guisos y molidos.",
+      "presentation": "Congelado · empaque al vacío",
+      "approxWeight": "3 – 4 kg por pieza",
+      "suggestedUse": "Guisos, molido y preparaciones largas",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/cubos.jpg",
+        "alt": "Pulpa de brazo — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-008",
+      "slug": "costillar-de-cerdo",
+      "name": "Costillar de cerdo",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Costillas parejas, para ahumado, horno y parrilla.",
+      "description": "Costillar de cerdo completo, de costillas parejas y grasa justa para ahumado, horno y parrilla.",
+      "presentation": "Congelado · empaque al vacío",
+      "approxWeight": "2 – 3 kg por pieza",
+      "suggestedUse": "Ahumado, horno y parrilla",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/costillar-cerdo.png",
+        "alt": "Costillar de cerdo — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/costillar-cerdo.png",
+          "alt": "Costillar de cerdo colgado de un gancho"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/cortes-colgados-cerdo.png",
+          "alt": "Cortes de cerdo colgados en ganchos"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-009",
+      "slug": "lomo-fino-de-res",
+      "name": "Lomo fino de res",
+      "line": "res",
+      "lineLabel": "Res",
+      "shortDescription": "Corte magro de res, de fibra fina y espesor uniforme.",
+      "description": "Corte magro de res, de fibra fina y espesor uniforme. Se porciona en destino según el grosor que maneje tu cocina.",
+      "presentation": "Congelado · empaque al vacío",
+      "approxWeight": "2 – 3 kg por pieza",
+      "suggestedUse": "Medallones, parrilla y plancha",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/cortes-tabla.jpg",
+        "alt": "Lomo fino de res — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-010",
+      "slug": "costillar-de-res",
+      "name": "Costillar de res",
+      "line": "res",
+      "lineLabel": "Res",
+      "shortDescription": "Costillar con hueso, apto para cocción lenta y carta.",
+      "description": "Costillar con hueso y corte parejo, pensado para cocción lenta, ahumado y carta.",
+      "presentation": "Congelado · empaque al vacío",
+      "approxWeight": "4 – 6 kg por pieza",
+      "suggestedUse": "Cocción lenta, horno y ahumado",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/costillar.jpg",
+        "alt": "Costillar de res — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/costillar.jpg",
+          "alt": "Costillar sostenido con guante"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/corte-hueso.jpg",
+          "alt": "Corte con hueso sobre tabla"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-011",
+      "slug": "corte-de-res-con-hueso",
+      "name": "Corte de res con hueso",
+      "line": "res",
+      "lineLabel": "Res",
+      "shortDescription": "Con grasa de cobertura, para parrilla y porciones grandes.",
+      "description": "Corte de res con hueso y grasa de cobertura, pensado para parrilla y porciones grandes.",
+      "presentation": "Congelado · pieza entera al vacío",
+      "approxWeight": "3 – 5 kg por pieza",
+      "suggestedUse": "Parrilla y porciones grandes",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/corte-hueso.jpg",
+        "alt": "Corte de res con hueso — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/corte-hueso.jpg",
+          "alt": "Corte con hueso sobre tabla"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    },
+    {
+      "id": "prd-012",
+      "slug": "res-en-cubos",
+      "name": "Res en cubos",
+      "line": "res",
+      "lineLabel": "Res",
+      "shortDescription": "Cubos regulares, listos para guisos de alto volumen.",
+      "description": "Res porcionada en cubos regulares, lista para guisos y preparaciones de alto volumen.",
+      "presentation": "Congelado · bolsa porcionada",
+      "approxWeight": "Bolsa de 5 kg",
+      "suggestedUse": "Guisos, estofados y alto volumen",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/cubos.jpg",
+        "alt": "Res en cubos — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/cubos.jpg",
+          "alt": "Producto porcionado sobre tabla"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/cortes-tabla.jpg",
+          "alt": "Cortes sobre tabla de madera"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Producto en cámara de congelación"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Corte sellado al vacío en su empaque"
+        }
+      ]
+    }
+  ]
+}

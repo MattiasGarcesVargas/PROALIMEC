@@ -1,0 +1,216 @@
+{
+  "hero": {
+    "eyebrow": "Alimentos cárnicos congelados",
+    "titleLines": ["Frescura", "protegida", "Calidad garantizada"],
+    "accentLineIndex": 2,
+    "intro": "Distribuimos cortes cárnicos nacionales e importados para restaurantes, mercados y distribuidores. Contamos con más de 15 años de experiencia en el mercado.",
+    "image": {
+      "src": "/assets/images/hero-chuleta-cut.png",
+      "alt": "Chuleta de cerdo con hueso",
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  "marquee": {
+    "items": [
+      "Frescura protegida",
+      "Cadena de frío sin cortes",
+      "Calidad garantizada",
+      "Respaldo en cada corte"
+    ]
+  },
+  "bestSellers": [
+    {
+      "id": "bs-01",
+      "position": "Best seller 01",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "title": "Pierna de cerdo",
+      "description": "Pierna entera con hueso y piel, de rendimiento alto para horno y porcionado. Sale de cámara congelada y lista para despiece en destino.",
+      "specs": [
+        {
+          "label": "Presentación",
+          "value": "Pieza entera con hueso"
+        },
+        {
+          "label": "Volumen",
+          "value": "Caja mayorista"
+        },
+        {
+          "label": "Conservación",
+          "value": "−18 °C",
+          "highlight": true
+        }
+      ],
+      "ctaLabel": "Consultar este corte",
+      "product": {
+        "src": "/assets/images/pierna-cerdo.png",
+        "alt": "Pierna de cerdo colgada de una cuerda",
+        "width": 1024,
+        "height": 1536
+      }
+    },
+    {
+      "id": "bs-02",
+      "position": "Best seller 02",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "title": "Costillar de cerdo",
+      "description": "Costillar de cerdo completo, de costillas parejas y grasa justa para ahumado, horno y parrilla. Se entrega congelado y listo para porcionar por costilla.",
+      "specs": [
+        {
+          "label": "Presentación",
+          "value": "Costillar entero al vacío"
+        },
+        {
+          "label": "Volumen",
+          "value": "Caja mayorista"
+        },
+        {
+          "label": "Conservación",
+          "value": "−18 °C",
+          "highlight": true
+        }
+      ],
+      "ctaLabel": "Consultar este corte",
+      "product": {
+        "src": "/assets/images/costillar-cerdo.png",
+        "alt": "Costillar de cerdo colgado de un gancho de carnicería",
+        "width": 1024,
+        "height": 1536
+      }
+    }
+  ],
+  "ourProducts": {
+    "title": "Nuestros productos",
+    "body": "A partir de estas piezas, es preferible que el corte sea recto para que se cocine uniformemente. El producto sale de cámara congelado y se porciona en destino. Cada línea del catálogo mantiene el mismo estándar de conservación, desde el almacenamiento hasta la entrega en tu punto de recepción.",
+    "image": {
+      "src": "/assets/images/cortes-colgados-cerdo.png",
+      "alt": "Cortes de cerdo y de res colgados de ganchos de carnicería",
+      "width": 1536,
+      "height": 1024
+    },
+    "captionTitle": "Cortes de cerdo y de res",
+    "captionMeta": "Líneas cerdo · res"
+  },
+  "categoriesIntro": {
+    "eyebrow": "Nuestro catálogo",
+    "title": "Explora por categoría",
+    "body": "Dos líneas de producto, un mismo estándar de conservación desde la cámara hasta tu cocina."
+  },
+  "categories": [
+    {
+      "id": "cerdo",
+      "index": "01",
+      "title": "Cerdo",
+      "description": "Piezas de cerdo para restaurantes, asaderos y punto de venta.",
+      "banner": {
+        "src": "/assets/images/banner-cerdo.png",
+        "alt": "Cortes de cerdo"
+      }
+    },
+    {
+      "id": "res",
+      "index": "02",
+      "title": "Res",
+      "description": "Cortes de res para parrilla, cocción lenta y porcionado industrial.",
+      "banner": {
+        "src": "/assets/images/banner-res.png",
+        "alt": "Cortes de res"
+      }
+    }
+  ],
+  "catalogPreview": {
+    "title": "Algunos de los cortes que manejamos",
+    "ctaLabel": "Ver catálogo completo"
+  },
+  "coldChain": {
+    "eyebrow": "Conservación",
+    "title": "Cadena de frío",
+    "intro": "Tres momentos donde el producto puede perderse. Los tratamos como uno solo.",
+    "steps": [
+      {
+        "step": "Paso 1",
+        "title": "Almacenamiento",
+        "body": "El producto permanece congelado en cámara, sin ciclos de descongelado parcial.",
+        "image": {
+          "src": "/assets/images/camara-ganchos.jpg",
+          "alt": "Cortes de carne colgados en ganchos dentro de una cámara fría",
+          "width": 736,
+          "height": 1104
+        }
+      },
+      {
+        "step": "Paso 2",
+        "title": "Preparación del pedido",
+        "body": "El despacho se arma en frío y se cierra antes de salir de cámara.",
+        "image": {
+          "src": "/assets/images/paso-empacado.webp",
+          "alt": "Filete de res crudo sellado al vacío en plástico",
+          "width": 1200,
+          "height": 800
+        }
+      },
+      {
+        "step": "Paso 3",
+        "title": "Transporte",
+        "body": "El traslado mantiene la temperatura hasta la entrega en tu punto de recepción.",
+        "image": {
+          "src": "/assets/images/paso-transporte.webp",
+          "alt": "Camión de carga refrigerado blanco estacionado junto a una bodega",
+          "width": 1200,
+          "height": 800
+        }
+      }
+    ],
+    "stats": [
+      {
+        "value": "−18 °C",
+        "label": "Temperatura de conservación del producto congelado"
+      },
+      {
+        "value": "2 líneas",
+        "label": "Líneas de producto en el catálogo: cerdo y res"
+      },
+      {
+        "value": "B2B",
+        "label": "Venta mayorista a negocios, no a consumidor final"
+      }
+    ]
+  },
+  "service": {
+    "eyebrow": "Proalimec",
+    "title": "Una atención pensada para tu negocio",
+    "intro": "Trabajamos con compradores mayoristas que necesitan producto constante, precio claro y una respuesta rápida.",
+    "cards": [
+      {
+        "title": "Pedidos por volumen",
+        "body": "Cotizamos según el tamaño real de tu operación, no por listas cerradas."
+      },
+      {
+        "title": "Abastecimiento constante",
+        "body": "Planificamos la reposición para que no te quedes sin producto en temporada alta."
+      },
+      {
+        "title": "Trato directo",
+        "body": "Hablas con quien gestiona tu pedido, sin cadenas de intermediarios."
+      },
+      {
+        "title": "Entrega coordinada",
+        "body": "Acordamos horarios de descarga que se ajusten a tu punto de recepción."
+      }
+    ]
+  },
+  "contactCta": {
+    "title": "Hablemos de lo que necesita tu negocio.",
+    "body": "Cuéntanos qué cortes manejas y con qué frecuencia. Te respondemos con una cotización concreta.",
+    "primaryLabel": "Ir a contacto",
+    "secondaryLabel": "Ver catálogo",
+    "image": {
+      "src": "/assets/images/cerdo-despiece.webp",
+      "alt": "Cortes de cerdo crudos dispuestos formando la silueta de un cerdo sobre piedra negra",
+      "width": 1448,
+      "height": 1086
+    }
+  }
+}
