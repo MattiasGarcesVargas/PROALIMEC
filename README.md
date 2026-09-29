@@ -34,4 +34,4 @@ Los módulos verticales viven en `src/sections`. El registro de implementaciones
 
 Los productos, categorías, canales de contacto, fotografías y datos empresariales siguen pendientes de aprobación. Los mocks permanecen vacíos y la interfaz no inventa información comercial.
 
-La dirección visual y las reglas de implementación están documentadas en `docs/PROALIMEC_DESIGN_SYSTEM.md`.
+La dirección visual está documentada en `DESIGN.md` y el contexto de producto en `PRODUCT.md`.

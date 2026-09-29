@@ -40,3 +40,9 @@ build
 .impeccable/review/
 .impeccable/questions/
 .impeccable/hook.cache.json
+
+# Documentación interna del proyecto (se mantiene local, fuera del repo)
+docs/
+
+# Lockfile de las skills de los agentes de IA (sus carpetas ya se ignoran arriba)
+skills-lock.json

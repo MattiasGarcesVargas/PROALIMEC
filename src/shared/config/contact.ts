@@ -37,7 +37,7 @@ export const CONTACT: ContactConfig = {
 
 export const CITY = 'Ambato, Ecuador'
 
-// Mensaje general acordado en docs/PROALIMEC_CONTEXT.md (sección 14)
+// Mensaje general acordado con PROALIMEC para las consultas desde la web
 export const WHATSAPP_GREETING =
   'Hola, vengo desde la página web de PROALIMEC y deseo información para una compra al por mayor.'
 
