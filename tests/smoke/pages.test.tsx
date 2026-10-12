@@ -64,8 +64,8 @@ describe('main pages', () => {
         name: 'Nuestros productos',
       }),
     ).toBeVisible()
-    expect(screen.getByRole('button', { name: /todos 12/i })).toBeVisible()
-    expect(screen.getByRole('button', { name: /cerdo 8/i })).toBeVisible()
+    expect(screen.getByRole('button', { name: /todos 13/i })).toBeVisible()
+    expect(screen.getByRole('button', { name: /cerdo 9/i })).toBeVisible()
     expect(screen.getByRole('button', { name: /res 4/i })).toBeVisible()
   })
 

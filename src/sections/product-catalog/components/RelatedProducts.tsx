@@ -1,6 +1,8 @@
 import { Link } from 'react-router'
 
+import { PHOTO_FIT_CLASS } from '@/sections/product-catalog/consts/product-views'
 import type { Product } from '@/sections/product-catalog/types/product-catalog.types'
+import { cn } from '@/shared/utils/cn'
 
 function RelatedProducts({ products }: { products: Product[] }) {
   if (products.length === 0) return null
@@ -24,7 +26,7 @@ function RelatedProducts({ products }: { products: Product[] }) {
                   src={product.image.src}
                   alt={product.image.alt}
                   loading="lazy"
-                  className="size-full object-cover"
+                  className={cn('size-full', PHOTO_FIT_CLASS[product.image.fit ?? 'cover'])}
                 />
                 <span
                   aria-hidden="true"

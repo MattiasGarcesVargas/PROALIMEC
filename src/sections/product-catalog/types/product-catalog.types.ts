@@ -5,6 +5,7 @@ import type {
   LineCountsSchema,
   MeatLineFilterSchema,
   MeatLineSchema,
+  PhotoFitSchema,
   ProductGalleryItemSchema,
   ProductMediaSchema,
   ProductViewSchema,
@@ -16,6 +17,7 @@ export type Product = z.infer<typeof ProductSchema>
 export type ProductMedia = z.infer<typeof ProductMediaSchema>
 export type ProductGalleryItem = z.infer<typeof ProductGalleryItemSchema>
 export type ProductView = z.infer<typeof ProductViewSchema>
+export type PhotoFit = z.infer<typeof PhotoFitSchema>
 export type ProductsDataset = z.infer<typeof ProductsDatasetSchema>
 export type MeatLine = z.infer<typeof MeatLineSchema>
 export type MeatLineFilter = z.infer<typeof MeatLineFilterSchema>

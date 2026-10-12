@@ -9,21 +9,28 @@ const SlugSchema = z
 export const MeatLineSchema = z.enum(['cerdo', 'res'])
 export const MeatLineFilterSchema = z.enum(['todo', 'cerdo', 'res'])
 
+// Cómo llena la foto su recuadro: las fotos reales vienen sobre negro puro y se muestran
+// completas ('contain'); el fondo negro del recuadro se funde con el de la foto
+export const PhotoFitSchema = z.enum(['cover', 'contain'])
+
 export const ProductMediaSchema = z.object({
   src: z.string().trim().min(1),
   alt: z.string().trim().min(1),
   width: z.number().int().positive().optional(),
   height: z.number().int().positive().optional(),
+  fit: PhotoFitSchema.optional(),
 })
 
 // Las cuatro fotos de la ficha, en este orden: la principal, desde arriba, de lado y en su empaque.
-// TODO: hoy usan fotos de referencia; reemplazar por las fotos reales de cada corte
+// TODO: casi todos usan fotos de referencia; reemplazar por las fotos reales de cada corte
+// (en public/assets/images/catalogo/<corte>/, sobre fondo negro puro y con fit 'contain')
 export const ProductViewSchema = z.enum(['principal', 'arriba', 'lateral', 'empaque'])
 
 export const ProductGalleryItemSchema = z.object({
   view: ProductViewSchema,
   src: z.string().trim().min(1),
   alt: z.string().trim().min(1),
+  fit: PhotoFitSchema.optional(),
 })
 
 export const ProductSchema = z.object({

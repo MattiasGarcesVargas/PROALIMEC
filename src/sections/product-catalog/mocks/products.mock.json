@@ -14,29 +14,34 @@
       "suggestedUse": "Porcionado en chuletas, parrilla y plancha",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/images/cortes-colgados-cerdo.png",
+        "src": "/assets/images/catalogo/chuleta_cerdo/chuleta_cerdo_encima.webp",
+        "fit": "contain",
         "alt": "Chuleta entera — corte congelado PROALIMEC"
       },
       "gallery": [
         {
           "view": "principal",
-          "src": "/assets/images/cortes-colgados-cerdo.png",
-          "alt": "Cortes de cerdo colgados en ganchos"
+          "src": "/assets/images/catalogo/chuleta_cerdo/chuleta_cerdo_encima.webp",
+          "fit": "contain",
+          "alt": "Lomo de cerdo con hueso en pieza entera, con su capa de grasa"
         },
         {
           "view": "arriba",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
+          "src": "/assets/images/catalogo/chuleta_cerdo/chuleta_cerdo.webp",
+          "fit": "contain",
+          "alt": "Pieza entera de chuleta de cerdo vista desde arriba"
         },
         {
           "view": "lateral",
-          "src": "/assets/images/costillar-cerdo.png",
-          "alt": "Costillar de cerdo colgado de un gancho"
+          "src": "/assets/images/catalogo/chuleta_cerdo/chuleta_cerdo_lateral.webp",
+          "fit": "contain",
+          "alt": "Corte transversal de la chuleta entera con el lomo y el hueso"
         },
         {
           "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
+          "src": "/assets/images/catalogo/chuleta_cerdo/chuleta_cerdo_empaquetada.webp",
+          "fit": "contain",
+          "alt": "Dos piezas de chuleta entera en caja con funda plástica"
         }
       ]
     },
@@ -53,29 +58,78 @@
       "suggestedUse": "Plancha, parrilla y menú diario",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/images/cortes-tabla.jpg",
+        "src": "/assets/images/catalogo/chuleta_rebanada/chuletas_rebanadas.webp",
+        "fit": "contain",
         "alt": "Chuleta rebanada — corte congelado PROALIMEC"
       },
       "gallery": [
         {
           "view": "principal",
-          "src": "/assets/images/cortes-tabla.jpg",
-          "alt": "Cortes sobre tabla de madera"
+          "src": "/assets/images/catalogo/chuleta_rebanada/chuletas_rebanadas.webp",
+          "fit": "contain",
+          "alt": "Cuatro chuletas de cerdo rebanadas a espesor uniforme"
         },
         {
           "view": "arriba",
-          "src": "/assets/images/cubos.jpg",
-          "alt": "Producto porcionado sobre tabla"
+          "src": "/assets/images/catalogo/chuleta_rebanada/chuletas_rebanadas_empaquetadas.webp",
+          "fit": "contain",
+          "alt": "Caja abierta con chuletas rebanadas sobre funda plástica, vista desde arriba"
         },
         {
           "view": "lateral",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
+          "src": "/assets/images/catalogo/chuleta_rebanada/presentacion_chuletas_rebanadas.webp",
+          "fit": "contain",
+          "alt": "Chuletas rebanadas frente a la caja de PROALIMEC"
         },
         {
           "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
+          "src": "/assets/images/catalogo/chuleta_rebanada/emapeque-chuletas.webp",
+          "fit": "contain",
+          "alt": "Caja cerrada de PROALIMEC con cinta de embalaje"
+        }
+      ]
+    },
+    {
+      "id": "prd-016",
+      "slug": "chuleta-nuca-de-cerdo",
+      "name": "Chuleta nuca de cerdo",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Pieza de nuca con hueso, jugosa y con vetas de grasa.",
+      "description": "Chuleta de nuca de cerdo en pieza, con hueso y vetas de grasa que la mantienen jugosa, para porcionar en chuletas o cocinar entera.",
+      "presentation": "Congelado · en caja",
+      "approxWeight": "Por confirmar",
+      "suggestedUse": "Parrilla, plancha y horno",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/catalogo/chuleta_nuca_cerdo/chuleta_nuca_cerdo_frontal.webp",
+        "fit": "contain",
+        "alt": "Chuleta nuca de cerdo — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/catalogo/chuleta_nuca_cerdo/chuleta_nuca_cerdo_frontal.webp",
+          "fit": "contain",
+          "alt": "Pieza de chuleta nuca de cerdo vista de frente, con el hueso arriba"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/catalogo/chuleta_nuca_cerdo/chelta_nuca_cerdo.webp",
+          "fit": "contain",
+          "alt": "Pieza de chuleta nuca de cerdo vista desde arriba"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/catalogo/chuleta_nuca_cerdo/chuleta_nuca_cerdo_lateral.webp",
+          "fit": "contain",
+          "alt": "Pieza de chuleta nuca de cerdo vista de lado"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/catalogo/cola_cerdo/empaque.webp",
+          "fit": "contain",
+          "alt": "Caja cerrada de PROALIMEC con cinta de embalaje"
         }
       ]
     },
@@ -92,107 +146,34 @@
       "suggestedUse": "Horno, pernil y porcionado",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/images/pierna-cerdo.png",
+        "src": "/assets/images/catalogo/pierna_cerdo/pierna_cerdo.webp",
+        "fit": "contain",
         "alt": "Pierna entera — corte congelado PROALIMEC"
       },
       "gallery": [
         {
           "view": "principal",
-          "src": "/assets/images/pierna-cerdo.png",
-          "alt": "Pierna de cerdo colgada de un gancho"
+          "src": "/assets/images/catalogo/pierna_cerdo/pierna_cerdo.webp",
+          "fit": "contain",
+          "alt": "Pierna de cerdo entera con su piel"
         },
         {
           "view": "arriba",
-          "src": "/assets/images/cortes-colgados-cerdo.png",
-          "alt": "Cortes de cerdo colgados en ganchos"
+          "src": "/assets/images/catalogo/pierna_cerdo/pierna_cerdo_frontal.webp",
+          "fit": "contain",
+          "alt": "Pierna de cerdo entera vista de frente"
         },
         {
           "view": "lateral",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
+          "src": "/assets/images/catalogo/pierna_cerdo/pierna_cerdo_lateral.webp",
+          "fit": "contain",
+          "alt": "Pierna de cerdo entera vista de lado, con el corte de la carne a la vista"
         },
         {
           "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
-        }
-      ]
-    },
-    {
-      "id": "prd-004",
-      "slug": "brazo-entero",
-      "name": "Brazo entero",
-      "line": "cerdo",
-      "lineLabel": "Cerdo",
-      "shortDescription": "Pieza entera para cocción larga y despiece.",
-      "description": "Brazo de cerdo entero, con buena proporción de carne y grasa, pensado para cocciones largas y despiece en cocina.",
-      "presentation": "Congelado · pieza entera al vacío",
-      "approxWeight": "5 – 7 kg por pieza",
-      "suggestedUse": "Cocción lenta, horno y despiece",
-      "storageTemperature": "−18 °C",
-      "image": {
-        "src": "/assets/images/cortes-colgados-cerdo.png",
-        "alt": "Brazo entero — corte congelado PROALIMEC"
-      },
-      "gallery": [
-        {
-          "view": "principal",
-          "src": "/assets/images/cortes-colgados-cerdo.png",
-          "alt": "Cortes de cerdo colgados en ganchos"
-        },
-        {
-          "view": "arriba",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
-        },
-        {
-          "view": "lateral",
-          "src": "/assets/images/pierna-cerdo.png",
-          "alt": "Pierna de cerdo colgada de un gancho"
-        },
-        {
-          "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
-        }
-      ]
-    },
-    {
-      "id": "prd-005",
-      "slug": "bondiola",
-      "name": "Bondiola",
-      "line": "cerdo",
-      "lineLabel": "Cerdo",
-      "shortDescription": "Corte jugoso y marmoleado, para cocción lenta.",
-      "description": "Bondiola de cerdo, corte jugoso y con marmoleo natural, ideal para cocción lenta, ahumado y sándwich de carta.",
-      "presentation": "Congelado · empaque al vacío",
-      "approxWeight": "2 – 3 kg por pieza",
-      "suggestedUse": "Ahumado, cocción lenta y sándwich",
-      "storageTemperature": "−18 °C",
-      "image": {
-        "src": "/assets/images/cubos.jpg",
-        "alt": "Bondiola — corte congelado PROALIMEC"
-      },
-      "gallery": [
-        {
-          "view": "principal",
-          "src": "/assets/images/cubos.jpg",
-          "alt": "Producto porcionado sobre tabla"
-        },
-        {
-          "view": "arriba",
-          "src": "/assets/images/cortes-tabla.jpg",
-          "alt": "Cortes sobre tabla de madera"
-        },
-        {
-          "view": "lateral",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
-        },
-        {
-          "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
+          "src": "/assets/images/catalogo/pierna_cerdo/pierna_cerdo_congelada.webp",
+          "fit": "contain",
+          "alt": "Pierna de cerdo entera congelada, escarchada por el frío"
         }
       ]
     },
@@ -209,107 +190,210 @@
       "suggestedUse": "Filetes, cubos y alto volumen",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/images/cortes-tabla.jpg",
+        "src": "/assets/images/catalogo/pulpa_pierna_cerdo/pulpa_pierna_cerdo.webp",
+        "fit": "contain",
         "alt": "Pulpa de pierna — corte congelado PROALIMEC"
       },
       "gallery": [
         {
           "view": "principal",
-          "src": "/assets/images/cortes-tabla.jpg",
-          "alt": "Cortes sobre tabla de madera"
+          "src": "/assets/images/catalogo/pulpa_pierna_cerdo/pulpa_pierna_cerdo.webp",
+          "fit": "contain",
+          "alt": "Pulpa de pierna de cerdo sin hueso, en pieza"
         },
         {
           "view": "arriba",
-          "src": "/assets/images/cubos.jpg",
-          "alt": "Producto porcionado sobre tabla"
+          "src": "/assets/images/catalogo/pulpa_pierna_cerdo/pulpa_pierna_cerdo_frontal.webp",
+          "fit": "contain",
+          "alt": "Pulpa de pierna de cerdo vista de frente"
         },
         {
           "view": "lateral",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
+          "src": "/assets/images/catalogo/pulpa_pierna_cerdo/pulpa_cerdo_empaquetada.webp",
+          "fit": "contain",
+          "alt": "Pulpa de pierna de cerdo dentro de una caja con funda plástica"
         },
         {
           "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
-        }
-      ]
-    },
-    {
-      "id": "prd-007",
-      "slug": "pulpa-de-brazo",
-      "name": "Pulpa de brazo",
-      "line": "cerdo",
-      "lineLabel": "Cerdo",
-      "shortDescription": "Sin hueso, de gran rendimiento en guisos.",
-      "description": "Pulpa de brazo de cerdo sin hueso, algo más fibrosa que la de pierna y de excelente rendimiento en guisos y molidos.",
-      "presentation": "Congelado · empaque al vacío",
-      "approxWeight": "3 – 4 kg por pieza",
-      "suggestedUse": "Guisos, molido y preparaciones largas",
-      "storageTemperature": "−18 °C",
-      "image": {
-        "src": "/assets/images/cubos.jpg",
-        "alt": "Pulpa de brazo — corte congelado PROALIMEC"
-      },
-      "gallery": [
-        {
-          "view": "principal",
-          "src": "/assets/images/cubos.jpg",
-          "alt": "Producto porcionado sobre tabla"
-        },
-        {
-          "view": "arriba",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
-        },
-        {
-          "view": "lateral",
-          "src": "/assets/images/cortes-tabla.jpg",
-          "alt": "Cortes sobre tabla de madera"
-        },
-        {
-          "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
+          "src": "/assets/images/catalogo/cola_cerdo/empaque.webp",
+          "fit": "contain",
+          "alt": "Caja cerrada de PROALIMEC con cinta de embalaje"
         }
       ]
     },
     {
       "id": "prd-008",
       "slug": "costillar-de-cerdo",
-      "name": "Costillar de cerdo",
+      "name": "Costillar de cerdo con piel",
       "line": "cerdo",
       "lineLabel": "Cerdo",
       "shortDescription": "Costillas parejas, para ahumado, horno y parrilla.",
-      "description": "Costillar de cerdo completo, de costillas parejas y grasa justa para ahumado, horno y parrilla.",
+      "description": "Costillar de cerdo completo con su piel, de costillas parejas y grasa justa para ahumado, horno y parrilla.",
       "presentation": "Congelado · empaque al vacío",
       "approxWeight": "2 – 3 kg por pieza",
       "suggestedUse": "Ahumado, horno y parrilla",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/images/costillar-cerdo.png",
-        "alt": "Costillar de cerdo — corte congelado PROALIMEC"
+        "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo_posterior.webp",
+        "fit": "contain",
+        "alt": "Costillar de cerdo con piel — corte congelado PROALIMEC"
       },
       "gallery": [
         {
           "view": "principal",
-          "src": "/assets/images/costillar-cerdo.png",
-          "alt": "Costillar de cerdo colgado de un gancho"
+          "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo_posterior.webp",
+          "fit": "contain",
+          "alt": "Costillar de cerdo con piel visto por el lado de las costillas"
         },
         {
           "view": "arriba",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
+          "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo.webp",
+          "fit": "contain",
+          "alt": "Costillar de cerdo visto desde arriba, por el lado de la piel"
         },
         {
           "view": "lateral",
-          "src": "/assets/images/cortes-colgados-cerdo.png",
-          "alt": "Cortes de cerdo colgados en ganchos"
+          "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo_cerdo.webp",
+          "fit": "contain",
+          "alt": "Costillar de cerdo con piel visto de lado"
         },
         {
           "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
+          "src": "/assets/images/catalogo/cola_cerdo/empaque.webp",
+          "fit": "contain",
+          "alt": "Caja cerrada de PROALIMEC con cinta de embalaje"
+        }
+      ]
+    },
+    {
+      "id": "prd-014",
+      "slug": "costillar-de-cerdo-sin-piel",
+      "name": "Costillar de cerdo sin piel",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Costillar sin piel, listo para porcionar y cocinar.",
+      "description": "Costillar de cerdo completo sin piel, de costillas parejas y grasa justa para ahumado, horno y parrilla.",
+      "presentation": "Congelado · en caja",
+      "approxWeight": "Por confirmar",
+      "suggestedUse": "Ahumado, horno y parrilla",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/catalogo/costillar_cerdo_sin_piel/costillar_cerdo_sin_piel_posterior.webp",
+        "fit": "contain",
+        "alt": "Costillar de cerdo sin piel — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/catalogo/costillar_cerdo_sin_piel/costillar_cerdo_sin_piel_posterior.webp",
+          "fit": "contain",
+          "alt": "Costillar de cerdo sin piel visto por el lado de las costillas"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/catalogo/costillar_cerdo_sin_piel/costilla_cerdo_sin_piel.webp",
+          "fit": "contain",
+          "alt": "Costillar de cerdo sin piel visto desde arriba, por el lado de la grasa"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/catalogo/costillar_cerdo_sin_piel/costillar_cerdo_sin_piel_lateral.webp",
+          "fit": "contain",
+          "alt": "Costillar de cerdo sin piel visto de lado"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/catalogo/costillar_cerdo_sin_piel/costillar_cerdo_sin_piel_empaquetado.webp",
+          "fit": "contain",
+          "alt": "Costillar de cerdo sin piel dentro de una caja con funda plástica"
+        }
+      ]
+    },
+    {
+      "id": "prd-013",
+      "slug": "cola-de-cerdo",
+      "name": "Cola de cerdo",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Pieza con cola, para caldos, fritada y horno.",
+      "description": "Cola de cerdo en pieza, con su carne y piel, para caldos, fritada y preparaciones al horno.",
+      "presentation": "Congelado · en caja",
+      "approxWeight": "Por confirmar",
+      "suggestedUse": "Caldos, fritada y horno",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/catalogo/cola_cerdo/cola_cerdo_frontal.webp",
+        "fit": "contain",
+        "alt": "Cola de cerdo — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/catalogo/cola_cerdo/cola_cerdo_frontal.webp",
+          "fit": "contain",
+          "alt": "Cola de cerdo en pieza, vista de frente"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/catalogo/cola_cerdo/cola_cerdo.webp",
+          "fit": "contain",
+          "alt": "Cola de cerdo en pieza, vista desde arriba"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/catalogo/cola_cerdo/cola_cerdo_lateral.webp",
+          "fit": "contain",
+          "alt": "Cola de cerdo en pieza, vista de lado"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/catalogo/cola_cerdo/empaque.webp",
+          "fit": "contain",
+          "alt": "Caja cerrada de PROALIMEC con cinta de embalaje"
+        }
+      ]
+    },
+    {
+      "id": "prd-015",
+      "slug": "gordura-de-cerdo",
+      "name": "Gordura de cerdo",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Láminas de grasa, para manteca, chicharrón y embutidos.",
+      "description": "Gordura de cerdo en láminas, con algo de carne, para derretir en manteca, preparar chicharrón o mezclar en embutidos.",
+      "presentation": "Congelado · en caja",
+      "approxWeight": "Por confirmar",
+      "suggestedUse": "Manteca, chicharrón y embutidos",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/catalogo/gordura_cerdo/gordura_cerdo_frontal.webp",
+        "fit": "contain",
+        "alt": "Gordura de cerdo — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/catalogo/gordura_cerdo/gordura_cerdo_frontal.webp",
+          "fit": "contain",
+          "alt": "Cuatro láminas de gordura de cerdo con vetas de carne"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/catalogo/gordura_cerdo/gordura_cerdo.webp",
+          "fit": "contain",
+          "alt": "Láminas de gordura de cerdo vistas desde arriba"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/catalogo/gordura_cerdo/gordura_cerdo_posterior.webp",
+          "fit": "contain",
+          "alt": "Láminas de gordura de cerdo vistas por el lado de la grasa"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/catalogo/cola_cerdo/empaque.webp",
+          "fit": "contain",
+          "alt": "Caja cerrada de PROALIMEC con cinta de embalaje"
         }
       ]
     },

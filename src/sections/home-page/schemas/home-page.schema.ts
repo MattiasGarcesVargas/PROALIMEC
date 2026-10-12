@@ -94,6 +94,7 @@ export const HomePageSchema = z.object({
         body: z.string().trim().min(1),
       }),
     ),
+    gallery: z.array(MediaAssetSchema.extend({ caption: z.string().trim().min(1) })).length(4),
   }),
   contactCta: z.object({
     title: z.string().trim().min(1),

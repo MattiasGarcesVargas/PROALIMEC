@@ -1,6 +1,9 @@
 import { useState } from 'react'
 
-import { PRODUCT_VIEW_LABELS } from '@/sections/product-catalog/consts/product-views'
+import {
+  PHOTO_FIT_CLASS,
+  PRODUCT_VIEW_LABELS,
+} from '@/sections/product-catalog/consts/product-views'
 import type { Product } from '@/sections/product-catalog/types/product-catalog.types'
 import { cn } from '@/shared/utils/cn'
 
@@ -17,7 +20,10 @@ function ProductGallery({ product }: { product: Product }) {
           key={activePhoto.view}
           src={activePhoto.src}
           alt={activePhoto.alt}
-          className="size-full animate-fade-in object-cover motion-reduce:animate-none"
+          className={cn(
+            'size-full animate-fade-in motion-reduce:animate-none',
+            PHOTO_FIT_CLASS[activePhoto.fit ?? 'cover'],
+          )}
         />
       </div>
 
@@ -43,7 +49,8 @@ function ProductGallery({ product }: { product: Product }) {
                 alt=""
                 loading="lazy"
                 className={cn(
-                  'size-full object-cover transition-[opacity,scale] duration-300',
+                  'size-full transition-[opacity,scale] duration-300',
+                  PHOTO_FIT_CLASS[photo.fit ?? 'cover'],
                   isActive
                     ? 'opacity-100'
                     : 'opacity-70 group-hover:scale-105 group-hover:opacity-100',

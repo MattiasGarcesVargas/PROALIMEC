@@ -1,7 +1,10 @@
 import { X } from 'lucide-react'
 import { useState } from 'react'
 
-import { PRODUCT_VIEW_LABELS } from '@/sections/product-catalog/consts/product-views'
+import {
+  PHOTO_FIT_CLASS,
+  PRODUCT_VIEW_LABELS,
+} from '@/sections/product-catalog/consts/product-views'
 import type { Product } from '@/sections/product-catalog/types/product-catalog.types'
 import ButtonLink from '@/shared/components/ui/ButtonLink'
 import { cn } from '@/shared/utils/cn'
@@ -44,7 +47,10 @@ function ProductSheet({ product, onClose }: { product: Product; onClose: () => v
               key={activePhoto.src + activeIndex}
               src={activePhoto.src}
               alt={activePhoto.alt}
-              className="absolute inset-0 size-full animate-fade-in object-cover motion-reduce:animate-none"
+              className={cn(
+                'absolute inset-0 size-full animate-fade-in motion-reduce:animate-none',
+                PHOTO_FIT_CLASS[activePhoto.fit ?? 'cover'],
+              )}
             />
           </div>
           <div className="flex gap-2 p-3">
@@ -63,7 +69,11 @@ function ProductSheet({ product, onClose }: { product: Product; onClose: () => v
                     isActive ? 'border-orange' : 'border-white/24 hover:border-white/60',
                   )}
                 >
-                  <img src={photo.src} alt="" className="size-full object-cover" />
+                  <img
+                    src={photo.src}
+                    alt=""
+                    className={cn('size-full', PHOTO_FIT_CLASS[photo.fit ?? 'cover'])}
+                  />
                 </button>
               )
             })}
