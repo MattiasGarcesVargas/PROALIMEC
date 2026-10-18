@@ -1,4 +1,6 @@
+import { PHOTO_FIT_CLASS } from '@/sections/product-catalog/consts/product-views'
 import type { Product } from '@/sections/product-catalog/types/product-catalog.types'
+import { cn } from '@/shared/utils/cn'
 
 interface ProductCardProps {
   product: Product
@@ -20,7 +22,10 @@ function ProductCard({ product, onOpen }: ProductCardProps) {
             alt={product.image.alt}
             loading="lazy"
             draggable={false}
-            className="size-full object-cover transition-transform duration-800 ease-out-expo group-hover:scale-105 group-focus:scale-105"
+            className={cn(
+              'size-full transition-transform duration-800 ease-out-expo group-hover:scale-105 group-focus:scale-105',
+              PHOTO_FIT_CLASS[product.image.fit ?? 'cover'],
+            )}
           />
           <span
             aria-hidden="true"

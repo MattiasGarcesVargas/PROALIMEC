@@ -134,10 +134,10 @@
         "title": "Almacenamiento",
         "body": "El producto permanece congelado en cámara, sin ciclos de descongelado parcial.",
         "image": {
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Cortes de carne colgados en ganchos dentro de una cámara fría",
-          "width": 736,
-          "height": 1104
+          "src": "/assets/images/homepage/process/almacenamiento.webp",
+          "alt": "Cámara fría con cajas de producto congelado apiladas y gavetas de cortes",
+          "width": 1600,
+          "height": 1067
         }
       },
       {
@@ -145,10 +145,10 @@
         "title": "Preparación del pedido",
         "body": "El despacho se arma en frío y se cierra antes de salir de cámara.",
         "image": {
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Filete de res crudo sellado al vacío en plástico",
-          "width": 1200,
-          "height": 800
+          "src": "/assets/images/homepage/process/preparacion-producto.webp",
+          "alt": "Personal con gorro, mascarilla y mandil preparando cortes en la sala de proceso",
+          "width": 1600,
+          "height": 1067
         }
       },
       {
@@ -156,10 +156,10 @@
         "title": "Transporte",
         "body": "El traslado mantiene la temperatura hasta la entrega en tu punto de recepción.",
         "image": {
-          "src": "/assets/images/paso-transporte.webp",
-          "alt": "Camión de carga refrigerado blanco estacionado junto a una bodega",
-          "width": 1200,
-          "height": 800
+          "src": "/assets/images/homepage/process/transporte.webp",
+          "alt": "Camiones refrigerados de distintos tamaños estacionados frente a la bodega",
+          "width": 1600,
+          "height": 1067
         }
       }
     ],
@@ -173,7 +173,7 @@
         "label": "Líneas de producto en el catálogo: cerdo y res"
       },
       {
-        "value": "B2B",
+        "value": "B2C",
         "label": "Venta mayorista a negocios, no a consumidor final"
       }
     ]
@@ -198,6 +198,36 @@
       {
         "title": "Entrega coordinada",
         "body": "Acordamos horarios de descarga que se ajusten a tu punto de recepción."
+      }
+    ],
+    "gallery": [
+      {
+        "src": "/assets/images/homepage/company/exterior_empresa.webp",
+        "alt": "Fachada de las instalaciones de PROALIMEC con camiones refrigerados frente a la bodega",
+        "caption": "Instalaciones · Ambato",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/assets/images/homepage/company/oficina_interior.webp",
+        "alt": "Pasillo de oficinas con escritorios y divisiones de vidrio",
+        "caption": "Oficinas",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/assets/images/homepage/company/interior_empresa.webp",
+        "alt": "Sala de reuniones con mesa para seis personas y pizarra",
+        "caption": "Sala de reuniones",
+        "width": 1600,
+        "height": 1067
+      },
+      {
+        "src": "/assets/images/homepage/company/salon_empresa.webp",
+        "alt": "Sala de juntas con pantalla y ventanal",
+        "caption": "Sala de juntas",
+        "width": 1600,
+        "height": 1067
       }
     ]
   },
