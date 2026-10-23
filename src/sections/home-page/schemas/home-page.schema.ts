@@ -45,7 +45,20 @@ export const HomeCategorySchema = z.object({
 
 export const HomePageSchema = z.object({
   hero: HomeHeroSchema,
-  marquee: z.object({ items: z.array(z.string().trim().min(1)).min(1) }),
+  brands: z.object({
+    // Dos filas: la segunda va en naranja, como el acento del hero
+    titleLines: z.tuple([z.string().trim().min(1), z.string().trim().min(1)]),
+    description: z.string().trim().min(1),
+    logos: z.array(
+      z.object({
+        id: z.string().trim().min(1),
+        src: z.string().trim().min(1),
+        alt: z.string().trim().min(1),
+        width: z.number().int().positive(),
+        height: z.number().int().positive(),
+      }),
+    ),
+  }),
   bestSellers: z.array(BestSellerSchema).min(2),
   ourProducts: z.object({
     title: z.string().trim().min(1),

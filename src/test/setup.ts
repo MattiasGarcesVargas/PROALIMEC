@@ -24,3 +24,18 @@ Object.defineProperty(window, 'ResizeObserver', {
   configurable: true,
   value: ResizeObserverStub,
 })
+
+// Tampoco trae IntersectionObserver: el carrusel de marcas lo usa para pausarse fuera de pantalla
+class IntersectionObserverStub {
+  observe() {}
+  unobserve() {}
+  disconnect() {}
+  takeRecords() {
+    return []
+  }
+}
+
+Object.defineProperty(window, 'IntersectionObserver', {
+  configurable: true,
+  value: IntersectionObserverStub,
+})

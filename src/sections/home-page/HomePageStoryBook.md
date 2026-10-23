@@ -11,7 +11,6 @@ Narrar la promesa de PROALIMEC con escenas de scroll —best sellers colgados de
 ## Componentes
 
 - `HeroSection`: eyebrow, H1 en tres líneas con máscara vertical (la tercera en naranja), intro y PNG recortado.
-- `MarqueeStrip`: banda negra en bucle de 28 s con separadores naranja.
 - `BestSellerScene` + `BestSellerCopy`: escena sticky de `calc(var(--scene) * 1.9)`. El corte 01 cae sobre la losa de piedra; el 02 entra con el gancho al ras del borde superior.
 - `OurProductsScene`: escena sticky donde primero entra el texto, luego la línea vertical y la percha se balancea desde la derecha.
 - `CategoriesSection`: filas cerdo / res con banner y velo en hover.
