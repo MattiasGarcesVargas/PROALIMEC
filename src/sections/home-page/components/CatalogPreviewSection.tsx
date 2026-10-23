@@ -32,6 +32,11 @@ function CatalogPreviewSection({ content, products, onOpen }: CatalogPreviewSect
 
   const visible =
     filter === 'todo' ? products : products.filter((product) => product.line === filter)
+  // Una línea sin cortes no se ofrece como filtro (vuelve sola cuando tenga productos)
+  const filters = FILTERS.filter(
+    (option) =>
+      option.value === 'todo' || products.some((product) => product.line === option.value),
+  )
   const summary = FILTERS.find((option) => option.value === filter)?.summary
 
   // Al cambiar de línea la pista vuelve al inicio (antes de pintar) y la barra se recalcula
@@ -62,7 +67,7 @@ function CatalogPreviewSection({ content, products, onOpen }: CatalogPreviewSect
             aria-label="Filtrar cortes por línea"
             className="flex flex-wrap gap-[clamp(18px,3vw,32px)]"
           >
-            {FILTERS.map((option) => {
+            {filters.map((option) => {
               const isActive = option.value === filter
 
               return (

@@ -43,7 +43,6 @@
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
 
-  --animate-marquee: marquee 28s linear infinite;
   /* La foto del hero de contacto ya se ve desde el inicio; solo asienta su escala */
   --animate-settle: settle 1.4s var(--ease-out-expo) both;
   /* Línea recién sumada al mensaje de WhatsApp: destella en hielo y se asienta */
@@ -55,12 +54,6 @@
   @keyframes fade-in {
     from {
       opacity: 0;
-    }
-  }
-
-  @keyframes marquee {
-    to {
-      transform: translateX(-50%);
     }
   }
 

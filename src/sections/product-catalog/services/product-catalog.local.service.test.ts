@@ -6,7 +6,7 @@ describe('localProductCatalogService', () => {
   it('returns every product when no line is requested', async () => {
     const products = await localProductCatalogService.getProducts()
 
-    expect(products).toHaveLength(13)
+    expect(products).toHaveLength(9)
   })
 
   it('filters products by meat line', async () => {
@@ -14,16 +14,16 @@ describe('localProductCatalogService', () => {
     const res = await localProductCatalogService.getProducts('res')
 
     expect(cerdo).toHaveLength(9)
-    expect(res).toHaveLength(4)
+    expect(res).toHaveLength(0)
     expect(cerdo.every((product) => product.line === 'cerdo')).toBe(true)
     expect(res.every((product) => product.line === 'res')).toBe(true)
   })
 
   it('counts products per line for the filter bar', async () => {
     await expect(localProductCatalogService.getLineCounts()).resolves.toEqual({
-      todo: 13,
+      todo: 9,
       cerdo: 9,
-      res: 4,
+      res: 0,
     })
   })
 

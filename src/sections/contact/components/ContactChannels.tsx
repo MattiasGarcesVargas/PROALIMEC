@@ -23,9 +23,28 @@ function buildChannels(): Channel[] {
 
   return [
     {
+      // La ciudad está aprobada: la ubicación siempre tiene algo real que mostrar
+      id: 'location',
+      icon: MapPin,
+      title: 'Ubicación',
+      body: (
+        <>
+          <address className="not-italic">
+            {address && <p>{address}</p>}
+            <p>{CITY}</p>
+          </address>
+          {mapsUrl && (
+            <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className={ACTION_CLASS}>
+              Abrir en Google Maps
+            </a>
+          )}
+        </>
+      ),
+    },
+    {
       id: 'phone',
       icon: Phone,
-      title: 'Teléfono',
+      title: 'Contacto',
       pendingName: 'teléfono',
       body:
         phone && phoneDisplay ? (
@@ -50,25 +69,6 @@ function buildChannels(): Channel[] {
           </a>
         </>
       ) : null,
-    },
-    {
-      // La ciudad está aprobada: la ubicación siempre tiene algo real que mostrar
-      id: 'location',
-      icon: MapPin,
-      title: 'Ubicación',
-      body: (
-        <>
-          <address className="not-italic">
-            {address && <p>{address}</p>}
-            <p>{CITY}</p>
-          </address>
-          {mapsUrl && (
-            <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className={ACTION_CLASS}>
-              Abrir en Google Maps
-            </a>
-          )}
-        </>
-      ),
     },
     {
       id: 'hours',

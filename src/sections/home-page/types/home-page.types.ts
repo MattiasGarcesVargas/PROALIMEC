@@ -11,7 +11,7 @@ import type {
 
 export type HomePageContent = z.infer<typeof HomePageSchema>
 export type HomeHeroContent = z.infer<typeof HomeHeroSchema>
-export type HomeMarqueeContent = HomePageContent['marquee']
+export type BrandsContent = HomePageContent['brands']
 export type BestSeller = z.infer<typeof BestSellerSchema>
 export type HomeCategory = z.infer<typeof HomeCategorySchema>
 export type CategoriesIntroContent = HomePageContent['categoriesIntro']

@@ -25,8 +25,8 @@ interface ContactConfig {
 // muestra "por confirmar" y los íconos no redirigen, nunca un dato inventado
 export const CONTACT: ContactConfig = {
   whatsappPhone: null,
-  phone: null,
-  phoneDisplay: null,
+  phone: '+9999999999',
+  phoneDisplay: '+(593) 275 4163',
   email: null,
   address: null,
   mapsUrl: 'https://maps.app.goo.gl/QQokT6YszTWAtn4P7',

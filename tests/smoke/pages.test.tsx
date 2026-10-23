@@ -64,9 +64,10 @@ describe('main pages', () => {
         name: 'Nuestros productos',
       }),
     ).toBeVisible()
-    expect(screen.getByRole('button', { name: /todos 13/i })).toBeVisible()
+    expect(screen.getByRole('button', { name: /todos 9/i })).toBeVisible()
     expect(screen.getByRole('button', { name: /cerdo 9/i })).toBeVisible()
-    expect(screen.getByRole('button', { name: /res 4/i })).toBeVisible()
+    // Sin cortes de res por ahora: la línea no se ofrece como filtro
+    expect(screen.queryByRole('button', { name: /^res/i })).not.toBeInTheDocument()
   })
 
   it('renders contact without invented business information', async () => {

@@ -17,13 +17,16 @@ const OPTIONS: { value: MeatLineFilter; label: string }[] = [
 ]
 
 function ProductFilterBar({ value, counts, onChange }: ProductFilterBarProps) {
+  // Una línea sin cortes no se ofrece como filtro (vuelve sola cuando tenga productos)
+  const options = OPTIONS.filter((option) => option.value === 'todo' || counts[option.value] > 0)
+
   return (
     <div
       role="group"
       aria-label="Filtrar cortes por línea"
       className="mt-[clamp(2.5rem,5vw,4rem)] flex flex-wrap items-center justify-center gap-[clamp(18px,3vw,36px)] border-y border-navy/12 py-[clamp(1rem,2vw,1.5rem)]"
     >
-      {OPTIONS.map((option) => {
+      {options.map((option) => {
         const isActive = option.value === value
 
         return (

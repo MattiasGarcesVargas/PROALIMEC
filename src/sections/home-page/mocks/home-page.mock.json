@@ -11,12 +11,31 @@
       "height": 1024
     }
   },
-  "marquee": {
-    "items": [
-      "Frescura protegida",
-      "Cadena de frío sin cortes",
-      "Calidad garantizada",
-      "Respaldo en cada corte"
+  "brands": {
+    "titleLines": ["Somos distribuidores de", "productos importados como:"],
+    "description": "Aliados estratégicos de distintas partes del mundo que confían en nosotros y nos ayudan a llevar cortes importados de calidad a tu negocio.",
+    "logos": [
+      {
+        "id": "agrosuper",
+        "src": "/assets/images/logos/marcas/agrosuper-logo.webp",
+        "alt": "Agrosuper",
+        "width": 756,
+        "height": 240
+      },
+      {
+        "id": "coexca",
+        "src": "/assets/images/logos/marcas/coexca-logo.webp",
+        "alt": "Coexca S.A.",
+        "width": 350,
+        "height": 126
+      },
+      {
+        "id": "maxagro",
+        "src": "/assets/images/logos/marcas/maxagro-logo.webp",
+        "alt": "MaxAgro",
+        "width": 731,
+        "height": 240
+      }
     ]
   },
   "bestSellers": [

@@ -234,22 +234,22 @@
       "suggestedUse": "Ahumado, horno y parrilla",
       "storageTemperature": "−18 °C",
       "image": {
-        "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo_posterior.webp",
+        "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo.webp",
         "fit": "contain",
         "alt": "Costillar de cerdo con piel — corte congelado PROALIMEC"
       },
       "gallery": [
         {
           "view": "principal",
-          "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo_posterior.webp",
-          "fit": "contain",
-          "alt": "Costillar de cerdo con piel visto por el lado de las costillas"
-        },
-        {
-          "view": "arriba",
           "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo.webp",
           "fit": "contain",
           "alt": "Costillar de cerdo visto desde arriba, por el lado de la piel"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo_posterior.webp",
+          "fit": "contain",
+          "alt": "Costillar de cerdo con piel visto por el lado de las costillas"
         },
         {
           "view": "lateral",
@@ -394,162 +394,6 @@
           "src": "/assets/images/catalogo/cola_cerdo/empaque.webp",
           "fit": "contain",
           "alt": "Caja cerrada de PROALIMEC con cinta de embalaje"
-        }
-      ]
-    },
-    {
-      "id": "prd-009",
-      "slug": "lomo-fino-de-res",
-      "name": "Lomo fino de res",
-      "line": "res",
-      "lineLabel": "Res",
-      "shortDescription": "Corte magro de res, de fibra fina y espesor uniforme.",
-      "description": "Corte magro de res, de fibra fina y espesor uniforme. Se porciona en destino según el grosor que maneje tu cocina.",
-      "presentation": "Congelado · empaque al vacío",
-      "approxWeight": "2 – 3 kg por pieza",
-      "suggestedUse": "Medallones, parrilla y plancha",
-      "storageTemperature": "−18 °C",
-      "image": {
-        "src": "/assets/images/cortes-tabla.jpg",
-        "alt": "Lomo fino de res — corte congelado PROALIMEC"
-      },
-      "gallery": [
-        {
-          "view": "principal",
-          "src": "/assets/images/cortes-tabla.jpg",
-          "alt": "Cortes sobre tabla de madera"
-        },
-        {
-          "view": "arriba",
-          "src": "/assets/images/cubos.jpg",
-          "alt": "Producto porcionado sobre tabla"
-        },
-        {
-          "view": "lateral",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
-        },
-        {
-          "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
-        }
-      ]
-    },
-    {
-      "id": "prd-010",
-      "slug": "costillar-de-res",
-      "name": "Costillar de res",
-      "line": "res",
-      "lineLabel": "Res",
-      "shortDescription": "Costillar con hueso, apto para cocción lenta y carta.",
-      "description": "Costillar con hueso y corte parejo, pensado para cocción lenta, ahumado y carta.",
-      "presentation": "Congelado · empaque al vacío",
-      "approxWeight": "4 – 6 kg por pieza",
-      "suggestedUse": "Cocción lenta, horno y ahumado",
-      "storageTemperature": "−18 °C",
-      "image": {
-        "src": "/assets/images/costillar.jpg",
-        "alt": "Costillar de res — corte congelado PROALIMEC"
-      },
-      "gallery": [
-        {
-          "view": "principal",
-          "src": "/assets/images/costillar.jpg",
-          "alt": "Costillar sostenido con guante"
-        },
-        {
-          "view": "arriba",
-          "src": "/assets/images/corte-hueso.jpg",
-          "alt": "Corte con hueso sobre tabla"
-        },
-        {
-          "view": "lateral",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
-        },
-        {
-          "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
-        }
-      ]
-    },
-    {
-      "id": "prd-011",
-      "slug": "corte-de-res-con-hueso",
-      "name": "Corte de res con hueso",
-      "line": "res",
-      "lineLabel": "Res",
-      "shortDescription": "Con grasa de cobertura, para parrilla y porciones grandes.",
-      "description": "Corte de res con hueso y grasa de cobertura, pensado para parrilla y porciones grandes.",
-      "presentation": "Congelado · pieza entera al vacío",
-      "approxWeight": "3 – 5 kg por pieza",
-      "suggestedUse": "Parrilla y porciones grandes",
-      "storageTemperature": "−18 °C",
-      "image": {
-        "src": "/assets/images/corte-hueso.jpg",
-        "alt": "Corte de res con hueso — corte congelado PROALIMEC"
-      },
-      "gallery": [
-        {
-          "view": "principal",
-          "src": "/assets/images/corte-hueso.jpg",
-          "alt": "Corte con hueso sobre tabla"
-        },
-        {
-          "view": "arriba",
-          "src": "/assets/images/cortes-tabla.jpg",
-          "alt": "Cortes sobre tabla de madera"
-        },
-        {
-          "view": "lateral",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
-        },
-        {
-          "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
-        }
-      ]
-    },
-    {
-      "id": "prd-012",
-      "slug": "res-en-cubos",
-      "name": "Res en cubos",
-      "line": "res",
-      "lineLabel": "Res",
-      "shortDescription": "Cubos regulares, listos para guisos de alto volumen.",
-      "description": "Res porcionada en cubos regulares, lista para guisos y preparaciones de alto volumen.",
-      "presentation": "Congelado · bolsa porcionada",
-      "approxWeight": "Bolsa de 5 kg",
-      "suggestedUse": "Guisos, estofados y alto volumen",
-      "storageTemperature": "−18 °C",
-      "image": {
-        "src": "/assets/images/cubos.jpg",
-        "alt": "Res en cubos — corte congelado PROALIMEC"
-      },
-      "gallery": [
-        {
-          "view": "principal",
-          "src": "/assets/images/cubos.jpg",
-          "alt": "Producto porcionado sobre tabla"
-        },
-        {
-          "view": "arriba",
-          "src": "/assets/images/cortes-tabla.jpg",
-          "alt": "Cortes sobre tabla de madera"
-        },
-        {
-          "view": "lateral",
-          "src": "/assets/images/camara-ganchos.jpg",
-          "alt": "Producto en cámara de congelación"
-        },
-        {
-          "view": "empaque",
-          "src": "/assets/images/paso-empacado.webp",
-          "alt": "Corte sellado al vacío en su empaque"
         }
       ]
     }
