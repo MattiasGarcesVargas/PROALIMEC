@@ -158,22 +158,22 @@
           "alt": "Pierna de cerdo entera con su piel"
         },
         {
-          "view": "arriba",
-          "src": "/assets/images/catalogo/pierna_cerdo/pierna_cerdo_frontal.webp",
-          "fit": "contain",
-          "alt": "Pierna de cerdo entera vista de frente"
-        },
-        {
           "view": "lateral",
           "src": "/assets/images/catalogo/pierna_cerdo/pierna_cerdo_lateral.webp",
           "fit": "contain",
           "alt": "Pierna de cerdo entera vista de lado, con el corte de la carne a la vista"
         },
         {
-          "view": "empaque",
+          "view": "arriba",
           "src": "/assets/images/catalogo/pierna_cerdo/pierna_cerdo_congelada.webp",
           "fit": "contain",
           "alt": "Pierna de cerdo entera congelada, escarchada por el frío"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/catalogo/pierna_cerdo/pierna_cerdo_caja.webp",
+          "fit": "contain",
+          "alt": "Pierna de cerdo entera dentro de una caja con funda plástica"
         }
       ]
     },
@@ -222,6 +222,50 @@
       ]
     },
     {
+      "id": "prd-017",
+      "slug": "brazo-de-cerdo",
+      "name": "Brazo de cerdo",
+      "line": "cerdo",
+      "lineLabel": "Cerdo",
+      "shortDescription": "Brazo entero con piel, para horno y cocción lenta.",
+      "description": "Brazo de cerdo entero con su piel y hueso, de carne jugosa y veteada. Se entrega congelado y listo para hornear entero, deshuesar o porcionar.",
+      "presentation": "Congelado · pieza entera en caja",
+      "approxWeight": "5 – 7 kg por pieza",
+      "suggestedUse": "Horno, cocción lenta y porcionado",
+      "storageTemperature": "−18 °C",
+      "image": {
+        "src": "/assets/images/catalogo/brazo_cerdo/brazo_cerdo.webp",
+        "fit": "contain",
+        "alt": "Brazo de cerdo — corte congelado PROALIMEC"
+      },
+      "gallery": [
+        {
+          "view": "principal",
+          "src": "/assets/images/catalogo/brazo_cerdo/brazo_cerdo.webp",
+          "fit": "contain",
+          "alt": "Brazo de cerdo entero con su piel"
+        },
+        {
+          "view": "arriba",
+          "src": "/assets/images/catalogo/brazo_cerdo/brazo_cerdo_frontal.webp",
+          "fit": "contain",
+          "alt": "Brazo de cerdo entero visto de frente"
+        },
+        {
+          "view": "lateral",
+          "src": "/assets/images/catalogo/brazo_cerdo/brazo_cerdo_lateral.webp",
+          "fit": "contain",
+          "alt": "Brazo de cerdo entero visto de lado"
+        },
+        {
+          "view": "empaque",
+          "src": "/assets/images/catalogo/brazo_cerdo/brazo_cerdo_caja.webp",
+          "fit": "contain",
+          "alt": "Brazo de cerdo entero dentro de una caja con funda plástica"
+        }
+      ]
+    },
+    {
       "id": "prd-008",
       "slug": "costillar-de-cerdo",
       "name": "Costillar de cerdo con piel",
@@ -259,9 +303,9 @@
         },
         {
           "view": "empaque",
-          "src": "/assets/images/catalogo/cola_cerdo/empaque.webp",
+          "src": "/assets/images/catalogo/costillar_cerdo_con_piel/costilla_cerdo_con_piel_caja.webp",
           "fit": "contain",
-          "alt": "Caja cerrada de PROALIMEC con cinta de embalaje"
+          "alt": "Costillar de cerdo con piel dentro de una caja con funda plástica"
         }
       ]
     },
