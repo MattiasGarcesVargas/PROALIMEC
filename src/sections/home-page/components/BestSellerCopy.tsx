@@ -1,54 +1,47 @@
-import type { CSSProperties } from 'react'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
+import { Link } from 'react-router'
 
 import type { BestSeller } from '@/sections/home-page/types/home-page.types'
-import ButtonLink from '@/shared/components/ui/ButtonLink'
+import { cutInquiryLink } from '@/shared/config/contact'
 import { cn } from '@/shared/utils/cn'
 
 interface BestSellerCopyProps {
   item: BestSeller
+  /** Lado de la escena donde cuelga el corte: el texto se alinea y la flecha apunta hacia él */
   side: 'left' | 'right'
-  /** Opacidad y desplazamiento que calcula la escena según el scroll */
-  style?: CSSProperties
 }
 
-function BestSellerCopy({ item, side, style }: BestSellerCopyProps) {
-  return (
-    <div
-      className={cn(
-        'absolute bottom-[clamp(1.5rem,7vh,4.5rem)] w-[min(34rem,44vw)]',
-        side === 'right' ? 'right-[clamp(1.25rem,5vw,5rem)]' : 'left-[clamp(1.25rem,5vw,5rem)]',
-      )}
-      style={style}
-    >
-      <p className="mb-2.5 text-xs/[1.2] font-semibold tracking-eyebrow text-orange uppercase">
-        {item.lineLabel} · {item.position}
-      </p>
+// En móvil los cortes quedan arriba del texto: la flecha se inclina 45° para apuntar hacia ellos
+function BestSellerCopy({ item, side }: BestSellerCopyProps) {
+  const isLeft = side === 'left'
+  const Arrow = isLeft ? ArrowLeft : ArrowRight
 
-      <h3 className="font-display text-[clamp(1.4rem,2.4vw,2rem)] leading-[1.1] font-bold tracking-[-0.03em] text-white">
+  return (
+    <div data-copy className={cn('py-4 md:py-6', !isLeft && 'text-right')}>
+      <h3
+        className={cn(
+          'flex items-center gap-2.5 font-display text-[clamp(1.2rem,1.8vw,1.5rem)] leading-[1.15] font-bold tracking-[-0.03em] text-white',
+          !isLeft && 'flex-row-reverse',
+        )}
+      >
+        <Arrow
+          aria-hidden="true"
+          className={cn(
+            'size-5 shrink-0 text-orange',
+            isLeft ? 'max-md:rotate-45' : 'max-md:-rotate-45',
+          )}
+        />
         {item.title}
       </h3>
 
-      <p className="mt-3.5 text-[15px] leading-[1.7] text-muted-cold">{item.description}</p>
+      <p className="mt-2.5 text-[15px]/[1.65] text-pretty text-muted-cold">{item.description}</p>
 
-      <dl className="mt-5.5 divide-y divide-white/16 border-y border-white/16">
-        {item.specs.map((spec) => (
-          <div key={spec.label} className="flex justify-between gap-4 py-[11px]">
-            <dt className="text-[13px] text-muted-cold">{spec.label}</dt>
-            <dd
-              className={cn(
-                'text-[13px]/[1.4] font-medium',
-                spec.highlight ? 'text-ice' : 'text-white',
-              )}
-            >
-              {spec.value}
-            </dd>
-          </div>
-        ))}
-      </dl>
-
-      <ButtonLink to="/contacto" variant="inverse" className="mt-5.5 min-h-12 px-5.5">
+      <Link
+        {...cutInquiryLink(item.title)}
+        className="mt-3.5 inline-flex border-b border-white/30 pb-1 text-xs/none font-semibold tracking-button text-white uppercase transition-colors hover:border-white"
+      >
         {item.ctaLabel}
-      </ButtonLink>
+      </Link>
     </div>
   )
 }

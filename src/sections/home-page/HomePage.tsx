@@ -8,6 +8,7 @@ import ColdChainSection from './components/ColdChainSection'
 import ContactCtaSection from './components/ContactCtaSection'
 import HeroSection from './components/HeroSection'
 import OurProductsScene from './components/OurProductsScene'
+import PurposeSection from './components/PurposeSection'
 import ServiceSection from './components/ServiceSection'
 import { useHomePageData } from './hooks/use-home-page-data'
 
@@ -18,6 +19,7 @@ function HomePage() {
   return (
     <main id="main-content">
       <HeroSection content={content.hero} />
+      <PurposeSection items={content.purpose} />
       <BestSellerScene items={content.bestSellers} />
       <OurProductsScene content={content.ourProducts} />
       <BrandsSection content={content.brands} />

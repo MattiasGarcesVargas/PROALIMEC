@@ -1,5 +1,7 @@
+import { Link } from 'react-router'
+
 import type { ContactCtaContent } from '@/sections/home-page/types/home-page.types'
-import ButtonLink from '@/shared/components/ui/ButtonLink'
+import { Button } from '@/shared/components/shadcn/button'
 
 // La foto es horizontal (4:3): en escritorio toma más ancho que el texto y se ve completa, sin recorte
 function ContactCtaSection({ content }: { content: ContactCtaContent }) {
@@ -14,11 +16,14 @@ function ContactCtaSection({ content }: { content: ContactCtaContent }) {
             {content.body}
           </p>
 
+          {/* Botones de shadcn/ui: primario y ghost, como enlaces de React Router */}
           <div className="mt-8 flex flex-wrap gap-3">
-            <ButtonLink to="/contacto">{content.primaryLabel}</ButtonLink>
-            <ButtonLink to="/productos" variant="outline">
-              {content.secondaryLabel}
-            </ButtonLink>
+            <Button asChild size="lg">
+              <Link to="/contacto">{content.primaryLabel}</Link>
+            </Button>
+            <Button asChild variant="ghost" size="lg" className="text-navy">
+              <Link to="/productos">{content.secondaryLabel}</Link>
+            </Button>
           </div>
         </div>
 

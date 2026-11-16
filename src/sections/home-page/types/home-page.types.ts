@@ -7,10 +7,12 @@ import type {
   HomePageSchema,
   MediaAssetSchema,
   MeatLineSchema,
+  PurposeStatementSchema,
 } from '@/sections/home-page/schemas/home-page.schema'
 
 export type HomePageContent = z.infer<typeof HomePageSchema>
 export type HomeHeroContent = z.infer<typeof HomeHeroSchema>
+export type PurposeStatement = z.infer<typeof PurposeStatementSchema>
 export type BrandsContent = HomePageContent['brands']
 export type BestSeller = z.infer<typeof BestSellerSchema>
 export type HomeCategory = z.infer<typeof HomeCategorySchema>
