@@ -23,6 +23,19 @@
   --color-cold-border: #c6e2ee;
   --color-shade: #040a18; /* velos oscuros sobre fotos */
 
+  /* Tokens que usan los componentes de shadcn/ui, apuntando a la paleta de la marca */
+  --color-background: #ffffff;
+  --color-foreground: var(--color-ink);
+  --color-primary: var(--color-navy);
+  --color-primary-foreground: #ffffff;
+  --color-secondary: var(--color-cold);
+  --color-secondary-foreground: var(--color-navy);
+  --color-accent: color-mix(in srgb, var(--color-navy) 7%, white);
+  --color-accent-foreground: var(--color-navy);
+  --color-destructive: #b42318;
+  --color-input: color-mix(in srgb, var(--color-navy) 20%, white);
+  --color-ring: var(--color-navy);
+
   /* Escala tipográfica de títulos (tamaño fluido + interlineado + tracking) */
   --text-display: clamp(2.6rem, 7.6vw, 6.5rem);
   --text-display--line-height: 0.98;
@@ -48,8 +61,17 @@
   /* Línea recién sumada al mensaje de WhatsApp: destella en hielo y se asienta */
   --animate-line-in: line-in 0.9s var(--ease-out-expo) both;
 
+  /* Flecha de "Sigue bajando": un empujón suave hacia abajo */
+  --animate-nudge: nudge 1.8s var(--ease-standard) infinite;
+
   /* Cambio de foto en la galería de la ficha */
   --animate-fade-in: fade-in 0.35s ease both;
+
+  @keyframes nudge {
+    50% {
+      transform: translateY(5px);
+    }
+  }
 
   @keyframes fade-in {
     from {

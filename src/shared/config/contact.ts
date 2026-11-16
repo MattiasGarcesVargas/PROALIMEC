@@ -24,7 +24,8 @@ interface ContactConfig {
 // TODO: completar con los datos confirmados por el cliente; mientras sean null la interfaz
 // muestra "por confirmar" y los íconos no redirigen, nunca un dato inventado
 export const CONTACT: ContactConfig = {
-  whatsappPhone: null,
+  // Número provisional de cotizaciones (0969060843) mientras se confirma el definitivo
+  whatsappPhone: '593969060843',
   phone: '+9999999999',
   phoneDisplay: '+(593) 275 4163',
   email: null,
@@ -44,6 +45,19 @@ export const WHATSAPP_GREETING =
 export const WHATSAPP_URL = CONTACT.whatsappPhone
   ? buildWhatsAppUrl(CONTACT.whatsappPhone, WHATSAPP_GREETING)
   : null
+
+// Botones "Consultar este corte": abren WhatsApp con el corte ya escrito en el mensaje.
+// Sin número confirmado, llevan a la página de contacto
+export function cutInquiryLink(cutName: string) {
+  if (!CONTACT.whatsappPhone) return { to: '/contacto' }
+
+  const message = `${WHATSAPP_GREETING} Quiero consultar por el corte: ${cutName}.`
+  return {
+    to: buildWhatsAppUrl(CONTACT.whatsappPhone, message),
+    target: '_blank',
+    rel: 'noopener noreferrer',
+  }
+}
 
 export interface SocialLink {
   label: string

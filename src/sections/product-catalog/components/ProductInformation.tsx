@@ -1,6 +1,6 @@
 import type { Product } from '@/sections/product-catalog/types/product-catalog.types'
-import ButtonLink from '@/shared/components/ui/ButtonLink'
 
+import CutInquiryButton from './CutInquiryButton'
 import ProductSpecs from './ProductSpecs'
 
 function ProductInformation({ product }: { product: Product }) {
@@ -18,9 +18,9 @@ function ProductInformation({ product }: { product: Product }) {
 
       <ProductSpecs product={product} className="mt-7" />
 
-      <ButtonLink to="/contacto" className="mt-7">
-        Consultar este corte
-      </ButtonLink>
+      <div className="mt-7 flex justify-end">
+        <CutInquiryButton cutName={product.name} />
+      </div>
     </div>
   )
 }

@@ -6,9 +6,9 @@ import {
   PRODUCT_VIEW_LABELS,
 } from '@/sections/product-catalog/consts/product-views'
 import type { Product } from '@/sections/product-catalog/types/product-catalog.types'
-import ButtonLink from '@/shared/components/ui/ButtonLink'
 import { cn } from '@/shared/utils/cn'
 
+import CutInquiryButton from './CutInquiryButton'
 import ProductSpecs from './ProductSpecs'
 
 interface ProductSheetModalProps {
@@ -38,7 +38,7 @@ function ProductSheet({ product, onClose }: { product: Product; onClose: () => v
     >
       <div
         onClick={(event) => event.stopPropagation()}
-        className="grid max-h-[88vh] w-[min(64rem,100%)] grid-fit-72 overflow-auto bg-white"
+        className="grid max-h-[88vh] w-[min(64rem,100%)] grid-fit-72 overflow-auto rounded-md bg-white"
       >
         {/* Galería: la foto principal crece hasta el alto del texto; debajo, las tres vistas */}
         <div className="flex flex-col bg-black">
@@ -105,19 +105,8 @@ function ProductSheet({ product, onClose }: { product: Product; onClose: () => v
 
           <ProductSpecs product={product} className="mt-6.5" />
 
-          {/* Las dos acciones van lado a lado: tamaño compacto para que quepan en una fila */}
-          <div className="mt-6.5 grid grid-cols-2 gap-2">
-            <ButtonLink to="/contacto" size="compact" className="px-3">
-              Consultar este corte
-            </ButtonLink>
-            <ButtonLink
-              to={`/productos/${product.slug}`}
-              variant="outline"
-              size="compact"
-              className="px-3"
-            >
-              Ver ficha completa
-            </ButtonLink>
+          <div className="mt-6.5 flex justify-end">
+            <CutInquiryButton cutName={product.name} />
           </div>
         </div>
       </div>

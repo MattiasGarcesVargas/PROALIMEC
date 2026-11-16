@@ -11,6 +11,32 @@
       "height": 1024
     }
   },
+  "purpose": [
+    {
+      "id": "mision",
+      "title": "Misión",
+      "statement": "Comercializar alimentos cárnicos nacionales e importados de calidad constante, conservados en frío y entregados con un servicio cercano, ágil y transparente, para que restaurantes, mercados y distribuidores trabajen con la tranquilidad de tener un proveedor que cumple.",
+      "values": ["Calidad", "Confianza", "Servicio"],
+      "image": {
+        "src": "/assets/images/homepage/process/preparacion-producto.webp",
+        "alt": "",
+        "width": 1600,
+        "height": 1067
+      }
+    },
+    {
+      "id": "vision",
+      "title": "Visión",
+      "statement": "Ser el distribuidor de alimentos cárnicos congelados de referencia en el Ecuador, reconocido por la calidad de cada corte, la solidez de sus relaciones comerciales y una evolución constante que nos permita crecer junto a nuestros clientes.",
+      "values": ["Experiencia", "Evolución"],
+      "image": {
+        "src": "/assets/images/homepage/process/transporte.webp",
+        "alt": "",
+        "width": 1600,
+        "height": 1067
+      }
+    }
+  ],
   "brands": {
     "titleLines": ["Somos distribuidores de", "productos importados como:"],
     "description": "Aliados estratégicos de distintas partes del mundo que confían en nosotros y nos ayudan a llevar cortes importados de calidad a tu negocio.",
@@ -41,26 +67,8 @@
   "bestSellers": [
     {
       "id": "bs-01",
-      "position": "Best seller 01",
-      "line": "cerdo",
-      "lineLabel": "Cerdo",
       "title": "Pierna de cerdo",
-      "description": "Pierna entera con hueso y piel, de rendimiento alto para horno y porcionado. Sale de cámara congelada y lista para despiece en destino.",
-      "specs": [
-        {
-          "label": "Presentación",
-          "value": "Pieza entera con hueso"
-        },
-        {
-          "label": "Volumen",
-          "value": "Caja mayorista"
-        },
-        {
-          "label": "Conservación",
-          "value": "−18 °C",
-          "highlight": true
-        }
-      ],
+      "description": "Pierna entera con hueso y piel, de alto rendimiento para horno y porcionado.",
       "ctaLabel": "Consultar este corte",
       "product": {
         "src": "/assets/images/pierna-cerdo.png",
@@ -71,26 +79,8 @@
     },
     {
       "id": "bs-02",
-      "position": "Best seller 02",
-      "line": "cerdo",
-      "lineLabel": "Cerdo",
       "title": "Costillar de cerdo",
-      "description": "Costillar de cerdo completo, de costillas parejas y grasa justa para ahumado, horno y parrilla. Se entrega congelado y listo para porcionar por costilla.",
-      "specs": [
-        {
-          "label": "Presentación",
-          "value": "Costillar entero al vacío"
-        },
-        {
-          "label": "Volumen",
-          "value": "Caja mayorista"
-        },
-        {
-          "label": "Conservación",
-          "value": "−18 °C",
-          "highlight": true
-        }
-      ],
+      "description": "Costillar completo, de costillas parejas y grasa justa para ahumado, horno y parrilla.",
       "ctaLabel": "Consultar este corte",
       "product": {
         "src": "/assets/images/costillar-cerdo.png",
@@ -192,8 +182,8 @@
         "label": "Líneas de producto en el catálogo: cerdo y res"
       },
       {
-        "value": "B2C",
-        "label": "Venta mayorista a negocios, no a consumidor final"
+        "value": "B2B & B2C",
+        "label": "Venta mayorista a negocios y consumidor final"
       }
     ]
   },

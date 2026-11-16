@@ -9,12 +9,6 @@ export const MediaAssetSchema = z.object({
   height: z.number().int().positive().optional(),
 })
 
-const SpecRowSchema = z.object({
-  label: z.string().trim().min(1),
-  value: z.string().trim().min(1),
-  highlight: z.boolean().optional(),
-})
-
 export const HomeHeroSchema = z.object({
   eyebrow: z.string().trim().min(1),
   titleLines: z.array(z.string().trim().min(1)).min(1),
@@ -23,14 +17,20 @@ export const HomeHeroSchema = z.object({
   image: MediaAssetSchema,
 })
 
+// Misión y visión: cada una es una banda a ancho completo con foto de fondo bajo un velo navy
+export const PurposeStatementSchema = z.object({
+  id: z.enum(['mision', 'vision']),
+  title: z.string().trim().min(1),
+  statement: z.string().trim().min(1),
+  values: z.array(z.string().trim().min(1)).min(1),
+  // Foto decorativa: el texto ya dice todo, por eso el alt va vacío
+  image: MediaAssetSchema,
+})
+
 export const BestSellerSchema = z.object({
   id: z.string().trim().min(1),
-  position: z.string().trim().min(1),
-  line: MeatLineSchema,
-  lineLabel: z.string().trim().min(1),
   title: z.string().trim().min(1),
   description: z.string().trim().min(1),
-  specs: z.array(SpecRowSchema),
   ctaLabel: z.string().trim().min(1),
   product: MediaAssetSchema,
 })
@@ -45,6 +45,7 @@ export const HomeCategorySchema = z.object({
 
 export const HomePageSchema = z.object({
   hero: HomeHeroSchema,
+  purpose: z.tuple([PurposeStatementSchema, PurposeStatementSchema]),
   brands: z.object({
     // Dos filas: la segunda va en naranja, como el acento del hero
     titleLines: z.tuple([z.string().trim().min(1), z.string().trim().min(1)]),

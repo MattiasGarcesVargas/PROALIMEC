@@ -64,8 +64,8 @@ describe('main pages', () => {
         name: 'Nuestros productos',
       }),
     ).toBeVisible()
-    expect(screen.getByRole('button', { name: /todos 9/i })).toBeVisible()
-    expect(screen.getByRole('button', { name: /cerdo 9/i })).toBeVisible()
+    expect(screen.getByRole('button', { name: /todos 10/i })).toBeVisible()
+    expect(screen.getByRole('button', { name: /cerdo 10/i })).toBeVisible()
     // Sin cortes de res por ahora: la línea no se ofrece como filtro
     expect(screen.queryByRole('button', { name: /^res/i })).not.toBeInTheDocument()
   })
@@ -83,6 +83,9 @@ describe('main pages', () => {
         name: 'Cotiza tu pedido.',
       }),
     ).toBeVisible()
-    expect(screen.queryByRole('link', { name: /whatsapp/i })).not.toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /cotizar por whatsapp/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('https://wa.me/593969060843'),
+    )
   })
 })
